@@ -15,3 +15,11 @@ Majornas Bok och Kaffe
 - Jennifer
 - Linnea
 - Chris
+
+## Yarn
+
+We are using Yarn in this project.
+
+- yarn start (run it in localhost)
+- yarn add (install dependencies)
+- yarn remove (uninstall dependencies)
