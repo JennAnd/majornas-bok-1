@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import { SanityClient } from "../Sanity/SanityClient";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
