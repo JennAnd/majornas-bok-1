@@ -19,6 +19,7 @@ Majornas Bok och Kaffe
 ## Yarn
 
 We are using Yarn in this project.
+Do not forget to run `yarn` in both **root folder** and in the **Sanity folder** in order to be up to date with packages.
 
 - yarn develop (to run both frontend and backend at the same time - FE: localhost:3000, BE: localhost:3333)
 
