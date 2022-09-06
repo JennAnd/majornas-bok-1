@@ -1,0 +1,12 @@
+{
+  "name": "majornas-bok",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "develop": "concurrently \"cd Next && yarn dev\" \"cd Sanity && sanity start\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^7.3.0"
+  }
+}

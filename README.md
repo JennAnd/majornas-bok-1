@@ -1,6 +1,23 @@
 # Majornas bok och kafé
 
-## Yarn
+## Designers
+
+- Felix
+- Emma
+- Klara
+- Mohamed
+
+## Devs
+
+- Oliver
+- Jennifer
+- Linnea
+- Chris
+
+<br>
+<br>
+
+# Yarn
 
 We are using **Yarn** in this project.
 Do not forget to run `yarn` in both the **Next folder** and in the **Sanity folder** in order to be up to date with packages.
