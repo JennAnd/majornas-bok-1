@@ -113,15 +113,46 @@ export const OpeningsHoursTime = styled.p`
 `;
 
 export const CompanyInfoContainer = styled.div`
-  background-color: hotpink;
   position: absolute;
-  left: 50%;
-  bottom: 160px;
-  width: 100px;
-  height: 100px;
+  left: 60px;
+  bottom: 180px;
+  width: 270px;
+  height: 230px;
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export const CompanyName = styled.p`
+  font-size: 1.9rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  color: #292929;
+`;
+export const CompanyInfo = styled.p`
   font-family: "Courier New", Courier, monospace;
   color: #292929;
+  margin: 0;
+
+  &:nth-child(3) {
+    margin-bottom: 1rem;
+  }
+`;
+
+export const CompanyPhone = styled.a`
+  font-family: "Courier New", Courier, monospace;
+  color: #292929;
+  &:hover {
+    color: #a3bfa7;
+  }
+`;
+export const CompanyEmail = styled.a`
+  font-family: "Courier New", Courier, monospace;
+  color: #292929;
+  cursor: pointer;
+  &:hover {
+    color: #a3bfa7;
+  }
 `;

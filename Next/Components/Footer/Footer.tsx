@@ -3,7 +3,7 @@ import { SanityClient } from "../../SanityClient";
 import * as S from "./Footer.styles";
 
 export const Footer = () => {
-  const [allCompanyData, setCompanyData] = useState<any[]>([]);
+  const [allCompanyData, setCompanyData] = useState<any[companyName]>();
 
   useEffect(() => {
     SanityClient.fetch(`*[_type == "info"][0]`)
@@ -22,7 +22,21 @@ export const Footer = () => {
         <S.OpeningsHoursDays>Sön - Mån</S.OpeningsHoursDays>
         <S.OpeningsHoursTime>Stängt</S.OpeningsHoursTime>
       </S.OpeningsHoursContainer>
-      <S.CompanyInfoContainer></S.CompanyInfoContainer>
+      <S.CompanyInfoContainer>
+        {allCompanyData?.companyName && (
+          <>
+            <S.CompanyName>{allCompanyData?.companyName}</S.CompanyName>
+            <S.CompanyInfo>{allCompanyData?.address}</S.CompanyInfo>
+            <S.CompanyInfo>{allCompanyData?.zipCode}</S.CompanyInfo>
+            <S.CompanyPhone href="tel:+46763414000">
+              {allCompanyData?.phone}
+            </S.CompanyPhone>
+            <S.CompanyEmail href="mailto:asdf@asdf.com">
+              {allCompanyData?.email}
+            </S.CompanyEmail>
+          </>
+        )}
+      </S.CompanyInfoContainer>
     </S.Container>
   );
 };
