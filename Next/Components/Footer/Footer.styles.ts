@@ -112,7 +112,6 @@ export const OpeningsHoursTime = styled.p`
 `;
 
 export const CompanyInfoContainer = styled.div`
-  /* background-color: rgba(350, 0, 200, 0.2); */
   position: absolute;
   left: calc(50% - 135px);
   bottom: 180px;
