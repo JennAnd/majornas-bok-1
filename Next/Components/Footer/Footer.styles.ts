@@ -46,6 +46,10 @@ export const OpeningsHoursContainer = styled.div`
     height: 720px;
   }
   @media (min-width: 1024px) {
+    bottom: 150px;
+    width: 280px;
+    height: 720px;
+    right: 120px;
   }
 `;
 
@@ -55,12 +59,28 @@ export const OpeningsHoursTitle = styled.p`
   letter-spacing: 1px;
   margin-bottom: 0.75rem;
   margin-top: 0.75rem;
+
+  @media (min-width: 768px) {
+    font-size: 3.5rem;
+    margin-bottom: 2.75rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
 `;
 export const OpeningsHoursDays = styled.p`
   font-size: 1.4rem;
   font-weight: 500;
   margin-bottom: 0;
   margin-top: 0;
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 2rem;
+  }
 `;
 
 export const OpeningsHoursTime = styled.p`
@@ -68,4 +88,13 @@ export const OpeningsHoursTime = styled.p`
   font-weight: 400;
   margin-bottom: 1.75rem;
   margin-top: 0.25rem;
+
+  @media (min-width: 768px) {
+    font-size: 2.75rem;
+    margin-bottom: 2.75rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
 `;
