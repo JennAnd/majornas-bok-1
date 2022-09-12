@@ -111,3 +111,17 @@ export const OpeningsHoursTime = styled.p`
     margin-bottom: 2.5rem;
   }
 `;
+
+export const CompanyInfoContainer = styled.div`
+  background-color: hotpink;
+  position: absolute;
+  left: 50%;
+  bottom: 160px;
+  width: 100px;
+  height: 100px;
+`;
+
+export const CompanyName = styled.p`
+  font-family: "Courier New", Courier, monospace;
+  color: #292929;
+`;

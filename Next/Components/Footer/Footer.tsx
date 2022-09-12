@@ -22,6 +22,7 @@ export const Footer = () => {
         <S.OpeningsHoursDays>Sön - Mån</S.OpeningsHoursDays>
         <S.OpeningsHoursTime>Stängt</S.OpeningsHoursTime>
       </S.OpeningsHoursContainer>
+      <S.CompanyInfoContainer></S.CompanyInfoContainer>
     </S.Container>
   );
 };
