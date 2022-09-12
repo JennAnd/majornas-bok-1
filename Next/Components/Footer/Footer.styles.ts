@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Footer = styled.div`
+export const Container = styled.div`
   position: relative;
   left: 0;
   bottom: 0;
@@ -35,23 +35,23 @@ export const OpeningsHoursContainer = styled.div`
   width: 230px;
   z-index: 1;
   right: 0px;
-  bottom: 120px;
+  bottom: 680px;
   padding: 0;
   margin: 0;
 
   @media (min-width: 768px) {
-    bottom: 120px;
+    bottom: 1500px;
     width: 480px;
   }
   @media (min-width: 1024px) {
-    bottom: 330px;
+    bottom: 520px;
     width: 280px;
     right: 120px;
   }
   @media (min-width: 1280px) {
-    bottom: 330px;
+    bottom: 750px;
     width: 400px;
-    right: 165px;
+    right: 185px;
   }
 `;
 

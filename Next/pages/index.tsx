@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import { Footer } from "../Components/Footer/Footer";
-// import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (

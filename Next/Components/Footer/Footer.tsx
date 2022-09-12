@@ -1,11 +1,18 @@
-import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { SanityClient } from "../../SanityClient";
 import * as S from "./Footer.styles";
 
 export const Footer = () => {
+  const [allCompanyData, setCompanyData] = useState<any[]>([]);
+
+  useEffect(() => {
+    SanityClient.fetch(`*[_type == "info"][0]`)
+      .then((data) => setCompanyData(data))
+      .catch(console.error);
+  }, []);
+
   return (
-    <>
-      <S.Footer></S.Footer>
+    <S.Container>
       <S.OpeningsHoursContainer>
         <S.OpeningsHoursTitle>Öppettider</S.OpeningsHoursTitle>
         <S.OpeningsHoursDays>Mån - Tis</S.OpeningsHoursDays>
@@ -15,6 +22,6 @@ export const Footer = () => {
         <S.OpeningsHoursDays>Sön - Mån</S.OpeningsHoursDays>
         <S.OpeningsHoursTime>Stängt</S.OpeningsHoursTime>
       </S.OpeningsHoursContainer>
-    </>
+    </S.Container>
   );
 };

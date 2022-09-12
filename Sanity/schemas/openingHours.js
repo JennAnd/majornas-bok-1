@@ -7,7 +7,7 @@ export default {
   type: "document",
   fields: [
     {
-      name: "Day",
+      name: "day",
       title: "Day",
       type: "string",
     },
