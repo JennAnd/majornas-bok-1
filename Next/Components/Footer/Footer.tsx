@@ -28,12 +28,12 @@ export const Footer = () => {
             <S.CompanyName>{allCompanyData?.companyName}</S.CompanyName>
             <S.CompanyInfo>{allCompanyData?.address}</S.CompanyInfo>
             <S.CompanyInfo>{allCompanyData?.zipCode}</S.CompanyInfo>
-            <S.CompanyPhone href="tel:+46763414000">
+            <S.CompanyContact href="tel:+46763414000">
               {allCompanyData?.phone}
-            </S.CompanyPhone>
-            <S.CompanyEmail href="mailto:asdf@asdf.com">
+            </S.CompanyContact>
+            <S.CompanyContact href="mailto:asdf@asdf.com">
               {allCompanyData?.email}
-            </S.CompanyEmail>
+            </S.CompanyContact>
           </>
         )}
       </S.CompanyInfoContainer>

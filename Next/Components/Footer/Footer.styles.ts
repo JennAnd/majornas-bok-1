@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   position: relative;
-  left: 0;
   bottom: 0;
   height: 0;
   width: 100vw;
@@ -12,7 +11,7 @@ export const Container = styled.div`
   background-size: contain !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
-  padding-bottom: 290%;
+  padding-bottom: 292%;
 
   @media (min-width: 1024px) {
     background: url("/Images/Footer/Footer_Desktop.svg");
@@ -113,8 +112,9 @@ export const OpeningsHoursTime = styled.p`
 `;
 
 export const CompanyInfoContainer = styled.div`
+  /* background-color: rgba(350, 0, 200, 0.2); */
   position: absolute;
-  left: 60px;
+  left: calc(50% - 135px);
   bottom: 180px;
   width: 270px;
   height: 230px;
@@ -123,6 +123,25 @@ export const CompanyInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (min-width: 768px) {
+    left: calc(50% - 275px);
+    bottom: 330px;
+    width: 550px;
+    height: 500px;
+  }
+  @media (min-width: 1024px) {
+    left: calc(25% - 170px);
+    bottom: 165px;
+    width: 260px;
+    height: 210px;
+  }
+  @media (min-width: 1280px) {
+    left: calc(25% - 235px);
+    bottom: 230px;
+    width: 360px;
+    height: 300px;
+  }
 `;
 
 export const CompanyName = styled.p`
@@ -130,6 +149,19 @@ export const CompanyName = styled.p`
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   color: #292929;
+
+  @media (min-width: 768px) {
+    font-size: 3.9rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  @media (min-width: 1280px) {
+    font-size: 2.6rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
 `;
 export const CompanyInfo = styled.p`
   font-family: "Courier New", Courier, monospace;
@@ -139,20 +171,40 @@ export const CompanyInfo = styled.p`
   &:nth-child(3) {
     margin-bottom: 1rem;
   }
-`;
 
-export const CompanyPhone = styled.a`
-  font-family: "Courier New", Courier, monospace;
-  color: #292929;
-  &:hover {
-    color: #a3bfa7;
+  @media (min-width: 768px) {
+    font-size: 2.25rem;
+    &:nth-child(3) {
+      margin-bottom: 2rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    font-size: 1.2rem;
+    &:nth-child(3) {
+      margin-bottom: 1rem;
+    }
+  }
+  @media (min-width: 1280px) {
+    font-size: 1.6rem;
   }
 `;
-export const CompanyEmail = styled.a`
+
+export const CompanyContact = styled.a`
   font-family: "Courier New", Courier, monospace;
   color: #292929;
-  cursor: pointer;
+  text-decoration: none;
   &:hover {
     color: #a3bfa7;
+    text-decoration: underline;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 2.25rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 1.2rem;
+  }
+  @media (min-width: 1280px) {
+    font-size: 1.6rem;
   }
 `;
