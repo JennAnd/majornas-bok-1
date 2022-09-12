@@ -22,16 +22,16 @@ const Stripes = styled.div<LengthProps>`
   background: white;
   height: 2rem;
 
-  width: 20rem;
+  width: 85%;
   width: ${(props) => {
     if (props.tallest) {
-      return "35rem";
+      return "100%";
     }
     if (props.tall) {
-      return "30rem";
+      return "95%";
     }
     if (props.short) {
-      return "10rem";
+      return "70%";
     }
   }};
 `;
@@ -39,12 +39,16 @@ const Stripes = styled.div<LengthProps>`
 export const HeroStripes: FC = () => {
   return (
     <StripeContainer>
-      <Stripes tallest></Stripes>
       <Stripes tall></Stripes>
+      <Stripes></Stripes>
+      <Stripes tallest></Stripes>
+      <Stripes short></Stripes>
+      <Stripes tall></Stripes>
+      <Stripes></Stripes>
+      <Stripes tallest></Stripes>
       <Stripes short></Stripes>
       <Stripes></Stripes>
-      <Stripes></Stripes>
-      <Stripes></Stripes>
+      <Stripes tallest></Stripes>
       <Stripes></Stripes>
       <Stripes></Stripes>
     </StripeContainer>
