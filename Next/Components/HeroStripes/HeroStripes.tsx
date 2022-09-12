@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 const StripeContainer = styled.div`
   background: pink;
-  width: 40rem;
+  width: 50%;
   height: 40rem;
 
   display: flex;
