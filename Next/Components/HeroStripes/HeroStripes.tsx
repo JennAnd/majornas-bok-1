@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const StripeContainer = styled.div`
   background: pink;
@@ -16,13 +16,15 @@ const Stripes = styled.div`
   background: white;
   width: 20rem;
   height: 2rem;
+
+  background: ${(props) => (props.primary ? "palevioletred" : "white")};
 `;
 
 export const HeroStripes: FC = () => {
   return (
     <StripeContainer>
       <Stripes></Stripes>
-      <Stripes></Stripes>
+      <Stripes primary></Stripes>
       <Stripes></Stripes>
       <Stripes></Stripes>
       <Stripes></Stripes>
