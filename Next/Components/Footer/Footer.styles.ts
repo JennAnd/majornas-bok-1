@@ -20,3 +20,52 @@ export const Footer = styled.div`
     background-position: left !important;
   }
 `;
+
+export const OpeningsHoursContainer = styled.div`
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: absolute;
+  width: 230px;
+  height: 340px;
+  z-index: 1;
+  right: 0px;
+  bottom: 120px;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: 768px) {
+    bottom: 10px;
+    width: 480px;
+    height: 720px;
+  }
+  @media (min-width: 1024px) {
+  }
+`;
+
+export const OpeningsHoursTitle = styled.p`
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+  margin-top: 0.75rem;
+`;
+export const OpeningsHoursDays = styled.p`
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 0;
+  margin-top: 0;
+`;
+
+export const OpeningsHoursTime = styled.p`
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 1.75rem;
+  margin-top: 0.25rem;
+`;
