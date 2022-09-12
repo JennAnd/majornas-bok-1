@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 const StripeContainer = styled.div`
   background: pink;
-  width: 30rem;
+  width: 40rem;
   height: 40rem;
 
   display: flex;
@@ -12,20 +12,36 @@ const StripeContainer = styled.div`
   justify-content: space-between;
 `;
 
-const Stripes = styled.div`
+interface LengthProps {
+  readonly tallest?: boolean;
+  readonly tall?: boolean;
+  readonly short?: boolean;
+}
+
+const Stripes = styled.div<LengthProps>`
   background: white;
-  width: 20rem;
   height: 2rem;
 
-  background: ${(props) => (props.primary ? "palevioletred" : "white")};
+  width: 20rem;
+  width: ${(props) => {
+    if (props.tallest) {
+      return "35rem";
+    }
+    if (props.tall) {
+      return "30rem";
+    }
+    if (props.short) {
+      return "10rem";
+    }
+  }};
 `;
 
 export const HeroStripes: FC = () => {
   return (
     <StripeContainer>
-      <Stripes></Stripes>
-      <Stripes primary></Stripes>
-      <Stripes></Stripes>
+      <Stripes tallest></Stripes>
+      <Stripes tall></Stripes>
+      <Stripes short></Stripes>
       <Stripes></Stripes>
       <Stripes></Stripes>
       <Stripes></Stripes>
