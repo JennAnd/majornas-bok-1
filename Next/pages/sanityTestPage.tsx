@@ -12,7 +12,7 @@ const Home: NextPage = () => {
     });
   });
 
-  return <div className={styles.container}>hej</div>;
+  return <div>hej</div>;
 };
 
 export default Home;
