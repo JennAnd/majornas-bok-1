@@ -33,7 +33,6 @@ export const OpeningsHoursContainer = styled.div`
 
   position: absolute;
   width: 230px;
-  height: 340px;
   z-index: 1;
   right: 0px;
   bottom: 120px;
@@ -41,15 +40,18 @@ export const OpeningsHoursContainer = styled.div`
   margin: 0;
 
   @media (min-width: 768px) {
-    bottom: 10px;
+    bottom: 120px;
     width: 480px;
-    height: 720px;
   }
   @media (min-width: 1024px) {
-    bottom: 150px;
+    bottom: 330px;
     width: 280px;
-    height: 720px;
     right: 120px;
+  }
+  @media (min-width: 1280px) {
+    bottom: 330px;
+    width: 400px;
+    right: 165px;
   }
 `;
 
@@ -68,6 +70,10 @@ export const OpeningsHoursTitle = styled.p`
     font-size: 2.25rem;
     margin-bottom: 1.5rem;
   }
+  @media (min-width: 1280px) {
+    font-size: 3.25rem;
+    margin-bottom: 1.5rem;
+  }
 `;
 export const OpeningsHoursDays = styled.p`
   font-size: 1.4rem;
@@ -76,10 +82,13 @@ export const OpeningsHoursDays = styled.p`
   margin-top: 0;
 
   @media (min-width: 768px) {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   @media (min-width: 1024px) {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  @media (min-width: 1280px) {
+    font-size: 2.25rem;
   }
 `;
 
@@ -94,7 +103,11 @@ export const OpeningsHoursTime = styled.p`
     margin-bottom: 2.75rem;
   }
   @media (min-width: 1024px) {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 1.5rem;
+  }
+  @media (min-width: 1280px) {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
   }
 `;
