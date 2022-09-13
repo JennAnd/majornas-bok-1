@@ -31,10 +31,7 @@ const Home: NextPage<propInterface> = ({ openingHours, companyInfo }) => {
 
 export const getServerSideProps = async () => {
   const openingHours = await SanityClient.fetch(`*[_type == 'openingHours']`);
-
   const companyInfo = await SanityClient.fetch(`*[_type == "info"][0]`);
-
-  console.log({ openingHours, companyInfo });
 
   return { props: { openingHours, companyInfo } };
 };

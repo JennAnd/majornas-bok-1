@@ -1,23 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { SanityClient } from "../../SanityClient";
 import * as S from "./Footer.styles";
 
 export const Footer = ({ openingHours, companyInfo }) => {
-  // const [allCompanyData, setCompanyData] = useState<any[]>();
-  // const [allOpeningData, setOpeningData] = useState<any[]>();
-
-  // useEffect(() => {
-  //   SanityClient.fetch(`*[_type == 'openingHours']`)
-  //     .then((data) => setOpeningData(data))
-  //     .catch(console.error);
-  // }, []);
-
-  // useEffect(() => {
-  //   SanityClient.fetch(`*[_type == "info"][0]`)
-  //     .then((data) => setCompanyData(data))
-  //     .catch(console.error);
-  // }, []);
-
   return (
     <S.Container>
       {openingHours?.length > 0 && (
