@@ -81,7 +81,7 @@ export const OpeningsHoursDays = styled.p`
   margin-top: 0;
 
   @media (min-width: 768px) {
-    font-size: 2rem;
+    font-size: 2.75rem;
   }
   @media (min-width: 1024px) {
     font-size: 1.8rem;
@@ -98,7 +98,7 @@ export const OpeningsHoursTime = styled.p`
   margin-top: 0.25rem;
 
   @media (min-width: 768px) {
-    font-size: 2.75rem;
+    font-size: 2rem;
     margin-bottom: 2.75rem;
   }
   @media (min-width: 1024px) {
