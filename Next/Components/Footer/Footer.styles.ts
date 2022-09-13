@@ -50,7 +50,7 @@ export const OpeningsHoursContainer = styled.div`
   @media (min-width: 1280px) {
     bottom: 750px;
     width: 400px;
-    right: 185px;
+    right: calc(25% - 200px);
   }
 `;
 
