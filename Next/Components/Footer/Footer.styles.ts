@@ -81,7 +81,9 @@ export const OpeningsHoursDays = styled.p`
   margin-bottom: 0;
   margin-top: 0;
 
+
   @media (${({ theme }) => theme.breakpoint.tablet}) {
+
     font-size: 2.75rem;
   }
   @media (${({ theme }) => theme.breakpoint.desktop}) {
@@ -124,18 +126,21 @@ export const CompanyInfoContainer = styled.div`
   flex-direction: column;
   justify-content: center;
 
+
   @media (${({ theme }) => theme.breakpoint.tablet}) {
     left: calc(50% - 275px);
     bottom: 330px;
     width: 550px;
     height: 500px;
   }
+
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     left: calc(25% - 170px);
     bottom: 165px;
     width: 260px;
     height: 210px;
   }
+
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     left: calc(25% - 235px);
     bottom: 230px;
@@ -166,6 +171,7 @@ export const CompanyInfo = styled.p`
   font-family: ${({ theme }) => theme.font.serif};
   color: #292929;
   margin: ${({ theme }) => theme.margin.none};
+
 
   &:nth-child(3) {
     margin-bottom: 1rem;
