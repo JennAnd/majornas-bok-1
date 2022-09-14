@@ -9,21 +9,41 @@ import { SanityClient } from "../SanityClient";
 interface propInterface {
   companyInfo: {};
   openingHours: [{}];
-  events: [{}];
+  eventInfo: [
+    {
+      name: string;
+      date: string;
+      description: string;
+      slug: string;
+      image: string;
+    }
+  ];
 }
 
 const Home: NextPage<propInterface> = ({
   openingHours,
   companyInfo,
-  events,
+  eventInfo,
 }) => {
   const [showPopup, setShowPopup] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
 
   return (
     <div>
       <Link href="sanityTestPage">Sanity test</Link>
-      <Button text="Click me" onClick={() => setShowPopup(!showPopup)} />
-      {showPopup && <PopupOverlay />}
+
+      {eventInfo.map((item) => {
+        return (
+          <Button
+            text={item.name}
+            onClick={() => {
+              setShowPopup(!showPopup);
+              setSelectedItem(item);
+            }}
+          />
+        );
+      })}
+      {showPopup && <PopupOverlay eventInfo={selectedItem} />}
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis
         mollitia. Doloremque laboriosam dolorum adipisci ullam odit minus nulla
@@ -46,7 +66,7 @@ export const getServerSideProps = async () => {
   const companyInfo = await SanityClient.fetch(`*[_type == "info"][0]`);
   const eventInfo = await SanityClient.fetch(`*[_type == "event"]`);
 
-  return { props: { openingHours, companyInfo } };
+  return { props: { openingHours, companyInfo, eventInfo } };
 };
 
 export default Home;

@@ -15,7 +15,7 @@ export default {
     {
       name: "date",
       title: "Date",
-      type: "datetime",
+      type: "date",
       description: "Please choose a date below",
     },
     {
