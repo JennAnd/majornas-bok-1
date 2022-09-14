@@ -16,12 +16,12 @@ interface propInterface {
       description: string;
       slug: string;
       image: string;
-      _key: string;
+      _id: string;
     }
   ];
 }
 
-const Home: NextPage<propInterface> = ({
+const Event: NextPage<propInterface> = ({
   openingHours,
   companyInfo,
   eventInfo,
@@ -31,12 +31,10 @@ const Home: NextPage<propInterface> = ({
 
   return (
     <div>
-      <Link href="sanityTestPage">Sanity test</Link>
-
-      {/* {eventInfo.map((item) => {
+      {eventInfo.map((item) => {
         return (
           <Button
-            key={item._key}
+            key={item._id}
             text={item.name}
             onClick={() => {
               setShowPopup(!showPopup);
@@ -45,19 +43,15 @@ const Home: NextPage<propInterface> = ({
           />
         );
       })}
-      {showPopup && <PopupOverlay eventInfo={selectedItem} />} */}
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis
-        mollitia. Doloremque laboriosam dolorum adipisci ullam odit minus nulla
-        consequuntur ab? Incidunt porro libero saepe voluptatem consequatur.
-        Voluptate, saepe fuga.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis
-        mollitia. Doloremque laboriosam dolorum adipisci ullam odit minus nulla
-        consequuntur ab? Incidunt porro libero saepe voluptatem consequatur.
-        Voluptate, saepe fuga.
-      </p>
+      {showPopup && (
+        <PopupOverlay
+          onClick={() => {
+            setShowPopup(!showPopup);
+          }}
+          eventInfo={selectedItem}
+        />
+      )}
+
       <Footer openingHours={openingHours} companyInfo={companyInfo} />
     </div>
   );
@@ -70,8 +64,7 @@ export const getServerSideProps = async () => {
     "imageUrl": image.asset->url,
       ...
     }`);
-
   return { props: { openingHours, companyInfo, eventInfo } };
 };
 
-export default Home;
+export default Event;
