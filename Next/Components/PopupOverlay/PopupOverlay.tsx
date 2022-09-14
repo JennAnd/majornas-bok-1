@@ -7,6 +7,8 @@ export const PopupOverlay: React.FC<PopupOverlayProps> = ({
   eventInfo,
   onClick,
 }) => {
+  console.log(eventInfo.description[0].children[0].text);
+
   return (
     <S.Overlay onClick={onClick}>
       <S.DateContainer>{eventInfo.date}</S.DateContainer>
@@ -22,6 +24,9 @@ export const PopupOverlay: React.FC<PopupOverlayProps> = ({
         <Image src="/Icons/VectorClose.svg" width={15} height={15} />
       </S.CloseContainer>
       <S.NameContainer>{eventInfo.name}</S.NameContainer>
+      <S.DescriptionContainer>
+        {eventInfo.description[0].children[0].text}
+      </S.DescriptionContainer>
     </S.Overlay>
   );
 };

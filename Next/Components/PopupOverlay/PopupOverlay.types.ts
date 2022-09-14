@@ -12,7 +12,7 @@ export type PopupOverlayProps = {
   eventInfo?: {
     name: string;
     date: string;
-    description: string;
+    description: [{ children }];
     slug: string;
     image: string;
     _id: string;

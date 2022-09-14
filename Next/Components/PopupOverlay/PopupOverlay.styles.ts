@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Theme from "../../styles/styledComponents/theme";
 
 export const Overlay = styled.div`
-  background-color: hotpink;
+  background-color: ${({ theme }) => theme.color.white};
   position: absolute;
   top: 0px;
   z-index: 3;
@@ -53,15 +53,23 @@ export const CloseContainer = styled.div`
 
 export const NameContainer = styled.div`
   position: relative;
-  z-index: 1;
-  top: ${({ theme }) => theme.margin.xLarge};
   background-color: ${({ theme }) => theme.color.purple};
   font-family: ${({ theme }) => theme.font.BigCaslon};
+  font-size: ${({ theme }) => theme.fontSize.h2};
   color: ${({ theme }) => theme.color.white};
-  height: ${({ theme }) => theme.margin.xLarge};
-  width: 40%;
-  margin-top: ${({ theme }) => theme.margin.large};
+  width: 50%;
+  padding: ${({ theme }) => theme.padding.large};
+  top: -5rem;
+
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+export const DescriptionContainer = styled.div`
+  position: relative;
+  font-family: ${({ theme }) => theme.font.DMSans};
+  font-size: ${({ theme }) => theme.fontSize.text};
+  padding: ${({ theme }) => theme.padding.large};
+  top: -5rem;
 `;
