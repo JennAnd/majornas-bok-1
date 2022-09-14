@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Link from "next/link";
+import { Bookgrid } from "../Components/Bookgrid/Bookgrid";
 import { Footer } from "../Components/Footer/Footer";
 import { SanityClient } from "../SanityClient";
 
@@ -12,6 +13,8 @@ const Home: NextPage<propInterface> = ({ openingHours, companyInfo }) => {
   return (
     <div>
       <Link href="sanityTestPage">Sanity test</Link>
+      <Bookgrid />
+
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis
         mollitia. Doloremque laboriosam dolorum adipisci ullam odit minus nulla
