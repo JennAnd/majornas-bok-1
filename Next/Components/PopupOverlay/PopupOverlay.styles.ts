@@ -70,6 +70,23 @@ export const DescriptionContainer = styled.div`
   position: relative;
   font-family: ${({ theme }) => theme.font.DMSans};
   font-size: ${({ theme }) => theme.fontSize.text};
-  padding: ${({ theme }) => theme.padding.large};
+
   top: -5rem;
+`;
+
+export const SignUpContainer = styled.p`
+  font-family: ${({ theme }) => theme.font.BigCaslon};
+  color: ${({ theme }) => theme.color.black};
+  font-size: ${({ theme }) => theme.fontSize.h2};
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 1px;
+  position: relative;
+  top: -5rem;
+`;
+
+export const InfoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: ${({ theme }) => theme.padding.large};
 `;

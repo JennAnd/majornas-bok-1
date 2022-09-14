@@ -8,4 +8,8 @@ export type ButtonProps = {
   children?: React.ReactNode;
   alt?: string;
   ref?: HTMLDivElement | null;
+  width?: string;
+  height?: string;
+  padding?: string;
+  fontSize?: string;
 };

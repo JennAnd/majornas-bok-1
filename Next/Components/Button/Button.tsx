@@ -10,7 +10,23 @@ export const Button: React.FC<ButtonProps> = ({
   children,
   alt,
   ref,
+  width,
+  height,
+  padding,
+  fontSize,
   ...rest
 }) => {
-  return <S.Button onClick={onClick}>{text}</S.Button>;
+  return (
+    <S.Button
+      style={{
+        width: `${width}`,
+        height: `${height}`,
+        padding: `${padding}`,
+        fontSize: `${fontSize}`,
+      }}
+      onClick={onClick}
+    >
+      {text}
+    </S.Button>
+  );
 };

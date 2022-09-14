@@ -50,7 +50,6 @@ const Event: NextPage<propInterface> = ({
           eventInfo={selectedItem}
         />
       )}
-
       <Footer openingHours={openingHours} companyInfo={companyInfo} />
     </div>
   );

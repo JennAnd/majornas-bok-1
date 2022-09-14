@@ -14,10 +14,7 @@ export const Button = styled.button`
   align-items: center;
 
   border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  min-height: 33px;
-  font-size: 1rem;
-  background-color: #585858;
+  background-color: ${({ theme }) => theme.color.black};
   background-position: center;
   background-size: cover;
   color: white;
@@ -26,6 +23,6 @@ export const Button = styled.button`
 
   &:hover {
     cursor: pointer;
-    color: red;
+    background-color: ${({ theme }) => theme.color.grey};
   }
 `;
