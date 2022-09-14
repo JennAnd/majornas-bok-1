@@ -1,11 +1,15 @@
 import type { NextPage } from "next";
 import Link from "next/link";
+import { Navbar } from "../Components/Navbar/Navbar";
 import { Footer } from "../Components/Footer/Footer";
 
 const Home: NextPage = () => {
   return (
     <div>
-      <Link href="sanityTestPage">Sanity test</Link>
+      {/* <Link href="sanityTestPage">Sanity test</Link> */}
+
+      <Navbar />
+
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis
         mollitia. Doloremque laboriosam dolorum adipisci ullam odit minus nulla
