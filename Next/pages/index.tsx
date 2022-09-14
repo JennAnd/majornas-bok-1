@@ -6,7 +6,11 @@ import { Footer } from "../Components/Footer/Footer";
 import { SanityClient } from "../SanityClient";
 
 interface propInterface {
-  heroStripesText: {};
+  heroStripesText: {
+    firstText: string;
+    secondText: string;
+    thirdText: string;
+  };
 
   companyInfo: {};
   openingHours: [{}];

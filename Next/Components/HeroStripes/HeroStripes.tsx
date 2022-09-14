@@ -40,9 +40,15 @@ const StripeContainer = styled.div`
   justify-content: space-between;
 `;
 
-interface StripesText {}
+interface StripesText {
+  heroStripesText: {
+    firstText: string;
+    secondText: string;
+    thirdText: string;
+  };
+}
 
-export const HeroStripes: FC = ({ heroStripesText }) => {
+export const HeroStripes: FC<StripesText> = ({ heroStripesText }) => {
   return (
     <StripeContainer>
       <Stripes tall></Stripes>
