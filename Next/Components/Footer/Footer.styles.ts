@@ -123,19 +123,19 @@ export const CompanyInfoContainer = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  @media (min-width: 768px) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     left: calc(50% - 275px);
     bottom: 330px;
     width: 550px;
     height: 500px;
   }
-  @media (min-width: 1024px) {
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     left: calc(25% - 170px);
     bottom: 165px;
     width: 260px;
     height: 210px;
   }
-  @media (min-width: 1280px) {
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     left: calc(25% - 235px);
     bottom: 230px;
     width: 360px;
@@ -149,14 +149,14 @@ export const CompanyName = styled.p`
   font-weight: bold;
   color: #292929;
 
-  @media (min-width: 768px) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     font-size: 3.9rem;
   }
-  @media (min-width: 1024px) {
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     font-size: 1.6rem;
     margin-bottom: 1rem;
   }
-  @media (min-width: 1280px) {
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     font-size: 2.6rem;
     margin-top: 0;
     margin-bottom: 1rem;
@@ -171,19 +171,19 @@ export const CompanyInfo = styled.p`
     margin-bottom: 1rem;
   }
 
-  @media (min-width: 768px) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     font-size: 2.25rem;
     &:nth-child(3) {
       margin-bottom: 2rem;
     }
   }
-  @media (min-width: 1024px) {
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     font-size: 1.2rem;
     &:nth-child(3) {
       margin-bottom: 1rem;
     }
   }
-  @media (min-width: 1280px) {
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     font-size: 1.6rem;
   }
 `;
@@ -197,13 +197,13 @@ export const CompanyContact = styled.a`
     text-decoration: underline;
   }
 
-  @media (min-width: 768px) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     font-size: 2.25rem;
   }
-  @media (min-width: 1024px) {
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     font-size: 1.2rem;
   }
-  @media (min-width: 1280px) {
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     font-size: 1.6rem;
   }
 `;
