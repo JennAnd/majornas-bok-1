@@ -6,7 +6,7 @@ export const Container = styled.div`
   height: 0;
   width: 100vw;
 
-  background-color: hotpink;
+  background-color: ${({ theme }) => theme.primaryColor.green};
   background: url("/Images/Footer/Footer_Mobile.svg");
   background-size: contain !important;
   background-repeat: no-repeat !important;
@@ -14,6 +14,7 @@ export const Container = styled.div`
   padding-bottom: 292%;
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
+    background-color: ${({ theme }) => theme.primaryColor.green};
     background: url("/Images/Footer/Footer_Desktop.svg");
     padding-bottom: 93%;
     background-position: left !important;
