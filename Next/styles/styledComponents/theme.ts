@@ -43,10 +43,12 @@ const Theme = {
     xLarge: "40px",
   },
   margin: {
-    small: "4px",
-    medium: "8px",
-    large: "16px",
-    xLarge: "32px",
+    none: "0rem",
+    small: "0.25rem",
+    medium: "0.5rem",
+    large: "1rem",
+    xLarge: "2rem",
+    xxLarge: "3rem",
   },
   borderRadius: {
     small: "0.125rem",

@@ -62,15 +62,15 @@ export const OpeningsHoursTitle = styled.p`
   margin-top: 0.75rem;
 
   @media (${({ theme }) => theme.breakpoint.tablet}) {
-    font-size: 3.5rem;
+    font-size: ${({ theme }) => theme.fontSize.xxLarge};
     margin-bottom: 2.75rem;
   }
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    font-size: 2.25rem;
+    font-size: ${({ theme }) => theme.fontSize.xlarge};
     margin-bottom: 1.5rem;
   }
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    font-size: 3.25rem;
+    font-size: ${({ theme }) => theme.fontSize.xxLarge};
     margin-bottom: 1.5rem;
   }
 `;
@@ -92,21 +92,21 @@ export const OpeningsHoursDays = styled.p`
 `;
 
 export const OpeningsHoursTime = styled.p`
-  font-size: 1.3rem;
+  font-size: ${({ theme }) => theme.fontSize.medium};
   font-weight: 400;
   margin-bottom: 1.75rem;
   margin-top: 0.25rem;
 
   @media (${({ theme }) => theme.breakpoint.tablet}) {
-    font-size: 2rem;
+    font-size: ${({ theme }) => theme.fontSize.large};
     margin-bottom: 2.75rem;
   }
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    font-size: 1.6rem;
+    font-size: ${({ theme }) => theme.fontSize.h2};
     margin-bottom: 1.5rem;
   }
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    font-size: 2rem;
+    font-size: ${({ theme }) => theme.fontSize.large};
     margin-bottom: 2.5rem;
   }
 `;
@@ -144,8 +144,8 @@ export const CompanyInfoContainer = styled.div`
 `;
 
 export const CompanyName = styled.p`
-  font-size: 1.9rem;
-  font-family: "Courier New", Courier, monospace;
+  font-size: 1.88rem;
+  font-family: ${({ theme }) => theme.font.serif};
   font-weight: bold;
   color: #292929;
 
@@ -154,18 +154,17 @@ export const CompanyName = styled.p`
   }
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     font-size: 1.6rem;
-    margin-bottom: 1rem;
+    margin-bottom: ${({ theme }) => theme.margin.large};
   }
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     font-size: 2.6rem;
     margin-top: 0;
-    margin-bottom: 1rem;
   }
 `;
 export const CompanyInfo = styled.p`
-  font-family: "Courier New", Courier, monospace;
+  font-family: ${({ theme }) => theme.font.serif};
   color: #292929;
-  margin: 0;
+  margin: ${({ theme }) => theme.margin.none};
 
   &:nth-child(3) {
     margin-bottom: 1rem;
@@ -174,13 +173,13 @@ export const CompanyInfo = styled.p`
   @media (${({ theme }) => theme.breakpoint.tablet}) {
     font-size: 2.25rem;
     &:nth-child(3) {
-      margin-bottom: 2rem;
+      margin-bottom: ${({ theme }) => theme.margin.xLarge};
     }
   }
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     font-size: 1.2rem;
     &:nth-child(3) {
-      margin-bottom: 1rem;
+      margin-bottom: ${({ theme }) => theme.margin.large};
     }
   }
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
@@ -189,7 +188,7 @@ export const CompanyInfo = styled.p`
 `;
 
 export const CompanyContact = styled.a`
-  font-family: "Courier New", Courier, monospace;
+  font-family: ${({ theme }) => theme.font.serif};
   color: #292929;
   text-decoration: none;
   &:hover {
