@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { HeroStripes } from "../Components/HeroStripes/HeroStripes";
+import { Bookgrid } from "../Components/Bookgrid/Bookgrid";
 import { Footer } from "../Components/Footer/Footer";
 import { SanityClient } from "../SanityClient";
 
@@ -26,6 +27,8 @@ const Home: NextPage<propInterface> = ({
       <HeroStripes heroStripesText={heroStripesText}></HeroStripes>
 
       <Link href="sanityTestPage">Sanity test</Link>
+      <Bookgrid />
+
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis
         mollitia. Doloremque laboriosam dolorum adipisci ullam odit minus nulla
