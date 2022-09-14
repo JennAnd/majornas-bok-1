@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Link from "next/link";
+import { Navbar } from "../Components/Navbar/Navbar";
 import styles from "../styles/Home.module.css";
 import { HeroStripes } from "../Components/HeroStripes/HeroStripes";
 import { Bookgrid } from "../Components/Bookgrid/Bookgrid";
@@ -24,10 +25,16 @@ const Home: NextPage<propInterface> = ({
 }) => {
   return (
     <div>
+
+      {/* <Link href="sanityTestPage">Sanity test</Link> */}
+
+      <Navbar />
+
       <HeroStripes heroStripesText={heroStripesText}></HeroStripes>
 
       <Link href="sanityTestPage">Sanity test</Link>
       <Bookgrid />
+
 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis
