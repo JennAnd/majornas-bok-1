@@ -15,6 +15,7 @@ const Stripes = styled.div<LengthProps>`
   padding: 0.2rem 1rem;
 
   height: 1.5rem;
+  max-width: 80rem;
   width: 85%;
   width: ${(props) => {
     if (props.tallest) {
@@ -39,31 +40,23 @@ const StripeContainer = styled.div`
   justify-content: space-between;
 `;
 
-interface StripesText {
-  first_text?: string;
-  second_text?: string;
-  third_text?: string;
-}
+interface StripesText {}
 
-export const HeroStripes: FC<StripesText> = ({
-  first_text,
-  second_text,
-  third_text,
-}) => {
+export const HeroStripes: FC = ({ heroStripesText }) => {
   return (
     <StripeContainer>
       <Stripes tall></Stripes>
       <Stripes></Stripes>
       <Stripes tallest></Stripes>
-      <Stripes short>{first_text}</Stripes>
+      <Stripes short>{heroStripesText.firstText}</Stripes>
       <Stripes tall></Stripes>
       <Stripes></Stripes>
       <Stripes tallest></Stripes>
-      <Stripes short>{second_text}</Stripes>
+      <Stripes short>{heroStripesText.secondText}</Stripes>
       <Stripes></Stripes>
       <Stripes tallest></Stripes>
       <Stripes></Stripes>
-      <Stripes short>{third_text}</Stripes>
+      <Stripes short>{heroStripesText.thirdText}</Stripes>
       <Stripes tall></Stripes>
       <Stripes tallest></Stripes>
       <Stripes></Stripes>
