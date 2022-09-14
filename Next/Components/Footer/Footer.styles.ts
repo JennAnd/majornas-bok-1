@@ -14,7 +14,7 @@ export const Container = styled.div`
   background-position: center !important;
   padding-bottom: 290%;
 
-  @media (min-width: 1024px) {
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     background: url("/Images/Footer/Footer_Desktop.svg");
     padding-bottom: 93%;
     background-position: left !important;
@@ -22,9 +22,9 @@ export const Container = styled.div`
 `;
 
 export const OpeningsHoursContainer = styled.div`
-  font-family: "Inter", sans-serif;
-  color: #fff;
-  font-size: 1.25rem;
+  font-family: ${({ theme }) => theme.font.default};
+  color: ${({ theme }) => theme.primaryColor.white};
+  font-size: ${({ theme }) => theme.fontSize.medium};
   text-transform: uppercase;
   text-align: center;
   display: flex;
@@ -39,16 +39,16 @@ export const OpeningsHoursContainer = styled.div`
   padding: 0;
   margin: 0;
 
-  @media (min-width: 768px) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     bottom: 1500px;
     width: 480px;
   }
-  @media (min-width: 1024px) {
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     bottom: 520px;
     width: 280px;
     right: 120px;
   }
-  @media (min-width: 1280px) {
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     bottom: 750px;
     width: 400px;
     right: 185px;
@@ -56,21 +56,21 @@ export const OpeningsHoursContainer = styled.div`
 `;
 
 export const OpeningsHoursTitle = styled.p`
-  font-size: 1.6rem;
+  font-size: ${({ theme }) => theme.fontSize.h2};
   font-weight: 600;
   letter-spacing: 1px;
   margin-bottom: 0.75rem;
   margin-top: 0.75rem;
 
-  @media (min-width: 768px) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     font-size: 3.5rem;
     margin-bottom: 2.75rem;
   }
-  @media (min-width: 1024px) {
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     font-size: 2.25rem;
     margin-bottom: 1.5rem;
   }
-  @media (min-width: 1280px) {
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     font-size: 3.25rem;
     margin-bottom: 1.5rem;
   }
@@ -81,13 +81,13 @@ export const OpeningsHoursDays = styled.p`
   margin-bottom: 0;
   margin-top: 0;
 
-  @media (min-width: 768px) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     font-size: 2rem;
   }
-  @media (min-width: 1024px) {
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     font-size: 1.8rem;
   }
-  @media (min-width: 1280px) {
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     font-size: 2.25rem;
   }
 `;
@@ -98,15 +98,15 @@ export const OpeningsHoursTime = styled.p`
   margin-bottom: 1.75rem;
   margin-top: 0.25rem;
 
-  @media (min-width: 768px) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     font-size: 2.75rem;
     margin-bottom: 2.75rem;
   }
-  @media (min-width: 1024px) {
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     font-size: 1.6rem;
     margin-bottom: 1.5rem;
   }
-  @media (min-width: 1280px) {
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     font-size: 2rem;
     margin-bottom: 2.5rem;
   }
@@ -122,6 +122,6 @@ export const CompanyInfoContainer = styled.div`
 `;
 
 export const CompanyName = styled.p`
-  font-family: "Courier New", Courier, monospace;
+  font-family: ${({ theme }) => theme.font.serif};
   color: #292929;
 `;
