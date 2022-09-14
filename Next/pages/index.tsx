@@ -9,9 +9,14 @@ import { SanityClient } from "../SanityClient";
 interface propInterface {
   companyInfo: {};
   openingHours: [{}];
+  events: [{}];
 }
 
-const Home: NextPage<propInterface> = ({ openingHours, companyInfo }) => {
+const Home: NextPage<propInterface> = ({
+  openingHours,
+  companyInfo,
+  events,
+}) => {
   const [showPopup, setShowPopup] = useState(false);
 
   return (
@@ -39,6 +44,7 @@ const Home: NextPage<propInterface> = ({ openingHours, companyInfo }) => {
 export const getServerSideProps = async () => {
   const openingHours = await SanityClient.fetch(`*[_type == 'openingHours']`);
   const companyInfo = await SanityClient.fetch(`*[_type == "info"][0]`);
+  const eventInfo = await SanityClient.fetch(`*[_type == "event"]`);
 
   return { props: { openingHours, companyInfo } };
 };

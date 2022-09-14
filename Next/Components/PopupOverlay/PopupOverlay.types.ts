@@ -7,4 +7,6 @@ export type PopupOverlayProps = {
   onClick?: MouseEventHandler<HTMLButtonElement>;
   children?: React.ReactNode;
   alt?: string;
+  imageURL?: string;
+  imageElement?: HTMLImageElement;
 };

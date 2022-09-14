@@ -18,7 +18,8 @@ const Theme = {
     white: "#FFF",
   },
   font: {
-    default: '"Inter", sans-serif',
+    Inter: '"Inter", sans-serif',
+    DMSans: '"DM Sans", sans-serif',
     serif: '"Courier", serif',
   },
   transition: {
