@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const NavWrapper = styled.div`
-  background-color: black;
+  background-color: ${({ theme }) => theme.color.black};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -29,7 +29,7 @@ export const NavText = styled.p`
   line-height: 23.23px;
   cursor: pointer;
   text-align: center;
-  color: white;
+  background-color: ${({ theme }) => theme.color.white};
 
   @media (min-width: 768px) {
   }
@@ -57,14 +57,14 @@ export const NavMenu = styled.div`
     display: flex;
     justify-content: space-evenly;
     gap: 140px;
-    color: white;
+    background-color: ${({ theme }) => theme.color.white};
     font-family: "Big Caslon";
     font-weight: 500;
     font-size: 20px;
     line-height: 24.18px;
     text-decoration: none;
     a {
-      color: white;
+      background-color: ${({ theme }) => theme.color.white};
       text-decoration: none;
     }
   }
