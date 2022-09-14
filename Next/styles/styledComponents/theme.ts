@@ -20,6 +20,7 @@ const Theme = {
   font: {
     Inter: '"Inter", sans-serif',
     DMSans: '"DM Sans", sans-serif',
+    BigCaslon: "BigCaslon",
     serif: '"Courier", serif',
   },
   transition: {

@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
-import Link from "next/link";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Button } from "../Components/Button/Button";
 import { Footer } from "../Components/Footer/Footer";
 import { PopupOverlay } from "../Components/PopupOverlay/PopupOverlay";

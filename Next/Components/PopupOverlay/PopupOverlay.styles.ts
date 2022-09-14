@@ -43,4 +43,25 @@ export const CloseContainer = styled.div`
   display: flex;
   justify-content: center;
   top: ${({ theme }) => theme.margin.xxLarge};
+  opacity: 0.85;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+`;
+
+export const NameContainer = styled.div`
+  position: relative;
+  z-index: 1;
+  top: ${({ theme }) => theme.margin.xLarge};
+  background-color: ${({ theme }) => theme.color.purple};
+  font-family: ${({ theme }) => theme.font.BigCaslon};
+  color: ${({ theme }) => theme.color.white};
+  height: ${({ theme }) => theme.margin.xLarge};
+  width: 40%;
+  margin-top: ${({ theme }) => theme.margin.large};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

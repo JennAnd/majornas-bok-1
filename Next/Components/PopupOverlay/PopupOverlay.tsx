@@ -21,6 +21,7 @@ export const PopupOverlay: React.FC<PopupOverlayProps> = ({
       <S.CloseContainer>
         <Image src="/Icons/VectorClose.svg" width={15} height={15} />
       </S.CloseContainer>
+      <S.NameContainer>{eventInfo.name}</S.NameContainer>
     </S.Overlay>
   );
 };

@@ -1,9 +1,6 @@
 import type { NextPage } from "next";
-import Link from "next/link";
-import { useRef, useState } from "react";
-import { Button } from "../Components/Button/Button";
+import { useState } from "react";
 import { Footer } from "../Components/Footer/Footer";
-import { PopupOverlay } from "../Components/PopupOverlay/PopupOverlay";
 import { SanityClient } from "../SanityClient";
 
 interface propInterface {
@@ -21,43 +18,9 @@ interface propInterface {
   ];
 }
 
-const Home: NextPage<propInterface> = ({
-  openingHours,
-  companyInfo,
-  eventInfo,
-}) => {
-  const [showPopup, setShowPopup] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(null);
-
+const Home: NextPage<propInterface> = ({ openingHours, companyInfo }) => {
   return (
     <div>
-      <Link href="sanityTestPage">Sanity test</Link>
-
-      {/* {eventInfo.map((item) => {
-        return (
-          <Button
-            key={item._key}
-            text={item.name}
-            onClick={() => {
-              setShowPopup(!showPopup);
-              setSelectedItem(item);
-            }}
-          />
-        );
-      })}
-      {showPopup && <PopupOverlay eventInfo={selectedItem} />} */}
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis
-        mollitia. Doloremque laboriosam dolorum adipisci ullam odit minus nulla
-        consequuntur ab? Incidunt porro libero saepe voluptatem consequatur.
-        Voluptate, saepe fuga.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis
-        mollitia. Doloremque laboriosam dolorum adipisci ullam odit minus nulla
-        consequuntur ab? Incidunt porro libero saepe voluptatem consequatur.
-        Voluptate, saepe fuga.
-      </p>
       <Footer openingHours={openingHours} companyInfo={companyInfo} />
     </div>
   );
