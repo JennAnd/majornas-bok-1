@@ -13,6 +13,12 @@ interface propInterface {
 const Home: NextPage<propInterface> = ({ openingHours, companyInfo }) => {
   return (
     <div>
+      <HeroStripes
+        first_text="BOOK"
+        second_text="BOOK"
+        third_text="BOOK"
+      ></HeroStripes>
+
       <Link href="sanityTestPage">Sanity test</Link>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis

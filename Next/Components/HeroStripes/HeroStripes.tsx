@@ -8,9 +8,13 @@ interface LengthProps {
 }
 
 const Stripes = styled.div<LengthProps>`
-  background: white;
-  height: 2rem;
+  background-color: ${({ theme }) => theme.color.black};
+  color: ${({ theme }) => theme.color.white};
 
+  text-align: start;
+  padding: 0.2rem 1rem;
+
+  height: 1.5rem;
   width: 85%;
   width: ${(props) => {
     if (props.tallest) {
@@ -26,7 +30,6 @@ const Stripes = styled.div<LengthProps>`
 `;
 
 const StripeContainer = styled.div`
-  background: pink;
   width: 50%;
   height: 40rem;
 
@@ -56,10 +59,13 @@ export const HeroStripes: FC<StripesText> = ({
       <Stripes tall></Stripes>
       <Stripes></Stripes>
       <Stripes tallest></Stripes>
-      <Stripes short></Stripes>
+      <Stripes short>{second_text}</Stripes>
       <Stripes></Stripes>
       <Stripes tallest></Stripes>
       <Stripes></Stripes>
+      <Stripes short>{third_text}</Stripes>
+      <Stripes tall></Stripes>
+      <Stripes tallest></Stripes>
       <Stripes></Stripes>
     </StripeContainer>
   );
