@@ -6,7 +6,7 @@ export const Container = styled.div`
   height: 0;
   width: 100vw;
 
-  background-color: ${({ theme }) => theme.primaryColor.green};
+  background-color: ${({ theme }) => theme.color.green};
   background: url("/Images/Footer/Footer_Mobile.svg");
   background-size: contain !important;
   background-repeat: no-repeat !important;
@@ -14,7 +14,7 @@ export const Container = styled.div`
   padding-bottom: 292%;
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    background-color: ${({ theme }) => theme.primaryColor.green};
+    background-color: ${({ theme }) => theme.color.green};
     background: url("/Images/Footer/Footer_Desktop.svg");
     padding-bottom: 93%;
     background-position: left !important;
@@ -23,7 +23,7 @@ export const Container = styled.div`
 
 export const OpeningsHoursContainer = styled.div`
   font-family: ${({ theme }) => theme.font.default};
-  color: ${({ theme }) => theme.primaryColor.white};
+  color: ${({ theme }) => theme.color.white};
   font-size: ${({ theme }) => theme.fontSize.medium};
   text-transform: uppercase;
   text-align: center;

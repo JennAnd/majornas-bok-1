@@ -6,7 +6,7 @@ const breakpoint = {
 
 const Theme = {
   breakpoint,
-  primaryColor: {
+  color: {
     orange: "#FEB28C",
     yellow: "#FFF4BF",
     purple: "#5F47A6",
