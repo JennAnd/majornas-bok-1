@@ -6,14 +6,15 @@ export const Container = styled.div`
   height: 0;
   width: 100vw;
 
-  background-color: hotpink;
+  background-color: ${({ theme }) => theme.color.green};
   background: url("/Images/Footer/Footer_Mobile.svg");
   background-size: contain !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
   padding-bottom: 292%;
 
-  @media (min-width: 1024px) {
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    background-color: ${({ theme }) => theme.color.green};
     background: url("/Images/Footer/Footer_Desktop.svg");
     padding-bottom: 93%;
     background-position: left !important;
@@ -21,9 +22,9 @@ export const Container = styled.div`
 `;
 
 export const OpeningsHoursContainer = styled.div`
-  font-family: "Inter", sans-serif;
-  color: #fff;
-  font-size: 1.25rem;
+  font-family: ${({ theme }) => theme.font.default};
+  color: ${({ theme }) => theme.color.white};
+  font-size: ${({ theme }) => theme.fontSize.medium};
   text-transform: uppercase;
   text-align: center;
   display: flex;
@@ -38,16 +39,16 @@ export const OpeningsHoursContainer = styled.div`
   padding: 0;
   margin: 0;
 
-  @media (min-width: 768px) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     bottom: 1500px;
     width: 480px;
   }
-  @media (min-width: 1024px) {
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     bottom: 520px;
     width: 280px;
     right: 120px;
   }
-  @media (min-width: 1280px) {
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     bottom: 750px;
     width: 400px;
     right: calc(25% - 200px);
@@ -55,22 +56,22 @@ export const OpeningsHoursContainer = styled.div`
 `;
 
 export const OpeningsHoursTitle = styled.p`
-  font-size: 1.6rem;
+  font-size: ${({ theme }) => theme.fontSize.h2};
   font-weight: 600;
   letter-spacing: 1px;
   margin-bottom: 0.75rem;
   margin-top: 0.75rem;
 
-  @media (min-width: 768px) {
-    font-size: 3.5rem;
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+    font-size: ${({ theme }) => theme.fontSize.xxLarge};
     margin-bottom: 2.75rem;
   }
-  @media (min-width: 1024px) {
-    font-size: 2.25rem;
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    font-size: ${({ theme }) => theme.fontSize.xlarge};
     margin-bottom: 1.5rem;
   }
-  @media (min-width: 1280px) {
-    font-size: 3.25rem;
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    font-size: ${({ theme }) => theme.fontSize.xxLarge};
     margin-bottom: 1.5rem;
   }
 `;
@@ -80,33 +81,35 @@ export const OpeningsHoursDays = styled.p`
   margin-bottom: 0;
   margin-top: 0;
 
-  @media (min-width: 768px) {
+
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+
     font-size: 2.75rem;
   }
-  @media (min-width: 1024px) {
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     font-size: 1.8rem;
   }
-  @media (min-width: 1280px) {
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     font-size: 2.25rem;
   }
 `;
 
 export const OpeningsHoursTime = styled.p`
-  font-size: 1.3rem;
+  font-size: ${({ theme }) => theme.fontSize.medium};
   font-weight: 400;
   margin-bottom: 1.75rem;
   margin-top: 0.25rem;
 
-  @media (min-width: 768px) {
-    font-size: 2rem;
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+    font-size: ${({ theme }) => theme.fontSize.large};
     margin-bottom: 2.75rem;
   }
-  @media (min-width: 1024px) {
-    font-size: 1.6rem;
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    font-size: ${({ theme }) => theme.fontSize.h2};
     margin-bottom: 1.5rem;
   }
-  @media (min-width: 1280px) {
-    font-size: 2rem;
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    font-size: ${({ theme }) => theme.fontSize.large};
     margin-bottom: 2.5rem;
   }
 `;
@@ -123,19 +126,22 @@ export const CompanyInfoContainer = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  @media (min-width: 768px) {
+
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     left: calc(50% - 275px);
     bottom: 330px;
     width: 550px;
     height: 500px;
   }
-  @media (min-width: 1024px) {
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     left: calc(25% - 170px);
     bottom: 165px;
     width: 260px;
     height: 210px;
   }
-  @media (min-width: 1280px) {
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     left: calc(25% - 235px);
     bottom: 230px;
     width: 360px;
@@ -144,52 +150,52 @@ export const CompanyInfoContainer = styled.div`
 `;
 
 export const CompanyName = styled.p`
-  font-size: 1.9rem;
-  font-family: "Courier New", Courier, monospace;
+  font-size: 1.88rem;
+  font-family: ${({ theme }) => theme.font.serif};
   font-weight: bold;
   color: #292929;
 
-  @media (min-width: 768px) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     font-size: 3.9rem;
   }
-  @media (min-width: 1024px) {
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     font-size: 1.6rem;
-    margin-bottom: 1rem;
+    margin-bottom: ${({ theme }) => theme.margin.large};
   }
-  @media (min-width: 1280px) {
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     font-size: 2.6rem;
     margin-top: 0;
-    margin-bottom: 1rem;
   }
 `;
 export const CompanyInfo = styled.p`
-  font-family: "Courier New", Courier, monospace;
+  font-family: ${({ theme }) => theme.font.serif};
   color: #292929;
-  margin: 0;
+  margin: ${({ theme }) => theme.margin.none};
+
 
   &:nth-child(3) {
     margin-bottom: 1rem;
   }
 
-  @media (min-width: 768px) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     font-size: 2.25rem;
     &:nth-child(3) {
-      margin-bottom: 2rem;
+      margin-bottom: ${({ theme }) => theme.margin.xLarge};
     }
   }
-  @media (min-width: 1024px) {
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     font-size: 1.2rem;
     &:nth-child(3) {
-      margin-bottom: 1rem;
+      margin-bottom: ${({ theme }) => theme.margin.large};
     }
   }
-  @media (min-width: 1280px) {
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     font-size: 1.6rem;
   }
 `;
 
 export const CompanyContact = styled.a`
-  font-family: "Courier New", Courier, monospace;
+  font-family: ${({ theme }) => theme.font.serif};
   color: #292929;
   text-decoration: none;
   &:hover {
@@ -197,13 +203,13 @@ export const CompanyContact = styled.a`
     text-decoration: underline;
   }
 
-  @media (min-width: 768px) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     font-size: 2.25rem;
   }
-  @media (min-width: 1024px) {
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     font-size: 1.2rem;
   }
-  @media (min-width: 1280px) {
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     font-size: 1.6rem;
   }
 `;
