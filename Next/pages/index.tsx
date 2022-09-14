@@ -1,6 +1,9 @@
 import type { NextPage } from "next";
 import Link from "next/link";
+import { useRef, useState } from "react";
+import { Button } from "../Components/Button/Button";
 import { Footer } from "../Components/Footer/Footer";
+import { PopupOverlay } from "../Components/PopupOverlay/PopupOverlay";
 import { SanityClient } from "../SanityClient";
 
 interface propInterface {
@@ -9,9 +12,13 @@ interface propInterface {
 }
 
 const Home: NextPage<propInterface> = ({ openingHours, companyInfo }) => {
+  const [showPopup, setShowPopup] = useState(false);
+
   return (
     <div>
       <Link href="sanityTestPage">Sanity test</Link>
+      <Button text="Click me" onClick={() => setShowPopup(!showPopup)} />
+      {showPopup && <PopupOverlay />}
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis
         mollitia. Doloremque laboriosam dolorum adipisci ullam odit minus nulla

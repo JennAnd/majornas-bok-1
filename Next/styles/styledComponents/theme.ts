@@ -37,10 +37,12 @@ const Theme = {
     xxLarge: "3.5rem", // 56px
   },
   padding: {
-    small: "5px",
-    medium: "10px",
-    large: "20px",
-    xLarge: "40px",
+    none: "0rem",
+    small: "0.25rem",
+    medium: "0.5rem",
+    large: "1rem",
+    xLarge: "2rem",
+    xxLarge: "3rem",
   },
   margin: {
     none: "0rem",

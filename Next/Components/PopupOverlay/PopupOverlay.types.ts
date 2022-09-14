@@ -1,11 +1,10 @@
 import { MouseEventHandler } from "react";
 
-export type ButtonProps = {
+export type PopupOverlayProps = {
   text?: string;
   href?: string;
   className?: string;
-  onClick?: () => void;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
   children?: React.ReactNode;
   alt?: string;
-  ref?: HTMLDivElement | null;
 };
