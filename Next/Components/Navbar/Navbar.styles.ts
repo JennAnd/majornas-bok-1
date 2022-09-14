@@ -29,7 +29,7 @@ export const NavText = styled.p`
   line-height: 23.23px;
   cursor: pointer;
   text-align: center;
-  background-color: ${({ theme }) => theme.color.white};
+  color: ${({ theme }) => theme.color.white};
 
   @media (min-width: 768px) {
   }
@@ -57,14 +57,13 @@ export const NavMenu = styled.div`
     display: flex;
     justify-content: space-evenly;
     gap: 140px;
-    background-color: ${({ theme }) => theme.color.white};
     font-family: "Big Caslon";
     font-weight: 500;
     font-size: 20px;
     line-height: 24.18px;
     text-decoration: none;
     a {
-      background-color: ${({ theme }) => theme.color.white};
+      color: ${({ theme }) => theme.color.white};
       text-decoration: none;
     }
   }
