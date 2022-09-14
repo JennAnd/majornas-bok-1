@@ -6,7 +6,7 @@ import { HeroStripes } from "../Components/HeroStripes/HeroStripes";
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
-      <HeroStripes></HeroStripes>
+      <HeroStripes first_text="BOOK BOOK BOOK"></HeroStripes>
       <Link href="sanityTestPage">Sanity test</Link>
     </div>
   );
