@@ -9,7 +9,6 @@ export const Overlay = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 5rem;
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     height: 40vh;
@@ -17,11 +16,12 @@ export const Overlay = styled.div`
     top: calc(50% - 40vh);
     left: calc(50% - 42.5vw);
     flex-direction: row;
+    gap: 5rem;
   }
 `;
 
-export const left = styled.div`
-  display: block;
+export const LeftContainer = styled.div`
+  /* display: block; */
   width: 100%;
   left: 0;
   height: 100%;
@@ -29,8 +29,8 @@ export const left = styled.div`
     width: 50%;
   }
 `;
-export const right = styled.div`
-  display: block;
+export const RightContainer = styled.div`
+  /* display: block; */
   width: 100%;
   right: 0;
   @media (${({ theme }) => theme.breakpoint.desktop}) {
@@ -41,13 +41,13 @@ export const right = styled.div`
 export const DateContainer = styled.div`
   position: relative;
   z-index: 1;
-  top: ${({ theme }) => theme.margin.xLarge};
+  top: ${({ theme }) => theme.margin.large};
   background-color: ${({ theme }) => theme.color.red};
   font-family: ${({ theme }) => theme.font.DMSans};
   color: ${({ theme }) => theme.color.white};
   height: ${({ theme }) => theme.margin.xLarge};
   width: 50%;
-  margin-top: ${({ theme }) => theme.margin.large};
+  /* margin-top: ${({ theme }) => theme.margin.large}; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,7 +61,7 @@ export const DateContainer = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  background-color: limegreen;
+  background-color: ${({ theme }) => theme.color.orange};
   position: relative;
   width: 100%;
   height: 100%;
@@ -83,7 +83,7 @@ export const CloseContainer = styled.div`
   border-radius: ${({ theme }) => theme.borderRadius.large};
   display: flex;
   justify-content: center;
-  top: ${({ theme }) => theme.margin.xxLarge};
+  top: ${({ theme }) => theme.margin.large};
   opacity: 0.85;
 
   &:hover {
@@ -104,9 +104,9 @@ export const NameContainer = styled.div`
   font-family: ${({ theme }) => theme.font.BigCaslon};
   font-size: ${({ theme }) => theme.fontSize.h2};
   color: ${({ theme }) => theme.color.white};
-  /* width: 50%; */
-  padding: ${({ theme }) => theme.padding.large};
-  top: -5rem;
+  width: fit-content;
+  padding: 0.5rem ${({ theme }) => theme.padding.xLarge};
+  top: -2.5rem;
 
   display: flex;
   justify-content: center;
@@ -134,7 +134,7 @@ export const DescriptionContainer = styled.div`
   position: relative;
   font-family: ${({ theme }) => theme.font.DMSans};
   font-size: ${({ theme }) => theme.fontSize.text};
-  top: -5rem;
+  top: -3rem;
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
   }

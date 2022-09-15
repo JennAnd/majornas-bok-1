@@ -20,17 +20,17 @@ export const PopupOverlay: React.FC<PopupOverlayProps> = ({
 
   return (
     <S.Overlay>
-      <S.left>
+      <S.LeftContainer>
         <S.DateContainer>{eventInfo.date}</S.DateContainer>
         <S.ImageContainer>
           <Image
             src={eventInfo.imageUrl}
             alt="Event image"
             layout="fill"
-            objectFit="cover"
+            objectFit="fill"
           />
         </S.ImageContainer>
-      </S.left>
+      </S.LeftContainer>
 
       <S.CloseContainer onClick={onClick}>
         <Image
@@ -40,7 +40,8 @@ export const PopupOverlay: React.FC<PopupOverlayProps> = ({
           alt="Close"
         />
       </S.CloseContainer>
-      <S.right>
+
+      <S.RightContainer>
         <S.NameContainer>{eventInfo.name}</S.NameContainer>
         <S.InfoWrapper>
           <S.DescriptionContainer>
@@ -71,7 +72,7 @@ export const PopupOverlay: React.FC<PopupOverlayProps> = ({
             }
           />
         </S.InfoWrapper>
-      </S.right>
+      </S.RightContainer>
     </S.Overlay>
   );
 };
