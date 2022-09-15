@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { Navbar } from "../Components/Navbar/Navbar";
 import { Footer } from "../Components/Footer/Footer";
 import { SanityClient } from "../SanityClient";
+import { AboutHero } from "../Components/AboutHero/AboutHero";
 
 interface propInterface {
   companyInfo: {};
@@ -14,6 +15,7 @@ const Home: NextPage<propInterface> = ({ openingHours, companyInfo }) => {
       {/* <Link href="sanityTestPage">Sanity test</Link> */}
 
       <Navbar />
+      <AboutHero />
 
       <Footer openingHours={openingHours} companyInfo={companyInfo} />
     </div>
