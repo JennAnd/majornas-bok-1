@@ -8,6 +8,8 @@ import blockContent from "./blockContent";
 import openingHours from "./openingHours";
 import info from "./info";
 import costumerReview from "./constumerReview";
+import event from "./event";
+
 
 import heroStripes from "./heroStripes";
 import book from "./book";
@@ -25,6 +27,7 @@ export default createSchema({
     heroStripes,
     info,
     openingHours,
+    event,
     book,
     costumerReview,
     // When added to this list, object types can be used as

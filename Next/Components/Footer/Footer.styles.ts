@@ -22,7 +22,7 @@ export const Container = styled.div`
 `;
 
 export const OpeningsHoursContainer = styled.div`
-  font-family: ${({ theme }) => theme.font.default};
+  font-family: ${({ theme }) => theme.font.Inter};
   color: ${({ theme }) => theme.color.white};
   font-size: ${({ theme }) => theme.fontSize.medium};
   text-transform: uppercase;
@@ -81,9 +81,7 @@ export const OpeningsHoursDays = styled.p`
   margin-bottom: 0;
   margin-top: 0;
 
-
   @media (${({ theme }) => theme.breakpoint.tablet}) {
-
     font-size: 2.75rem;
   }
   @media (${({ theme }) => theme.breakpoint.desktop}) {
@@ -125,7 +123,6 @@ export const CompanyInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 
   @media (${({ theme }) => theme.breakpoint.tablet}) {
     left: calc(50% - 275px);
@@ -171,7 +168,6 @@ export const CompanyInfo = styled.p`
   font-family: ${({ theme }) => theme.font.serif};
   color: #292929;
   margin: ${({ theme }) => theme.margin.none};
-
 
   &:nth-child(3) {
     margin-bottom: 1rem;
