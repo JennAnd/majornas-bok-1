@@ -27,7 +27,7 @@ export const PopupOverlay: React.FC<PopupOverlayProps> = ({
             src={eventInfo.imageUrl}
             alt="Event image"
             layout="fill"
-            objectFit="fill"
+            objectFit="cover"
           />
         </S.ImageContainer>
       </S.LeftContainer>

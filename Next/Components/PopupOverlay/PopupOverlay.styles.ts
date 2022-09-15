@@ -12,29 +12,37 @@ export const Overlay = styled.div`
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     height: 40vh;
-    /* width: 85vw; */
+    width: 90vw;
     top: calc(50% - 40vh);
-    left: calc(50% - 42.5vw);
+    left: calc(50% - 45vw);
     flex-direction: row;
     gap: 5rem;
   }
 `;
 
 export const LeftContainer = styled.div`
-  /* display: block; */
   width: 100%;
   left: 0;
   height: 100%;
   @media (${({ theme }) => theme.breakpoint.desktop}) {
+    position: relative;
     width: 50%;
+    left: 1rem;
+    padding: 1rem 0;
+    margin-top: ${({ theme }) => theme.margin.xxLarge};
   }
 `;
 export const RightContainer = styled.div`
-  /* display: block; */
   width: 100%;
   right: 0;
   @media (${({ theme }) => theme.breakpoint.desktop}) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
     width: 50%;
+    /* top: 15%; */
+    /* margin-top: ${({ theme }) => theme.margin.xxLarge}; */
   }
 `;
 
@@ -47,16 +55,16 @@ export const DateContainer = styled.div`
   color: ${({ theme }) => theme.color.white};
   height: ${({ theme }) => theme.margin.xLarge};
   width: 50%;
-  /* margin-top: ${({ theme }) => theme.margin.large}; */
   display: flex;
   justify-content: center;
   align-items: center;
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    left: 5%;
-    /* width: 30%; */
+    left: 2%;
+    width: fit-content;
     padding: ${({ theme }) => theme.margin.xLarge};
     font-size: ${({ theme }) => theme.fontSize.h2};
+    top: 5%;
   }
 `;
 
@@ -67,10 +75,9 @@ export const ImageContainer = styled.div`
   height: 100%;
   top: -3rem;
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    /* position: absolute; */
-    /* width: 40%; */
+    width: 90%;
     height: 80%;
-    left: 10%;
+    left: 18%;
   }
 `;
 
@@ -113,10 +120,11 @@ export const NameContainer = styled.div`
   align-items: center;
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    /* right: -35%; */
+    padding: 0 ${({ theme }) => theme.padding.large};
+    margin-bottom: ${({ theme }) => theme.margin.medium};
     background-color: unset;
     color: ${({ theme }) => theme.color.black};
-    top: -5rem;
+    top: ${({ theme }) => theme.margin.xLarge};
   }
 `;
 
@@ -125,8 +133,6 @@ export const InfoWrapper = styled.div`
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     position: relative;
-    /* width: 50%; */
-    /* right: -50%; */
   }
 `;
 
@@ -134,9 +140,10 @@ export const DescriptionContainer = styled.div`
   position: relative;
   font-family: ${({ theme }) => theme.font.DMSans};
   font-size: ${({ theme }) => theme.fontSize.text};
-  top: -3rem;
+  top: -2rem;
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
+    top: -2rem;
   }
 `;
 
@@ -162,6 +169,7 @@ export const NameAndMail = styled.p`
   top: -2rem;
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
+    margin-bottom: ${({ theme }) => theme.margin.small};
   }
 `;
 
