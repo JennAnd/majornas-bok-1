@@ -17,6 +17,7 @@ export const Overlay = styled.div`
     left: calc(50% - 45vw);
     flex-direction: row;
     gap: 5rem;
+    box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.2);
   }
 `;
 
