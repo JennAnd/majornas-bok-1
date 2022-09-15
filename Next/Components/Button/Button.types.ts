@@ -1,8 +1,6 @@
-import { MouseEventHandler } from "react";
-
 export type ButtonProps = {
   text?: string;
-  href?: string;
+  href?: HTMLAnchorElement | string;
   className?: string;
   onClick?: () => void;
   children?: React.ReactNode;

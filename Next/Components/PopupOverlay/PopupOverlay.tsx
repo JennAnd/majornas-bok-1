@@ -10,7 +10,7 @@ export const PopupOverlay: React.FC<PopupOverlayProps> = ({
   text,
 }) => {
   return (
-    <S.Overlay onClick={onClick}>
+    <S.Overlay>
       <S.DateContainer>{eventInfo.date}</S.DateContainer>
       <S.ImageContainer>
         <Image
@@ -20,7 +20,7 @@ export const PopupOverlay: React.FC<PopupOverlayProps> = ({
           objectFit="cover"
         />
       </S.ImageContainer>
-      <S.CloseContainer>
+      <S.CloseContainer onClick={onClick}>
         <Image src="/Icons/VectorClose.svg" width={15} height={15} />
       </S.CloseContainer>
       <S.NameContainer>{eventInfo.name}</S.NameContainer>
@@ -32,9 +32,11 @@ export const PopupOverlay: React.FC<PopupOverlayProps> = ({
         <Button
           text="Anmäl dig"
           width="100%"
-          padding="1.5rem"
+          padding="1rem"
           fontSize="1.2rem"
-          href="mailto:info@majornasbocker.se"
+          onClick={() =>
+            ((window as Window).location = "mailto:info@majornasbocker.se")
+          }
         />
       </S.InfoWrapper>
     </S.Overlay>

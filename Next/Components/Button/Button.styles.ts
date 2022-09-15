@@ -19,7 +19,6 @@ export const Button = styled.button`
   background-size: cover;
   color: white;
   white-space: nowrap;
-  text-transform: capitalize;
 
   &:hover {
     cursor: pointer;
