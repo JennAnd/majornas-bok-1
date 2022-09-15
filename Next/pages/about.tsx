@@ -31,7 +31,7 @@ export const getServerSideProps = async () => {
   const openingHours = await SanityClient.fetch(`*[_type == 'openingHours']`);
   const companyInfo = await SanityClient.fetch(`*[_type == "info"][0]`);
   const costumerReview = await SanityClient.fetch(
-    `*[_type == "costumerReview"][3]`
+    `*[_type == "costumerReview"]`
   );
 
   return { props: { openingHours, companyInfo, costumerReview } };
