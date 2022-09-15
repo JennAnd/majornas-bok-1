@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { Button } from "../Button/Button";
 import * as S from "./PopupOverlay.styles";
 import { PopupOverlayProps } from "./PopupOverlay.types";

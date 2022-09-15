@@ -1,7 +1,9 @@
 import type { NextPage } from "next";
 import { useState } from "react";
 import { Button } from "../Components/Button/Button";
+import { EventContainer } from "../Components/EventContainer/EventContainer";
 import { Footer } from "../Components/Footer/Footer";
+import { Navbar } from "../Components/Navbar/Navbar";
 import { PopupOverlay } from "../Components/PopupOverlay/PopupOverlay";
 import { SanityClient } from "../SanityClient";
 
@@ -29,29 +31,32 @@ const Event: NextPage<propInterface> = ({
   const [selectedItem, setSelectedItem] = useState(null);
 
   return (
-    <div>
-      {eventInfo.map((item) => {
-        return (
-          <Button
-            key={item._id}
-            text={item.name}
+    <>
+      <Navbar />
+      <EventContainer>
+        {eventInfo.map((item) => {
+          return (
+            <Button
+              key={item._id}
+              text={item.name}
+              onClick={() => {
+                setShowPopup(!showPopup);
+                setSelectedItem(item);
+              }}
+            />
+          );
+        })}
+        {showPopup && (
+          <PopupOverlay
             onClick={() => {
               setShowPopup(!showPopup);
-              setSelectedItem(item);
             }}
+            eventInfo={selectedItem}
           />
-        );
-      })}
-      {showPopup && (
-        <PopupOverlay
-          onClick={() => {
-            setShowPopup(!showPopup);
-          }}
-          eventInfo={selectedItem}
-        />
-      )}
+        )}
+      </EventContainer>
       <Footer openingHours={openingHours} companyInfo={companyInfo} />
-    </div>
+    </>
   );
 };
 
