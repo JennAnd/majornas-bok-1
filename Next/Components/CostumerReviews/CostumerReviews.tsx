@@ -11,7 +11,7 @@ export const CostumerReviews = ({ costumerReview }) => {
               <Image
                 src="/Images/Pin.png"
                 alt="pin-icon"
-                width={43}
+                width={40}
                 height={40}
               />
             </S.ImageWrapper>
@@ -23,11 +23,11 @@ export const CostumerReviews = ({ costumerReview }) => {
               <Image
                 src="/Images/Pin.png"
                 alt="pin-icon"
-                width={43}
+                width={40}
                 height={40}
               />
             </S.ImageWrapper>
-            <S.ReviewText>{costumerReview[2].Review}</S.ReviewText>
+            <S.ReviewText>{costumerReview[1].Review}</S.ReviewText>
           </S.ReviewNoteTwo>
 
           <S.ReviewNoteThree>
@@ -35,11 +35,11 @@ export const CostumerReviews = ({ costumerReview }) => {
               <Image
                 src="/Images/Pin.png"
                 alt="pin-icon"
-                width={43}
+                width={40}
                 height={40}
               />
             </S.ImageWrapper>
-            <S.ReviewText>{costumerReview[1].Review}</S.ReviewText>
+            <S.ReviewText>{costumerReview[2].Review}</S.ReviewText>
           </S.ReviewNoteThree>
 
           <S.ReviewNoteFour>
@@ -47,7 +47,7 @@ export const CostumerReviews = ({ costumerReview }) => {
               <Image
                 src="/Images/Pin.png"
                 alt="pin-icon"
-                width={43}
+                width={40}
                 height={40}
               />
             </S.ImageWrapper>
