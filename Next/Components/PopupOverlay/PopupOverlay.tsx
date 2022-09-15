@@ -9,6 +9,17 @@ export const PopupOverlay: React.FC<PopupOverlayProps> = ({
   onClick,
   text,
 }) => {
+  const [inputName, setInputName] = useState("");
+  const [inputEmail, setInputEmail] = useState("");
+
+  const handleNameChange = (event) => {
+    setInputName(event.target.value);
+  };
+
+  const handleEmailChange = (event) => {
+    setInputEmail(event.target.value);
+  };
+
   return (
     <S.Overlay>
       <S.DateContainer>{eventInfo.date}</S.DateContainer>
@@ -21,7 +32,12 @@ export const PopupOverlay: React.FC<PopupOverlayProps> = ({
         />
       </S.ImageContainer>
       <S.CloseContainer onClick={onClick}>
-        <Image src="/Icons/VectorClose.svg" width={15} height={15} />
+        <Image
+          src="/Icons/VectorClose.svg"
+          width={15}
+          height={15}
+          alt="Close"
+        />
       </S.CloseContainer>
       <S.NameContainer>{eventInfo.name}</S.NameContainer>
       <S.InfoWrapper>
@@ -30,9 +46,19 @@ export const PopupOverlay: React.FC<PopupOverlayProps> = ({
         </S.DescriptionContainer>
         <S.SignUpContainer>Anmäl dig till författarkvällen</S.SignUpContainer>
         <S.NameAndMail>Namn</S.NameAndMail>
-        <S.Input />
+        <S.Input
+          onChange={handleNameChange}
+          value={inputName}
+          placeholder="Namn Efternamn"
+          type={"text"}
+        />
         <S.NameAndMail>Mailadress</S.NameAndMail>
-        <S.Input />
+        <S.Input
+          onChange={handleEmailChange}
+          value={inputEmail}
+          placeholder="namn.efternamn@email.com"
+          type={"email"}
+        />
         <Button
           text="Anmäl dig"
           width="100%"
