@@ -126,6 +126,11 @@ export const NameContainer = styled.div`
     color: ${({ theme }) => theme.color.black};
     top: ${({ theme }) => theme.margin.xLarge};
   }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    font-size: ${({ theme }) => theme.fontSize.h1};
+    top: 0;
+  }
 `;
 
 export const InfoWrapper = styled.div`
@@ -145,6 +150,11 @@ export const DescriptionContainer = styled.div`
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     top: -2rem;
   }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    font-size: ${({ theme }) => theme.fontSize.h2};
+    top: -6rem;
+  }
 `;
 
 export const SignUpContainer = styled.p`
@@ -159,6 +169,11 @@ export const SignUpContainer = styled.p`
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
   }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    font-size: ${({ theme }) => theme.fontSize.large};
+    top: -4rem;
+  }
 `;
 
 export const NameAndMail = styled.p`
@@ -170,6 +185,11 @@ export const NameAndMail = styled.p`
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     margin-bottom: ${({ theme }) => theme.margin.small};
+  }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    font-size: ${({ theme }) => theme.fontSize.medium};
+    top: -4rem;
   }
 `;
 
@@ -184,5 +204,10 @@ export const Input = styled.input`
   top: -2rem;
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
+  }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    font-size: ${({ theme }) => theme.fontSize.medium};
+    top: -4rem;
   }
 `;
