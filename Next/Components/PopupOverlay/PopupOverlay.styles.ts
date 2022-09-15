@@ -9,6 +9,33 @@ export const Overlay = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
+  gap: 5rem;
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    height: 40vh;
+    /* width: 85vw; */
+    top: calc(50% - 40vh);
+    left: calc(50% - 42.5vw);
+    flex-direction: row;
+  }
+`;
+
+export const left = styled.div`
+  display: block;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    width: 50%;
+  }
+`;
+export const right = styled.div`
+  display: block;
+  width: 100%;
+  right: 0;
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    width: 50%;
+  }
 `;
 
 export const DateContainer = styled.div`
@@ -19,19 +46,32 @@ export const DateContainer = styled.div`
   font-family: ${({ theme }) => theme.font.DMSans};
   color: ${({ theme }) => theme.color.white};
   height: ${({ theme }) => theme.margin.xLarge};
-  width: 40%;
+  width: 50%;
   margin-top: ${({ theme }) => theme.margin.large};
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    left: 5%;
+    /* width: 30%; */
+    padding: ${({ theme }) => theme.margin.xLarge};
+    font-size: ${({ theme }) => theme.fontSize.h2};
+  }
 `;
 
 export const ImageContainer = styled.div`
   background-color: limegreen;
   position: relative;
   width: 100%;
-  height: 40%;
+  height: 100%;
   top: -3rem;
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    /* position: absolute; */
+    /* width: 40%; */
+    height: 80%;
+    left: 10%;
+  }
 `;
 
 export const CloseContainer = styled.div`
@@ -50,6 +90,12 @@ export const CloseContainer = styled.div`
     cursor: pointer;
     opacity: 1;
   }
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    width: ${({ theme }) => theme.margin.xxLarge};
+    height: ${({ theme }) => theme.margin.xxLarge};
+    opacity: 1;
+  }
 `;
 
 export const NameContainer = styled.div`
@@ -58,16 +104,30 @@ export const NameContainer = styled.div`
   font-family: ${({ theme }) => theme.font.BigCaslon};
   font-size: ${({ theme }) => theme.fontSize.h2};
   color: ${({ theme }) => theme.color.white};
-  width: 50%;
+  /* width: 50%; */
   padding: ${({ theme }) => theme.padding.large};
   top: -5rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    /* right: -35%; */
+    background-color: unset;
+    color: ${({ theme }) => theme.color.black};
+    top: -5rem;
+  }
 `;
+
 export const InfoWrapper = styled.div`
   padding: ${({ theme }) => theme.padding.large};
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    position: relative;
+    /* width: 50%; */
+    /* right: -50%; */
+  }
 `;
 
 export const DescriptionContainer = styled.div`
@@ -75,6 +135,9 @@ export const DescriptionContainer = styled.div`
   font-family: ${({ theme }) => theme.font.DMSans};
   font-size: ${({ theme }) => theme.fontSize.text};
   top: -5rem;
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  }
 `;
 
 export const SignUpContainer = styled.p`
@@ -86,6 +149,9 @@ export const SignUpContainer = styled.p`
   text-decoration-thickness: 1px;
   position: relative;
   top: -2rem;
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  }
 `;
 
 export const NameAndMail = styled.p`
@@ -94,6 +160,9 @@ export const NameAndMail = styled.p`
   margin-bottom: ${({ theme }) => theme.margin.medium};
   position: relative;
   top: -2rem;
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  }
 `;
 
 export const Input = styled.input`
@@ -105,4 +174,7 @@ export const Input = styled.input`
   margin-bottom: ${({ theme }) => theme.margin.medium};
   position: relative;
   top: -2rem;
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  }
 `;
