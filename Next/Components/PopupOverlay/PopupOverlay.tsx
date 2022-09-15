@@ -29,6 +29,10 @@ export const PopupOverlay: React.FC<PopupOverlayProps> = ({
           {eventInfo.description[0].children[0].text}
         </S.DescriptionContainer>
         <S.SignUpContainer>Anmäl dig till författarkvällen</S.SignUpContainer>
+        <S.NameAndMail>Namn</S.NameAndMail>
+        <S.Input />
+        <S.NameAndMail>Mailadress</S.NameAndMail>
+        <S.Input />
         <Button
           text="Anmäl dig"
           width="100%"

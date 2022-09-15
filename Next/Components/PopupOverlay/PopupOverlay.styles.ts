@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Theme from "../../styles/styledComponents/theme";
 
 export const Overlay = styled.div`
   background-color: ${({ theme }) => theme.color.white};
@@ -8,6 +7,8 @@ export const Overlay = styled.div`
   z-index: 3;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const DateContainer = styled.div`
@@ -65,12 +66,14 @@ export const NameContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
+export const InfoWrapper = styled.div`
+  padding: ${({ theme }) => theme.padding.large};
+`;
 
 export const DescriptionContainer = styled.div`
   position: relative;
   font-family: ${({ theme }) => theme.font.DMSans};
   font-size: ${({ theme }) => theme.fontSize.text};
-
   top: -5rem;
 `;
 
@@ -82,11 +85,24 @@ export const SignUpContainer = styled.p`
   text-underline-offset: 10px;
   text-decoration-thickness: 1px;
   position: relative;
-  top: -5rem;
+  top: -2rem;
 `;
 
-export const InfoWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: ${({ theme }) => theme.padding.large};
+export const NameAndMail = styled.p`
+  font-family: ${({ theme }) => theme.font.DMSans};
+  font-size: ${({ theme }) => theme.fontSize.text};
+  margin-bottom: ${({ theme }) => theme.margin.medium};
+  position: relative;
+  top: -2rem;
+`;
+
+export const Input = styled.input`
+  border: 1.5px solid ${({ theme }) => theme.color.black};
+  width: 100%;
+  height: 2rem;
+  border-radius: ${({ theme }) => theme.borderRadius.large};
+  padding: ${({ theme }) => theme.padding.medium};
+  margin-bottom: ${({ theme }) => theme.margin.medium};
+  position: relative;
+  top: -2rem;
 `;
