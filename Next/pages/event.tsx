@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import { useState } from "react";
 import { Button } from "../Components/Button/Button";
+import { EventCard } from "../Components/EventCard/EventCard";
 import { EventContainer } from "../Components/EventContainer/EventContainer";
 import { Footer } from "../Components/Footer/Footer";
 import { Navbar } from "../Components/Navbar/Navbar";
@@ -36,14 +37,16 @@ const Event: NextPage<propInterface> = ({
       <EventContainer>
         {eventInfo.map((item) => {
           return (
-            <Button
-              key={item._id}
-              text={item.name}
-              onClick={() => {
-                setShowPopup(!showPopup);
-                setSelectedItem(item);
-              }}
-            />
+            <EventCard key={item._id}>
+              <Button
+                key={item._id}
+                text={item.name}
+                onClick={() => {
+                  setShowPopup(!showPopup);
+                  setSelectedItem(item);
+                }}
+              />
+            </EventCard>
           );
         })}
         {showPopup && (
