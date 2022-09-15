@@ -27,7 +27,7 @@ export const HeroTextWrapper = styled.div`
   padding-left: 24px;
   padding-bottom: 64px;
 
-  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  @media (${({ theme }) => theme.breakpoint}) {
     padding-top: 57px;
     padding-right: 305px;
     padding-left: 99px;
