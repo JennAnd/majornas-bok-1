@@ -7,7 +7,9 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 import blockContent from "./blockContent";
 import openingHours from "./openingHours";
 import info from "./info";
+import costumerReview from "./constumerReview";
 import event from "./event";
+
 
 import heroStripes from "./heroStripes";
 import book from "./book";
@@ -21,11 +23,13 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
+
     heroStripes,
     info,
     openingHours,
     event,
     book,
+    costumerReview,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
