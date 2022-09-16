@@ -5,4 +5,9 @@ export const EventContainer = styled.div`
   flex-direction: column;
   background-color: ${({ theme }) => theme.color.lightGreen};
   padding: ${({ theme }) => theme.padding.large};
+
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+    flex-direction: row;
+    gap: 5rem;
+  }
 `;

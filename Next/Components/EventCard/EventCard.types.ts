@@ -7,7 +7,7 @@ export type EventCardProps = {
   alt?: string;
   imageURL?: string;
   imageElement?: HTMLImageElement;
-  eventInfo?: {
+  item?: {
     name: string;
     date: string;
     description: [{ children }];

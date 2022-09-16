@@ -38,23 +38,16 @@ const Event: NextPage<propInterface> = ({
       <Navbar />
       <Bookmark text="Författarkvällar" />
       <EventContainer>
-        {eventInfo.map((item) => {
-          return (
-            <>
-              <EventCard eventInfo={item} />
-              <Button
-                key={item._id}
-                text={"Läs mer & anmäl dig här"}
-                onClick={() => {
-                  setShowPopup(!showPopup);
-                  setSelectedItem(item);
-                }}
-                padding={".75rem 1rem"}
-                margin={"0 0 2rem 0"}
-                fontSize={"1rem"}
-              />
-            </>
-          );
+        {eventInfo.map((item, index) => {
+          if (index === 0) {
+            return <></>;
+          } else {
+            return (
+              <>
+                <EventCard item={item} key={item._id} />
+              </>
+            );
+          }
         })}
         {showPopup && (
           <PopupOverlay

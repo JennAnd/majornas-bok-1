@@ -11,6 +11,7 @@ export const PopupOverlay: React.FC<PopupOverlayProps> = ({
 }) => {
   const [inputName, setInputName] = useState("");
   const [inputEmail, setInputEmail] = useState("");
+
   const handleNameChange = (event) => {
     setInputName(event.target.value);
   };
