@@ -1,10 +1,10 @@
-import { SiBookstack } from "react-icons/si";
+import { BsCardText } from "react-icons/si";
 
 export default {
   name: "about",
   title: "Om butiken",
   type: "document",
-  icon: SiBookstack,
+  icon: BsCardText,
   fields: [
     {
       name: "aboutStore",
