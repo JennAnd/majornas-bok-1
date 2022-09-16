@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import { useState } from "react";
+import { Bookmark } from "../Components/Bookmark/Bookmark";
 import { Button } from "../Components/Button/Button";
 import { EventCard } from "../Components/EventCard/EventCard";
 import { EventContainer } from "../Components/EventContainer/EventContainer";
@@ -35,6 +36,7 @@ const Event: NextPage<propInterface> = ({
   return (
     <>
       <Navbar />
+      <Bookmark text="Författarkvällar" />
       <EventContainer>
         {eventInfo.map((item) => {
           return (

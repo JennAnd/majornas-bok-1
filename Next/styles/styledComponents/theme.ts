@@ -8,6 +8,7 @@ const Theme = {
   breakpoint,
   color: {
     orange: "#FEB28C",
+    peach: "#FEC590",
     yellow: "#FFF4BF",
     purple: "#5F47A6",
     green: "#A3BFA7",
