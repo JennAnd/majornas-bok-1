@@ -3,13 +3,12 @@ import styled from "styled-components";
 export const EventCardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: ${({ theme }) => theme.padding.large};
 `;
 
 export const DateContainer = styled.div`
   position: relative;
   z-index: 1;
-  top: ${({ theme }) => theme.margin.large};
+  top: ${({ theme }) => theme.margin.xxLarge};
   background-color: ${({ theme }) => theme.color.red};
   font-family: ${({ theme }) => theme.font.DMSans};
   color: ${({ theme }) => theme.color.white};
@@ -18,6 +17,7 @@ export const DateContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  left: -${({ theme }) => theme.margin.large};
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     left: 2%;
@@ -32,14 +32,13 @@ export const NameContainer = styled.div`
   position: relative;
   background-color: ${({ theme }) => theme.color.purple};
   font-family: ${({ theme }) => theme.font.BigCaslon};
-  font-size: ${({ theme }) => theme.fontSize.h2};
+  font-size: ${({ theme }) => theme.fontSize.medium};
   color: ${({ theme }) => theme.color.white};
-  width: fit-content;
+  width: 100%;
   padding: 0.5rem ${({ theme }) => theme.padding.xLarge};
-  top: -2.5rem;
+  margin-bottom: ${({ theme }) => theme.margin.large};
 
   display: flex;
-  justify-content: center;
   align-items: center;
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
@@ -53,5 +52,18 @@ export const NameContainer = styled.div`
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     font-size: ${({ theme }) => theme.fontSize.h1};
     top: 0;
+  }
+`;
+
+export const ImageContainer = styled.div`
+  background-color: ${({ theme }) => theme.color.orange};
+  position: relative;
+  width: 100%;
+  height: 300px;
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    width: 90%;
+    height: 80%;
+    left: 18%;
   }
 `;

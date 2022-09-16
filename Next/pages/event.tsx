@@ -15,9 +15,10 @@ interface propInterface {
     {
       name: string;
       date: string;
-      description: string;
+      description: string | any;
       slug: string;
       image: string;
+      imageUrl: string;
       _id: string;
     }
   ];
@@ -37,16 +38,20 @@ const Event: NextPage<propInterface> = ({
       <EventContainer>
         {eventInfo.map((item) => {
           return (
-            <EventCard key={item._id}>
+            <>
+              <EventCard eventInfo={item} />
               <Button
                 key={item._id}
-                text={item.name}
+                text={"Läs mer & anmäl dig här"}
                 onClick={() => {
                   setShowPopup(!showPopup);
                   setSelectedItem(item);
                 }}
+                padding={".75rem 1rem"}
+                margin={"0 0 2rem 0"}
+                fontSize={"1rem"}
               />
-            </EventCard>
+            </>
           );
         })}
         {showPopup && (

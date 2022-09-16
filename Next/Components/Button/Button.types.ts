@@ -9,5 +9,6 @@ export type ButtonProps = {
   width?: string;
   height?: string;
   padding?: string;
+  margin?: string;
   fontSize?: string;
 };

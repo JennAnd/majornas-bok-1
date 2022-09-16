@@ -17,6 +17,7 @@ export const Button = styled.button`
   background-color: ${({ theme }) => theme.color.black};
   background-position: center;
   background-size: cover;
+  font-family: ${({ theme }) => theme.font.DMSans};
   color: white;
   white-space: nowrap;
 

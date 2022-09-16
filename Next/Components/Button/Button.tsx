@@ -13,6 +13,7 @@ export const Button: React.FC<ButtonProps> = ({
   width,
   height,
   padding,
+  margin,
   fontSize,
   ...rest
 }) => {
@@ -22,6 +23,7 @@ export const Button: React.FC<ButtonProps> = ({
         width: `${width}`,
         height: `${height}`,
         padding: `${padding}`,
+        margin: `${margin}`,
         fontSize: `${fontSize}`,
       }}
       onClick={onClick}
