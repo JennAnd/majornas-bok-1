@@ -37,7 +37,6 @@ const Home: NextPage<propInterface> = ({
 }) => {
   return (
     <div>
-
       {/* <Link href="sanityTestPage">Sanity test</Link> */}
 
       <Navbar />
@@ -46,7 +45,6 @@ const Home: NextPage<propInterface> = ({
 
       <Link href="sanityTestPage">Sanity test</Link>
       <Bookgrid />
-
 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis
@@ -79,7 +77,6 @@ export const getServerSideProps = async () => {
     }`);
 
   return { props: { heroStripesText, openingHours, companyInfo, eventInfo } };
-
 };
 
 export default Home;
