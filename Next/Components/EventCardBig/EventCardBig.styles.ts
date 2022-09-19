@@ -5,12 +5,12 @@ export const Overlay = styled.div`
   width: 100vw;
   display: flex;
   flex-direction: column;
-  padding: ${({ theme }) => theme.padding.large};
+  padding: 0 ${({ theme }) => theme.padding.large};
 
   @media (${({ theme }) => theme.breakpoint.tablet}) {
     flex-direction: row;
     gap: 3rem;
-    padding: 100px ${({ theme }) => theme.padding.medium};
+    padding: 100px 0.5rem 50px 0.5rem;
   }
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {

@@ -19,13 +19,21 @@ export const DateContainer = styled.div`
   align-items: center;
   left: -${({ theme }) => theme.margin.large};
 
-  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     left: 0%;
     width: fit-content;
     padding: ${({ theme }) => theme.margin.xLarge};
     font-size: ${({ theme }) => theme.fontSize.medium};
     top: 10.25%;
   }
+
+  /* @media (${({ theme }) => theme.breakpoint.desktop}) {
+    left: 0%;
+    width: fit-content;
+    padding: ${({ theme }) => theme.margin.xLarge};
+    font-size: ${({ theme }) => theme.fontSize.medium};
+    top: 10.25%;
+  } */
 `;
 
 export const NameContainer = styled.div`
@@ -43,16 +51,16 @@ export const NameContainer = styled.div`
 
   @media (${({ theme }) => theme.breakpoint.tablet}) {
     font-size: ${({ theme }) => theme.fontSize.medium};
-    margin-bottom: ${({ theme }) => theme.margin.medium};
+    margin-bottom: ${({ theme }) => theme.margin.large};
     padding: 0.75rem ${({ theme }) => theme.padding.medium};
     align-items: flex-start;
     width: 210px;
     height: 80px;
   }
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    margin-bottom: ${({ theme }) => theme.margin.medium};
+    font-size: ${({ theme }) => theme.fontSize.h2};
     width: 280px;
-    height: 100px;
+    height: 90px;
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {

@@ -30,9 +30,7 @@ export const EventCard: React.FC<EventCardProps> = ({ item, children }) => {
           setShowPopup(!showPopup);
           setSelectedItem(item);
         }}
-        padding=".75rem 1rem"
         margin="0 0 2rem 0"
-        fontSize="1rem"
       />
 
       {showPopup && (

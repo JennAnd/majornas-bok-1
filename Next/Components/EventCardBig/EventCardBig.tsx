@@ -65,8 +65,6 @@ export const EventCardBig: React.FC<EventCardBigProps> = ({
             <Button
               text="Anmäl dig"
               width="100%"
-              padding=".75rem 1rem"
-              fontSize="1rem"
               onClick={() =>
                 ((window as Window).location = "mailto:info@majornasbocker.se")
               }
@@ -80,9 +78,7 @@ export const EventCardBig: React.FC<EventCardBigProps> = ({
                 setShowPopup(!showPopup);
                 setSelectedItem(item);
               }}
-              padding=".75rem 1rem"
-              margin="0 0 2rem 0"
-              fontSize="1rem"
+              margin="0 0 1rem 0"
               width="100%"
             />
 
