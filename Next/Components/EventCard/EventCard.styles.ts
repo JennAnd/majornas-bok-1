@@ -42,19 +42,22 @@ export const NameContainer = styled.div`
   align-items: center;
 
   @media (${({ theme }) => theme.breakpoint.tablet}) {
+    font-size: ${({ theme }) => theme.fontSize.medium};
     margin-bottom: ${({ theme }) => theme.margin.medium};
+    padding: 0.75rem ${({ theme }) => theme.padding.medium};
+    align-items: flex-start;
     width: 210px;
     height: 80px;
   }
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     margin-bottom: ${({ theme }) => theme.margin.medium};
     width: 280px;
-    height: 80px;
+    height: 100px;
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    font-size: ${({ theme }) => theme.fontSize.h2};
     top: 0;
+    width: 380px;
   }
 `;
 
@@ -67,5 +70,10 @@ export const ImageContainer = styled.div`
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     width: 280px;
     height: 400px;
+  }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    width: 380px;
+    height: 500px;
   }
 `;
