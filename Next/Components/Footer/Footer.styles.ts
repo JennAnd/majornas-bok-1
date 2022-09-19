@@ -12,12 +12,14 @@ export const Container = styled.div`
   background-repeat: no-repeat !important;
   background-position: center !important;
   padding-bottom: 292%;
+  margin-top: -200px;
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     background-color: ${({ theme }) => theme.color.green};
     background: url("/Images/Footer/Footer_Desktop.svg");
     padding-bottom: 93%;
     background-position: left !important;
+    margin-top: -180px;
   }
 `;
 

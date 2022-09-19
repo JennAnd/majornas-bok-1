@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { BookCircleContainer } from "../Components/BookCircleContainer/BookCircleContainer";
 import { Bookmark } from "../Components/Bookmark/Bookmark";
 import { Button } from "../Components/Button/Button";
 import { EventCard } from "../Components/EventCard/EventCard";
@@ -8,6 +9,8 @@ import { EventContainer } from "../Components/EventContainer/EventContainer";
 import { Footer } from "../Components/Footer/Footer";
 import { Navbar } from "../Components/Navbar/Navbar";
 import { PopupOverlay } from "../Components/PopupOverlay/PopupOverlay";
+import { Text } from "../Components/Text/Text";
+import { Whitespace } from "../Components/Whitespace/Whitespace";
 import { SanityClient } from "../SanityClient";
 
 interface propInterface {
@@ -33,6 +36,12 @@ const Event: NextPage<propInterface> = ({
 }) => {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
+
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
 
   return (
     <>
@@ -61,6 +70,34 @@ const Event: NextPage<propInterface> = ({
         )}
       </EventContainer>
       <Bookmark text="Bokcirkel" />
+      <BookCircleContainer>
+        {width >= 768 ? (
+          <Text
+            text="Är du sugen på att vara med i en bokcirkel till hösten?"
+            fontFamily="BigCaslon"
+            fontSize="2.25rem"
+          />
+        ) : (
+          <Text
+            text="Är du sugen på att vara med i en bokcirkel till hösten?"
+            fontFamily="BigCaslon"
+            fontSize="1.75rem"
+          />
+        )}
+
+        <Text
+          text="Anmäl dig redan idag via formuläret. Vi ser fram emot att ditt deltagande!"
+          fontFamily="DM Sans"
+        />
+        <Button
+          text="Läs mer & anmäl dig här"
+          margin="0rem 0rem 0rem 0rem"
+          onClick={() => {
+            setShowPopup(!showPopup);
+          }}
+        />
+        <Whitespace />
+      </BookCircleContainer>
       <Footer openingHours={openingHours} companyInfo={companyInfo} />
     </>
   );
