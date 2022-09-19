@@ -21,6 +21,10 @@ export const Container = styled.div`
     background-position: left !important;
     margin-top: -180px;
   }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    margin-top: -255px;
+  }
 `;
 
 export const OpeningsHoursContainer = styled.div`

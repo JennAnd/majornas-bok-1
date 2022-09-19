@@ -5,11 +5,7 @@ import { PopupOverlay } from "../PopupOverlay/PopupOverlay";
 import * as S from "./EventCardBig.styles";
 import { EventCardBigProps } from "./EventCardBig.types";
 
-export const EventCardBig: React.FC<EventCardBigProps> = ({
-  item,
-  onClick,
-  text,
-}) => {
+export const EventCardBig: React.FC<EventCardBigProps> = ({ item }) => {
   const [inputName, setInputName] = useState("");
   const [inputEmail, setInputEmail] = useState("");
   const [showPopup, setShowPopup] = useState(false);
