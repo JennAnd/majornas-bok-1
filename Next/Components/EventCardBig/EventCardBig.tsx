@@ -1,59 +1,74 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import { SanityClient } from "../../SanityClient";
 import { Button } from "../Button/Button";
-import { PopupOverlay } from "../PopupOverlay/PopupOverlay";
 import * as S from "./EventCardBig.styles";
 import { EventCardBigProps } from "./EventCardBig.types";
 
 export const EventCardBig: React.FC<EventCardBigProps> = ({
   item,
-  children,
+  onClick,
+  text,
 }) => {
-  const [showPopup, setShowPopup] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(null);
+  const [inputName, setInputName] = useState("");
+  const [inputEmail, setInputEmail] = useState("");
+
+  const handleNameChange = (event) => {
+    setInputName(event.target.value);
+  };
+  const handleEmailChange = (event) => {
+    setInputEmail(event.target.value);
+  };
 
   return (
-    <S.EventCardContainer>
-      <S.DateContainer>{item.date}</S.DateContainer>
-      <S.ImageContainer>
-        <Image
-          src={item.imageUrl}
-          alt="Event image"
-          layout="fill"
-          objectFit="cover"
-        />
-      </S.ImageContainer>
-      <S.NameContainer>{item.name}</S.NameContainer>
+    <S.Overlay>
+      <S.LeftContainer>
+        <S.DateContainer>{item.date}</S.DateContainer>
+        <S.ImageContainer>
+          <Image
+            src={item.imageUrl}
+            alt="Event image"
+            layout="fill"
+            objectFit="cover"
+          />
+        </S.ImageContainer>
+      </S.LeftContainer>
 
-      <Button
-        key={item._id}
-        text={"Läs mer & anmäl dig här"}
-        onClick={() => {
-          setShowPopup(!showPopup);
-          setSelectedItem(item);
-        }}
-        padding={".75rem 1rem"}
-        margin={"0 0 2rem 0"}
-        fontSize={"1rem"}
-      />
-
-      {showPopup && (
-        <PopupOverlay
-          onClick={() => {
-            setShowPopup(!showPopup);
-          }}
-          eventInfo={selectedItem}
-        />
-      )}
-    </S.EventCardContainer>
+      <S.RightContainer>
+        <S.NameContainer>{item.name}</S.NameContainer>
+        <S.InfoWrapper>
+          <S.DescriptionContainer>
+            {item.description[0].children[0].text}
+          </S.DescriptionContainer>
+          <S.SignUpWrapper>
+            <S.SignUpContainer>
+              Anmäl dig till författarkvällen
+            </S.SignUpContainer>
+            <S.NameAndMail>Namn</S.NameAndMail>
+            <S.Input
+              onChange={handleNameChange}
+              value={inputName}
+              placeholder="Namn Efternamn"
+              type={"text"}
+            />
+            <S.NameAndMail>Mailadress</S.NameAndMail>
+            <S.Input
+              onChange={handleEmailChange}
+              value={inputEmail}
+              placeholder="namn.efternamn@email.com"
+              type={"email"}
+            />
+          </S.SignUpWrapper>
+          <Button
+            text="Anmäl dig"
+            width="100%"
+            padding={".75rem 1rem"}
+            fontSize={"1rem"}
+            onClick={() =>
+              ((window as Window).location = "mailto:info@majornasbocker.se")
+            }
+          />
+        </S.InfoWrapper>
+      </S.RightContainer>
+    </S.Overlay>
   );
-};
-
-export const getServerSideProps = async () => {
-  const eventInfo = await SanityClient.fetch(`*[_type == 'event']{
-    "imageUrl": image.asset->url,
-      ...
-    }`);
-  return { props: { eventInfo } };
 };
