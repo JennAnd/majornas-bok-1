@@ -1,5 +1,18 @@
 import styled from "styled-components";
 
+export const BookmarkWrapper = styled.div`
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+    margin-bottom: -4rem;
+    display: flex;
+  }
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+  }
+`;
+
 export const BookmarkContainer = styled.div`
   display: flex;
   align-items: center;
@@ -15,4 +28,15 @@ export const BookmarkContainer = styled.div`
   font-size: ${({ theme }) => theme.fontSize.h2};
   margin: ${({ theme }) => theme.margin.xLarge} 0;
   color: ${({ theme }) => theme.color.black};
+
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+    width: 40%;
+    font-size: ${({ theme }) => theme.fontSize.large};
+  }
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+  }
 `;
