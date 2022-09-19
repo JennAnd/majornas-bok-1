@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { Button } from "../Button/Button";
+import { PopupOverlay } from "../PopupOverlay/PopupOverlay";
 import * as S from "./EventCardBig.styles";
 import { EventCardBigProps } from "./EventCardBig.types";
 
@@ -11,6 +12,8 @@ export const EventCardBig: React.FC<EventCardBigProps> = ({
 }) => {
   const [inputName, setInputName] = useState("");
   const [inputEmail, setInputEmail] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
 
   const handleNameChange = (event) => {
     setInputName(event.target.value);
@@ -58,15 +61,40 @@ export const EventCardBig: React.FC<EventCardBigProps> = ({
               type={"email"}
             />
           </S.SignUpWrapper>
-          <Button
-            text="Anmäl dig"
-            width="100%"
-            padding={".75rem 1rem"}
-            fontSize={"1rem"}
-            onClick={() =>
-              ((window as Window).location = "mailto:info@majornasbocker.se")
-            }
-          />
+          <S.SignUpButtonContainer>
+            <Button
+              text="Anmäl dig"
+              width="100%"
+              padding=".75rem 1rem"
+              fontSize="1rem"
+              onClick={() =>
+                ((window as Window).location = "mailto:info@majornasbocker.se")
+              }
+            />
+          </S.SignUpButtonContainer>
+          <S.ReadMoreAndSignUpButtonContainer>
+            <Button
+              key={item._id}
+              text="Läs mer & anmäl dig här"
+              onClick={() => {
+                setShowPopup(!showPopup);
+                setSelectedItem(item);
+              }}
+              padding=".75rem 1rem"
+              margin="0 0 2rem 0"
+              fontSize="1rem"
+              width="100%"
+            />
+
+            {showPopup && (
+              <PopupOverlay
+                onClick={() => {
+                  setShowPopup(!showPopup);
+                }}
+                eventInfo={selectedItem}
+              />
+            )}
+          </S.ReadMoreAndSignUpButtonContainer>
         </S.InfoWrapper>
       </S.RightContainer>
     </S.Overlay>

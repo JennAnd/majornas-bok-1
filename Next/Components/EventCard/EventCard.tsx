@@ -25,14 +25,14 @@ export const EventCard: React.FC<EventCardProps> = ({ item, children }) => {
 
       <Button
         key={item._id}
-        text={"Läs mer & anmäl dig här"}
+        text="Läs mer & anmäl dig här"
         onClick={() => {
           setShowPopup(!showPopup);
           setSelectedItem(item);
         }}
-        padding={".75rem 1rem"}
-        margin={"0 0 2rem 0"}
-        fontSize={"1rem"}
+        padding=".75rem 1rem"
+        margin="0 0 2rem 0"
+        fontSize="1rem"
       />
 
       {showPopup && (

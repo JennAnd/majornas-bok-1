@@ -7,34 +7,53 @@ export const Overlay = styled.div`
   flex-direction: column;
   padding: ${({ theme }) => theme.padding.large};
 
-  @media (${({ theme }) => theme.breakpoint.desktop}) {
-    height: 90vh;
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     flex-direction: row;
+    gap: 3rem;
+    padding: 100px ${({ theme }) => theme.padding.medium};
+  }
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     gap: 5rem;
+  }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    padding: 100px ${({ theme }) => theme.padding.large};
   }
 `;
 
 export const LeftContainer = styled.div`
   width: 100%;
   left: 0;
-  /* height: 100%; */
-  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     position: relative;
     width: 50%;
     left: 1rem;
     padding: 1rem 0;
-    margin-top: ${({ theme }) => theme.margin.xxLarge};
+  }
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
   }
 `;
 export const RightContainer = styled.div`
-  width: 100%;
   right: 0;
-  @media (${({ theme }) => theme.breakpoint.desktop}) {
+
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     position: relative;
     width: 50%;
+  }
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    justify-content: space-evenly;
+  }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
   }
 `;
 
@@ -52,30 +71,44 @@ export const DateContainer = styled.div`
   align-items: center;
   left: -${({ theme }) => theme.margin.large};
 
-  @media (${({ theme }) => theme.breakpoint.desktop}) {
-    left: 2%;
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     width: fit-content;
     padding: ${({ theme }) => theme.margin.xLarge};
+    font-size: ${({ theme }) => theme.fontSize.medium};
+    top: -3.7%;
+    left: -6.5%;
+  }
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     font-size: ${({ theme }) => theme.fontSize.h2};
-    top: 5%;
+    top: -2.5%;
   }
 `;
 
 export const ImageContainer = styled.div`
-  background-color: ${({ theme }) => theme.color.orange};
   position: relative;
   width: 100%;
   height: 300px;
 
-  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+    position: static;
     width: 90%;
-    height: 80%;
-    left: 18%;
+    height: 90%;
+    left: 6%;
+  }
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
   }
 `;
 
 export const NameContainer = styled.div`
-  position: relative;
+  display: block;
   background-color: ${({ theme }) => theme.color.purple};
   font-family: ${({ theme }) => theme.font.BigCaslon};
   font-size: ${({ theme }) => theme.fontSize.medium};
@@ -87,13 +120,16 @@ export const NameContainer = styled.div`
   display: flex;
   align-items: center;
 
-  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     font-size: ${({ theme }) => theme.fontSize.h2};
     padding: 0 ${({ theme }) => theme.padding.large};
-    margin-bottom: ${({ theme }) => theme.margin.medium};
+    margin-bottom: 0;
     background-color: unset;
     color: ${({ theme }) => theme.color.black};
     top: ${({ theme }) => theme.margin.xLarge};
+  }
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
@@ -103,26 +139,37 @@ export const NameContainer = styled.div`
 `;
 
 export const InfoWrapper = styled.div`
-  padding: ${({ theme }) => theme.padding.large};
+  padding: 0;
+
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+    padding: ${({ theme }) => theme.padding.large};
+    position: relative;
+  }
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    position: relative;
+  }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
   }
 `;
 
 export const DescriptionContainer = styled.div`
   display: none;
-  position: relative;
   font-family: ${({ theme }) => theme.font.DMSans};
   font-size: ${({ theme }) => theme.fontSize.text};
   top: -2rem;
 
-  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     display: block;
     top: -2rem;
+    margin-bottom: ${({ theme }) => theme.margin.xxLarge};
+  }
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    margin-bottom: 6rem;
     font-size: ${({ theme }) => theme.fontSize.h2};
     top: -6rem;
   }
@@ -130,7 +177,7 @@ export const DescriptionContainer = styled.div`
 
 export const SignUpWrapper = styled.div`
   display: none;
-  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     display: block;
   }
 `;
@@ -145,7 +192,7 @@ export const SignUpContainer = styled.p`
   position: relative;
   top: -2rem;
 
-  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
@@ -161,7 +208,7 @@ export const NameAndMail = styled.p`
   position: relative;
   top: -2rem;
 
-  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     margin-bottom: ${({ theme }) => theme.margin.small};
   }
 
@@ -181,11 +228,25 @@ export const Input = styled.input`
   position: relative;
   top: -2rem;
 
-  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     font-size: ${({ theme }) => theme.fontSize.medium};
     top: -4rem;
+  }
+`;
+
+export const SignUpButtonContainer = styled.div`
+  display: none;
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+    display: block;
+  }
+`;
+
+export const ReadMoreAndSignUpButtonContainer = styled.div`
+  display: block;
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+    display: none;
   }
 `;

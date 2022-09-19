@@ -23,7 +23,7 @@ export const DateContainer = styled.div`
     left: 0%;
     width: fit-content;
     padding: ${({ theme }) => theme.margin.xLarge};
-    font-size: ${({ theme }) => theme.fontSize.h2};
+    font-size: ${({ theme }) => theme.fontSize.medium};
     top: 10.25%;
   }
 `;
