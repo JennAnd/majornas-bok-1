@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const EventCardContainer = styled.div`
   display: flex;
   flex-direction: column;
+  background-color: ${({ theme }) => theme.color.lightGreen};
+  padding: 0 ${({ theme }) => theme.padding.large};
 `;
 
 export const DateContainer = styled.div`
@@ -20,11 +22,11 @@ export const DateContainer = styled.div`
   left: -${({ theme }) => theme.margin.large};
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    left: 0%;
+    left: 2%;
     width: fit-content;
     padding: ${({ theme }) => theme.margin.xLarge};
     font-size: ${({ theme }) => theme.fontSize.h2};
-    top: 10.25%;
+    top: 5%;
   }
 `;
 
@@ -41,19 +43,16 @@ export const NameContainer = styled.div`
   display: flex;
   align-items: center;
 
-  @media (${({ theme }) => theme.breakpoint.tablet}) {
-    margin-bottom: ${({ theme }) => theme.margin.medium};
-    width: 210px;
-    height: 80px;
-  }
   @media (${({ theme }) => theme.breakpoint.desktop}) {
+    padding: 0 ${({ theme }) => theme.padding.large};
     margin-bottom: ${({ theme }) => theme.margin.medium};
-    width: 280px;
-    height: 80px;
+    background-color: unset;
+    color: ${({ theme }) => theme.color.black};
+    top: ${({ theme }) => theme.margin.xLarge};
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    font-size: ${({ theme }) => theme.fontSize.h2};
+    font-size: ${({ theme }) => theme.fontSize.h1};
     top: 0;
   }
 `;
@@ -65,7 +64,8 @@ export const ImageContainer = styled.div`
   height: 300px;
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    width: 280px;
-    height: 400px;
+    width: 90%;
+    height: 80%;
+    left: 18%;
   }
 `;

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Bookmark } from "../Components/Bookmark/Bookmark";
 import { Button } from "../Components/Button/Button";
 import { EventCard } from "../Components/EventCard/EventCard";
+import { EventCardBig } from "../Components/EventCardBig/EventCardBig";
 import { EventContainer } from "../Components/EventContainer/EventContainer";
 import { Footer } from "../Components/Footer/Footer";
 import { Navbar } from "../Components/Navbar/Navbar";
@@ -37,16 +38,17 @@ const Event: NextPage<propInterface> = ({
     <>
       <Navbar />
       <Bookmark text="Författarkvällar" />
+      {eventInfo.map((item, index) => {
+        if (index === 0) {
+          return <EventCardBig item={item} key={item._id} />;
+        }
+      })}
       <EventContainer>
         {eventInfo.map((item, index) => {
           if (index === 0) {
             return <></>;
           } else {
-            return (
-              <>
-                <EventCard item={item} key={item._id} />
-              </>
-            );
+            return <EventCard item={item} key={item._id} />;
           }
         })}
         {showPopup && (

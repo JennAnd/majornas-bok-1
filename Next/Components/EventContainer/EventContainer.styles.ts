@@ -8,6 +8,8 @@ export const EventContainer = styled.div`
 
   @media (${({ theme }) => theme.breakpoint.tablet}) {
     flex-direction: row;
-    gap: 5rem;
+    gap: 4rem;
+    height: 655px;
+    justify-content: space-evenly;
   }
 `;
