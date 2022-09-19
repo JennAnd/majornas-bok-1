@@ -9,7 +9,12 @@ export const Bookmark: React.FC<BookmarkProps> = ({
   color,
 }) => {
   return (
-    <S.BookmarkWrapper>
+    <S.BookmarkWrapper
+      style={{
+        color: `${color}`,
+        backgroundColor: `${backgroundColor}`,
+      }}
+    >
       <S.BookmarkContainer
         style={{
           color: `${color}`,

@@ -60,6 +60,7 @@ const Event: NextPage<propInterface> = ({
           />
         )}
       </EventContainer>
+      <Bookmark text="Bokcirkel" />
       <Footer openingHours={openingHours} companyInfo={companyInfo} />
     </>
   );
