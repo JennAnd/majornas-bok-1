@@ -41,7 +41,7 @@ const Home: NextPage<propInterface> = ({
       {/* <Link href="sanityTestPage">Sanity test</Link> */}
 
       <Navbar />
-      <NewsHero />
+      <NewsHero heroStripesText={heroStripesText} />
       <HeroStripes heroStripesText={heroStripesText}></HeroStripes>
 
       <Link href="sanityTestPage">Sanity test</Link>

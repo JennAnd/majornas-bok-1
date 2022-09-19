@@ -34,6 +34,7 @@ const StripeContainer = styled.div`
   width: 50%;
   height: 40rem;
 
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
