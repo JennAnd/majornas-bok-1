@@ -5,6 +5,7 @@ import { HeroStripes } from "./HeroStripes/HeroStripes";
 
 const HeroSection = styled.div`
   height: 60rem;
+  max-width: 80rem;
 
   display: flex;
   align-items: center;

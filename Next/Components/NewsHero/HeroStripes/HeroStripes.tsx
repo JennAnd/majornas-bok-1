@@ -67,7 +67,7 @@ const StripeContainer = styled.div`
     height: 34rem;
     width: 90%;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     top: 24rem;
   }
 `;
