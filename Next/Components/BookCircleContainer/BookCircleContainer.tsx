@@ -1,9 +1,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Z_ASCII } from "zlib";
 import { Button } from "../Button/Button";
 import { Text } from "../Text/Text";
-import { Whitespace } from "../Whitespace/Whitespace";
 import * as S from "./BookCircleContainer.styles";
 import { BookCircleContainerProps } from "./BookCircleContainer.types";
 
@@ -75,10 +73,10 @@ export const BookCircleContainer: React.FC<BookCircleContainerProps> = ({
             {bookCircle.map((bookCircle, index) => {
               return (
                 <>
-                  <S.TextTitle bookCircle={bookCircle} key={bookCircle._id}>
+                  <S.TextTitle key={bookCircle._id}>
                     {bookCircle.name}
                   </S.TextTitle>
-                  <S.TextBody>
+                  <S.TextBody key={bookCircle._id}>
                     {bookCircle.description[0].children[0].text}
                   </S.TextBody>
                 </>
