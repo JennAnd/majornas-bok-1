@@ -1,34 +1,32 @@
 import React from "react";
-import * as S from "./Button.styles";
-import { ButtonProps } from "./Button.types";
+import { TextProps } from "./Text.types";
+import * as S from "./Text.styles";
 
-export const Button: React.FC<ButtonProps> = ({
+export const Text: React.FC<TextProps> = ({
   text,
-  href,
-  className,
-  onClick,
-  children,
-  alt,
-  ref,
   width,
   height,
   padding,
   margin,
+  color,
   fontSize,
-  ...rest
+  fontFamily,
+  onClick,
 }) => {
   return (
-    <S.Button
+    <S.Text
       style={{
         width: `${width}`,
         height: `${height}`,
         padding: `${padding}`,
         margin: `${margin}`,
         fontSize: `${fontSize}`,
+        fontFamily: `${fontFamily}`,
+        color: `${color}`,
       }}
       onClick={onClick}
     >
       {text}
-    </S.Button>
+    </S.Text>
   );
 };

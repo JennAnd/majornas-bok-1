@@ -9,10 +9,9 @@ import openingHours from "./openingHours";
 import info from "./info";
 import costumerReview from "./constumerReview";
 import event from "./event";
-
-
 import heroStripes from "./heroStripes";
 import book from "./book";
+import bookCircle from "./bookCircle";
 import about from "./about";
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -30,9 +29,8 @@ export default createSchema({
     openingHours,
     event,
     book,
-
+    bookCircle,
     about,
-
     costumerReview,
 
     // When added to this list, object types can be used as

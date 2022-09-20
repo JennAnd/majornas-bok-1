@@ -1,7 +1,12 @@
 import type { NextPage } from "next";
 import { useState } from "react";
-import { Button } from "../Components/Button/Button";
+import { BookCircleContainer } from "../Components/BookCircleContainer/BookCircleContainer";
+import { Bookmark } from "../Components/Bookmark/Bookmark";
+import { EventCard } from "../Components/EventCard/EventCard";
+import { EventCardBig } from "../Components/EventCardBig/EventCardBig";
+import { EventContainer } from "../Components/EventContainer/EventContainer";
 import { Footer } from "../Components/Footer/Footer";
+import { Navbar } from "../Components/Navbar/Navbar";
 import { PopupOverlay } from "../Components/PopupOverlay/PopupOverlay";
 import { SanityClient } from "../SanityClient";
 
@@ -12,10 +17,22 @@ interface propInterface {
     {
       name: string;
       date: string;
-      description: string;
+      description: string | any;
+      slug: string;
+      image: string;
+      imageUrl: string;
+      _id: string;
+    }
+  ];
+  bookCircle: [
+    {
+      name: string;
+      date: string;
+      description: { children }[];
       slug: string;
       image: string;
       _id: string;
+      imageUrl: string;
     }
   ];
 }
@@ -24,34 +41,41 @@ const Event: NextPage<propInterface> = ({
   openingHours,
   companyInfo,
   eventInfo,
+  bookCircle,
 }) => {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
 
   return (
-    <div>
-      {eventInfo.map((item) => {
-        return (
-          <Button
-            key={item._id}
-            text={item.name}
+    <>
+      <Navbar />
+      <Bookmark text="Författarkvällar" />
+      {eventInfo.map((item, index) => {
+        if (index === 0) {
+          return <EventCardBig item={item} key={`EventCardBig-${item._id}`} />;
+        }
+      })}
+      <EventContainer>
+        {eventInfo.map((item, index) => {
+          if (index === 0) {
+            return null;
+          } else {
+            return <EventCard item={item} key={`EventCard-${item._id}`} />;
+          }
+        })}
+        {showPopup && (
+          <PopupOverlay
             onClick={() => {
               setShowPopup(!showPopup);
-              setSelectedItem(item);
             }}
+            eventInfo={selectedItem}
           />
-        );
-      })}
-      {showPopup && (
-        <PopupOverlay
-          onClick={() => {
-            setShowPopup(!showPopup);
-          }}
-          eventInfo={selectedItem}
-        />
-      )}
+        )}
+      </EventContainer>
+      <Bookmark text="Bokcirkel" />
+      <BookCircleContainer bookCircle={bookCircle} />
       <Footer openingHours={openingHours} companyInfo={companyInfo} />
-    </div>
+    </>
   );
 };
 
@@ -62,7 +86,9 @@ export const getServerSideProps = async () => {
     "imageUrl": image.asset->url,
       ...
     }`);
-  return { props: { openingHours, companyInfo, eventInfo } };
+  const bookCircle = await SanityClient.fetch(`*[_type == 'bookCircle'][0..1]`);
+
+  return { props: { openingHours, companyInfo, eventInfo, bookCircle } };
 };
 
 export default Event;

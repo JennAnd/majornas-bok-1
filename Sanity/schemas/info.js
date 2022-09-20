@@ -8,22 +8,22 @@ export default {
   fields: [
     {
       name: "companyName",
-      title: "Company Name",
+      title: "Företagsnamn",
       type: "string",
     },
     {
       name: "address",
-      title: "Address",
+      title: "Adress",
       type: "string",
     },
     {
       name: "zipCode",
-      title: "Zip code",
+      title: "Postnummer",
       type: "string",
     },
     {
       name: "phone",
-      title: "Phone",
+      title: "Telefon",
       type: "string",
     },
     {
@@ -35,6 +35,7 @@ export default {
       name: "slug",
       title: "Slug",
       type: "slug",
+      description: "Tryck på 'Generate' för att skapa ett unikt id.",
       options: {
         source: "title",
       },

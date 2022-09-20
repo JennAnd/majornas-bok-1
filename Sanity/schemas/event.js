@@ -8,29 +8,32 @@ export default {
   fields: [
     {
       name: "name",
-      title: "Name",
+      title: "Namn",
       type: "string",
-      description: 'Please use "Firstname Lastname" format',
+      description: "Vänligen använd Förnamn Efternamn format.",
     },
     {
       name: "date",
-      title: "Date",
+      title: "Datum",
       type: "date",
-      description: "Please choose a date below",
+      description: "Vänligen ange datum för eventet.",
     },
     {
       name: "description",
-      title: "Description",
+      title: "Beskrivning",
       type: "blockContent",
       description:
-        "Please write a short description of the event and/or the person",
+        "Vänligen ange en kort beskrivning av eventet. (max 100 tecken)",
+      options: {
+        maxLength: 100,
+      },
     },
     {
       name: "slug",
       title: "Slug",
       type: "slug",
       description:
-        "Please press the 'Generate' button to create a unique slug for this event",
+        "Tryck på 'Generate' för att skapa ett unikt id för bokcirkeln.",
       options: {
         source: "name",
         maxLength: 100,
@@ -38,9 +41,9 @@ export default {
     },
     {
       name: "image",
-      title: "Image",
+      title: "Bild",
       type: "image",
-      description: "Please choose an image for this event",
+      description: "Vänligen ladda upp en bild för eventet.",
       options: {
         hotspot: true,
       },
