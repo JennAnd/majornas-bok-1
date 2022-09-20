@@ -39,8 +39,6 @@ const Home: NextPage<propInterface> = ({
 }) => {
   return (
     <div>
-      {/* <Link href="sanityTestPage">Sanity test</Link> */}
-
       <Navbar />
       <NewsHero newsInfo={newsInfo} />
       <Bookgrid />
