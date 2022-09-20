@@ -7,7 +7,7 @@ import styles from "../styles/Home.module.css";
 import { NewsHero } from "../Components/NewsHero/NewsHero";
 import { Bookgrid } from "../Components/Bookgrid/Bookgrid";
 import { Footer } from "../Components/Footer/Footer";
-import { HeroStripes } from "../Components/HeroStripes/HeroStripes";
+import { HeroStripes } from "../Components/NewsHero/HeroStripes/HeroStripes";
 import { SanityClient } from "../SanityClient";
 
 interface propInterface {
