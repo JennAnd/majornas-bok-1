@@ -11,9 +11,7 @@ export const NavWrapper = styled.div`
   padding-top: 16px;
   padding-bottom: 0;
 
-  @media (min-width: 768px) {
-  }
-  @media (min-width: 1024px) {
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     height: 64px;
     padding: 0px;
     align-items: center;
@@ -30,29 +28,21 @@ export const NavText = styled.p`
   cursor: pointer;
   text-align: center;
   color: ${({ theme }) => theme.color.white};
-
-  @media (min-width: 768px) {
-  }
-  @media (min-width: 1024px) {
-  }
 `;
 
 export const ImageWrapper = styled.div`
   padding-top: 30px;
   cursor: pointer;
-  @media (min-width: 768px) {
-  }
-  @media (min-width: 1024px) {
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     display: none;
   }
 `;
 
 export const NavMenu = styled.div`
   display: none;
-  @media (min-width: 768px) {
-  }
 
-  @media (min-width: 1024px) {
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     display: block;
     display: flex;
     justify-content: space-evenly;
