@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import { Bookgrid } from "../Components/Bookgrid/Bookgrid";
+import { BookgridContainer } from "../Components/BookgridContainer/BookgridContainer";
 import { Footer } from "../Components/Footer/Footer";
 import { HeroStripes } from "../Components/HeroStripes/HeroStripes";
 import { Bookmark } from "../Components/Bookmark/Bookmark";
@@ -25,12 +26,21 @@ interface propInterface {
       _key: string;
     }
   ];
+  bookGrid: [
+    {
+      title?: string;
+      author?: string;
+      cover?: string;
+      imageUrl?: string;
+    }
+  ];
 }
 
 const Home: NextPage<propInterface> = ({
   heroStripesText,
   openingHours,
   companyInfo,
+  bookGrid,
 }) => {
   return (
     <div>
@@ -38,8 +48,9 @@ const Home: NextPage<propInterface> = ({
 
       <Navbar />
       <HeroStripes heroStripesText={heroStripesText}></HeroStripes>
+      <BookgridContainer bookGrid={bookGrid} />
       <Bookmark text="Nyinkomna böcker" />
-      <Bookgrid />
+      <Bookgrid book={bookGrid} />
       <Bookmark text="Senaste på Instagram" />
 
       <p>
@@ -70,8 +81,14 @@ export const getServerSideProps = async () => {
     "imageUrl": image.asset->url,
       ...
     }`);
+  const bookGrid = await SanityClient.fetch(`*[_type == 'book']{
+    "imageUrl": cover.asset->url,
+      ...
+      }`);
 
-  return { props: { heroStripesText, openingHours, companyInfo, eventInfo } };
+  return {
+    props: { heroStripesText, openingHours, companyInfo, eventInfo, bookGrid },
+  };
 };
 
 export default Home;
