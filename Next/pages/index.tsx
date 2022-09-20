@@ -28,10 +28,10 @@ interface propInterface {
   ];
   bookGrid: [
     {
-      title: string;
-      author: string;
-      cover: string;
-      imageUrl: string;
+      title?: string;
+      author?: string;
+      cover?: string;
+      imageUrl?: string;
     }
   ];
 }
