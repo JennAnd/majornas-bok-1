@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import * as S from "./Navbar.styles";
 import Image from "next/image";
 import Link from "next/link";
+import { NavbarProps } from "./Navbar.types";
+import { OverlayMobileMenu } from "../OverlayMobileMenu/OverlayMobileMenu";
 
-export const Navbar = () => {
+export const Navbar: React.FC<NavbarProps> = ({ onClick }) => {
+  const [showOverlayMenu, setShowPopup] = useState(false);
   return (
     <S.Nav>
       <S.NavWrapper>
@@ -11,7 +14,11 @@ export const Navbar = () => {
           Majornas <br />
           Böcker & Kaffe
         </S.NavText>
-        <S.ImageWrapper>
+        <S.ImageWrapper
+          onClick={() => {
+            setShowPopup(!showOverlayMenu);
+          }}
+        >
           <Image
             src="/Icons/Mobile-menu.svg"
             alt="menu-icon"
@@ -19,6 +26,13 @@ export const Navbar = () => {
             height={40}
           />
         </S.ImageWrapper>
+        {showOverlayMenu && (
+          <OverlayMobileMenu
+            onClick={() => {
+              setShowPopup(!showOverlayMenu);
+            }}
+          />
+        )}
         <S.NavMenu>
           <Link href="/">
             <a>Nyheter</a>

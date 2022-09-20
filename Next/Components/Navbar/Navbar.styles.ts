@@ -7,7 +7,6 @@ export const NavWrapper = styled.div`
   justify-content: space-between;
   height: 96px;
   padding-right: 24px;
-  padding-left: 24px;
   padding-top: 16px;
   padding-bottom: 0;
 
@@ -27,6 +26,7 @@ export const NavText = styled.p`
   line-height: 23.23px;
   cursor: pointer;
   text-align: center;
+  padding-left: 24px;
   color: ${({ theme }) => theme.color.white};
 `;
 
