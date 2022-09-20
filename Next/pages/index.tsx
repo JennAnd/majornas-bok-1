@@ -3,6 +3,7 @@ import { Bookgrid } from "../Components/Bookgrid/Bookgrid";
 import { BookgridContainer } from "../Components/BookgridContainer/BookgridContainer";
 import { Footer } from "../Components/Footer/Footer";
 import { HeroStripes } from "../Components/HeroStripes/HeroStripes";
+import { Bookmark } from "../Components/Bookmark/Bookmark";
 import { Navbar } from "../Components/Navbar/Navbar";
 import { SanityClient } from "../SanityClient";
 
@@ -47,8 +48,11 @@ const Home: NextPage<propInterface> = ({
 
       <Navbar />
       <HeroStripes heroStripesText={heroStripesText}></HeroStripes>
-
       <BookgridContainer bookGrid={bookGrid} />
+      <Bookmark text="Nyinkomna böcker" />
+      <Bookgrid />
+      <Bookmark text="Senaste på Instagram" />
+
 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis
