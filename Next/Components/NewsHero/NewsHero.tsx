@@ -8,6 +8,10 @@ const HeroSection = styled.div`
 
   display: flex;
   align-items: center;
+
+  @media (max-width: 1300px) {
+    flex-direction: column;
+  }
 `;
 
 const BackgroundDiv = styled.div`
