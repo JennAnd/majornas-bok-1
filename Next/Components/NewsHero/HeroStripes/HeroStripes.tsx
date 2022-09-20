@@ -35,11 +35,18 @@ const StripeContainer = styled.div`
   width: 50%;
   height: 40rem;
 
-  position: relative;
+  position: absolute;
+  right: 0rem;
+  top: 20rem;
+
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
+
+  @media (max-width: 1300px) {
+    width: 80%;
+  }
 `;
 
 interface StripesText {

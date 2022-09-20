@@ -40,6 +40,11 @@ const Title = styled.h1`
   font-weight: 400;
 
   position: relative;
+
+  @media (max-width: 1300px) {
+    margin: 2rem 5rem;
+    font-size: 2.5rem;
+  }
 `;
 
 interface newsText {
