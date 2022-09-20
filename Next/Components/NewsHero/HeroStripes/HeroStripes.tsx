@@ -42,6 +42,11 @@ const Stripes = styled.div<LengthProps>`
       }
     }};
   }
+
+  @media (max-width: 800px) {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+  }
 `;
 
 const StripeContainer = styled.div`
