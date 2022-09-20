@@ -8,9 +8,9 @@ import blockContent from "./blockContent";
 import openingHours from "./openingHours";
 import info from "./info";
 import event from "./event";
-
 import heroStripes from "./heroStripes";
 import book from "./book";
+import bookCircle from "./bookCircle";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -26,6 +26,8 @@ export default createSchema({
     openingHours,
     event,
     book,
+    bookCircle,
+
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
