@@ -50,7 +50,7 @@ const StripeContainer = styled.div`
 
   position: absolute;
   right: 0rem;
-  top: 20rem;
+  top: 15rem;
 
   display: flex;
   flex-direction: column;
@@ -58,6 +58,7 @@ const StripeContainer = styled.div`
   justify-content: space-between;
 
   @media (max-width: 1300px) {
+    top: 20rem;
     height: 34rem;
     width: 90%;
   }
