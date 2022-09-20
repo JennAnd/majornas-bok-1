@@ -50,9 +50,8 @@ const Home: NextPage<propInterface> = ({
       <HeroStripes heroStripesText={heroStripesText}></HeroStripes>
       <BookgridContainer bookGrid={bookGrid} />
       <Bookmark text="Nyinkomna böcker" />
-      <Bookgrid />
+      <Bookgrid book={bookGrid} />
       <Bookmark text="Senaste på Instagram" />
-
 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis

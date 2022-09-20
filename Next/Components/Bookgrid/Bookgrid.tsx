@@ -3,7 +3,6 @@ import * as S from "./Bookgrid.styles";
 import Image from "next/image";
 
 export const Bookgrid = ({ book }) => {
-  console.log(book.imageUrl);
   return (
     <S.Bookdiv>
       <Image src={book.imageUrl} alt={book.title} width={380} height={480} />
