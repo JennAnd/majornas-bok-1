@@ -4,6 +4,7 @@ import { Footer } from "../Components/Footer/Footer";
 import { SanityClient } from "../SanityClient";
 import { AboutHero } from "../Components/AboutHero/AboutHero";
 import { CostumerReviews } from "../Components/CostumerReviews/CostumerReviews";
+import { Bookmark } from "../Components/Bookmark/Bookmark";
 
 interface propInterface {
   companyInfo: {};
@@ -23,9 +24,9 @@ const Home: NextPage<propInterface> = ({
       {/* <Link href="sanityTestPage">Sanity test</Link> */}
 
       <Navbar />
-
+      <Bookmark text="Om butiken" />
       <AboutHero aboutInfo={aboutInfo} />
-
+      <Bookmark text="Vad besökare sagt" />
       <CostumerReviews costumerReview={costumerReview} />
 
       <Footer openingHours={openingHours} companyInfo={companyInfo} />
