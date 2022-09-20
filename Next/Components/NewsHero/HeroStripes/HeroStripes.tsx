@@ -1,4 +1,5 @@
-import React, { FC } from "react";
+import { log } from "console";
+import React, { FC, useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 
 interface LengthProps {
@@ -61,23 +62,45 @@ interface StripesText {
 }
 
 export const HeroStripes: FC<StripesText> = ({ heroStripesText }) => {
-  return (
-    <StripeContainer>
-      <Stripes tall></Stripes>
-      <Stripes></Stripes>
-      <Stripes tallest></Stripes>
-      <Stripes short>{heroStripesText.firstText}</Stripes>
-      <Stripes tall></Stripes>
-      <Stripes></Stripes>
-      <Stripes tallest></Stripes>
-      <Stripes short>{heroStripesText.secondText}</Stripes>
-      <Stripes></Stripes>
-      <Stripes tallest></Stripes>
-      <Stripes></Stripes>
-      <Stripes short>{heroStripesText.thirdText}</Stripes>
-      <Stripes tall></Stripes>
-      <Stripes tallest></Stripes>
-      <Stripes></Stripes>
-    </StripeContainer>
-  );
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setWidth(window.innerHeight);
+      console.log("AAA " + width);
+      console.log("BBB " + window.innerWidth);
+    });
+  }, []);
+
+  if (width > 1300) {
+    return (
+      <StripeContainer>
+        <Stripes tall></Stripes>
+        <Stripes></Stripes>
+        <Stripes tallest></Stripes>
+        <Stripes short>{heroStripesText.firstText}</Stripes>
+        <Stripes tall></Stripes>
+        <Stripes></Stripes>
+        <Stripes tallest></Stripes>
+        <Stripes short>{heroStripesText.secondText}</Stripes>
+        <Stripes></Stripes>
+        <Stripes tallest></Stripes>
+        <Stripes></Stripes>
+        <Stripes short>{heroStripesText.thirdText}</Stripes>
+        <Stripes tall></Stripes>
+        <Stripes tallest></Stripes>
+        <Stripes></Stripes>
+      </StripeContainer>
+    );
+  } else {
+    return (
+      <StripeContainer>
+        <Stripes tall></Stripes>
+        <Stripes></Stripes>
+        <Stripes tallest></Stripes>
+        <Stripes short>{heroStripesText.firstText}</Stripes>
+        <Stripes></Stripes>
+      </StripeContainer>
+    );
+  }
 };
