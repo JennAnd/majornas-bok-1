@@ -33,7 +33,16 @@ const Title = styled.h1`
   margin: 0rem 5rem;
 `;
 
-export const NewsHero: FC = ({ heroStripesText }) => {
+interface newsText {
+  newsInfo: {
+    h1: string;
+    firstText: string;
+    secondText: string;
+    thirdText: string;
+  };
+}
+
+export const NewsHero: FC<newsText> = ({ newsInfo }) => {
   return (
     <HeroSection>
       <BackgroundDiv />
@@ -45,11 +54,8 @@ export const NewsHero: FC = ({ heroStripesText }) => {
           height={1000}
         />
       </Ampersand>
-      <Title>
-        Stig in i böckernas värld <br /> och drick en kopp kaffe i<br /> hjärtat
-        av majorna.
-      </Title>
-      <HeroStripes heroStripesText={heroStripesText} />
+      <Title>{newsInfo.h1}</Title>
+      <HeroStripes heroStripesText={newsInfo} />
     </HeroSection>
   );
 };
