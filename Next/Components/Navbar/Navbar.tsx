@@ -13,7 +13,7 @@ export const Navbar = () => {
         </S.NavText>
         <S.ImageWrapper>
           <Image
-            src="/Images/Navbar/Mobile-menu.svg"
+            src="/Icons/Mobile-menu.svg"
             alt="menu-icon"
             width={43}
             height={40}
@@ -23,7 +23,7 @@ export const Navbar = () => {
           <Link href="/">
             <a>Nyheter</a>
           </Link>
-          <Link href="/">
+          <Link href="/event">
             <a>Event</a>
           </Link>
           <Link href="/about">

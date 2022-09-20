@@ -1,14 +1,15 @@
-export type ButtonProps = {
+export type TextProps = {
   text?: string;
-  href?: HTMLAnchorElement | string;
+  href?: string;
   className?: string;
   onClick?: () => void;
-  children?: React.ReactNode;
   alt?: string;
-  ref?: HTMLDivElement | null;
+  backgroundColor?: string;
+  color?: string;
   width?: string;
   height?: string;
   padding?: string;
   margin?: string;
   fontSize?: string;
+  fontFamily?: string;
 };

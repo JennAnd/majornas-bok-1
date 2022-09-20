@@ -1,9 +1,9 @@
-export type PopupOverlayProps = {
+export type EventContainerProps = {
   text?: string;
   href?: string;
   className?: string;
   onClick?: () => void;
-  children?: React.ReactNode;
+  children?: React.ReactNode | JSX.Element | JSX.Element[];
   alt?: string;
   imageURL?: string;
   imageElement?: HTMLImageElement;

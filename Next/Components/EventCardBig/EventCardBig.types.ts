@@ -1,4 +1,4 @@
-export type PopupOverlayProps = {
+export type EventCardBigProps = {
   text?: string;
   href?: string;
   className?: string;
@@ -7,7 +7,7 @@ export type PopupOverlayProps = {
   alt?: string;
   imageURL?: string;
   imageElement?: HTMLImageElement;
-  eventInfo?: {
+  item?: {
     name: string;
     date: string;
     description: [{ children }];

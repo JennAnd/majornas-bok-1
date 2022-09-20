@@ -8,6 +8,8 @@ import { NewsHero } from "../Components/NewsHero/NewsHero";
 import { HeroStripes } from "../Components/HeroStripes/HeroStripes";
 import { Bookgrid } from "../Components/Bookgrid/Bookgrid";
 import { Footer } from "../Components/Footer/Footer";
+import { HeroStripes } from "../Components/HeroStripes/HeroStripes";
+import { Navbar } from "../Components/Navbar/Navbar";
 import { SanityClient } from "../SanityClient";
 
 interface propInterface {
@@ -43,8 +45,6 @@ const Home: NextPage<propInterface> = ({
       <Navbar />
       <NewsHero heroStripesText={heroStripesText} />
       <HeroStripes heroStripesText={heroStripesText}></HeroStripes>
-
-      <Link href="sanityTestPage">Sanity test</Link>
       <Bookgrid />
 
       <p>
@@ -69,7 +69,6 @@ export const getServerSideProps = async () => {
   const heroStripesText = await SanityClient.fetch(
     `*[_type == "heroStripes"][0]`
   );
-
   const openingHours = await SanityClient.fetch(`*[_type == 'openingHours']`);
   const companyInfo = await SanityClient.fetch(`*[_type == "info"][0]`);
   const eventInfo = await SanityClient.fetch(`*[_type == 'event']{
