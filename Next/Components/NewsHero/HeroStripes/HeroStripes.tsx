@@ -1,5 +1,4 @@
-import { log } from "console";
-import React, { FC, useEffect, useState } from "react";
+import React, { FC } from "react";
 import styled, { css } from "styled-components";
 
 interface LengthProps {
@@ -30,6 +29,19 @@ const Stripes = styled.div<LengthProps>`
       return "70%";
     }
   }};
+
+  @media (max-width: 1300px) {
+    width: ${(props) => {
+      if (props.short) {
+        return "100%";
+      }
+    }};
+    display: ${(props) => {
+      if (props.tallest) {
+        return "none";
+      }
+    }};
+  }
 `;
 
 const StripeContainer = styled.div`
@@ -46,6 +58,7 @@ const StripeContainer = styled.div`
   justify-content: space-between;
 
   @media (max-width: 1300px) {
+    height: 34rem;
     width: 90%;
   }
   @media (max-width: 800px) {
@@ -62,45 +75,23 @@ interface StripesText {
 }
 
 export const HeroStripes: FC<StripesText> = ({ heroStripesText }) => {
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setWidth(window.innerHeight);
-      console.log("AAA " + width);
-      console.log("BBB " + window.innerWidth);
-    });
-  }, []);
-
-  if (width > 1300) {
-    return (
-      <StripeContainer>
-        <Stripes tall></Stripes>
-        <Stripes></Stripes>
-        <Stripes tallest></Stripes>
-        <Stripes short>{heroStripesText.firstText}</Stripes>
-        <Stripes tall></Stripes>
-        <Stripes></Stripes>
-        <Stripes tallest></Stripes>
-        <Stripes short>{heroStripesText.secondText}</Stripes>
-        <Stripes></Stripes>
-        <Stripes tallest></Stripes>
-        <Stripes></Stripes>
-        <Stripes short>{heroStripesText.thirdText}</Stripes>
-        <Stripes tall></Stripes>
-        <Stripes tallest></Stripes>
-        <Stripes></Stripes>
-      </StripeContainer>
-    );
-  } else {
-    return (
-      <StripeContainer>
-        <Stripes tall></Stripes>
-        <Stripes></Stripes>
-        <Stripes tallest></Stripes>
-        <Stripes short>{heroStripesText.firstText}</Stripes>
-        <Stripes></Stripes>
-      </StripeContainer>
-    );
-  }
+  return (
+    <StripeContainer>
+      <Stripes tall></Stripes>
+      <Stripes></Stripes>
+      <Stripes tallest></Stripes>
+      <Stripes short>{heroStripesText.firstText}</Stripes>
+      <Stripes tall></Stripes>
+      <Stripes></Stripes>
+      <Stripes tallest></Stripes>
+      <Stripes short>{heroStripesText.secondText}</Stripes>
+      <Stripes></Stripes>
+      <Stripes tallest></Stripes>
+      <Stripes></Stripes>
+      <Stripes short>{heroStripesText.thirdText}</Stripes>
+      <Stripes tall></Stripes>
+      <Stripes tallest></Stripes>
+      <Stripes></Stripes>
+    </StripeContainer>
+  );
 };
