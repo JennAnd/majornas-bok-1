@@ -47,16 +47,13 @@ const Home: NextPage<propInterface> = ({
   return (
     <div>
       <Navbar />
-
       <NewsHero newsInfo={newsInfo} />
-
       <Bookgrid book={bookGrid} />
-      <HeroStripes heroStripesText={heroStripesText}></HeroStripes>
+      <HeroStripes heroStripesText={newsInfo}></HeroStripes>
       <BookgridContainer bookGrid={bookGrid} />
       <Bookmark text="Nyinkomna böcker" />
       <Bookgrid book={bookGrid} />
       <Bookmark text="Senaste på Instagram" />
-
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis
         mollitia. Doloremque laboriosam dolorum adipisci ullam odit minus nulla
@@ -69,7 +66,6 @@ const Home: NextPage<propInterface> = ({
         consequuntur ab? Incidunt porro libero saepe voluptatem consequatur.
         Voluptate, saepe fuga.
       </p>
-
       <Footer openingHours={openingHours} companyInfo={companyInfo} />
     </div>
   );
