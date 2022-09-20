@@ -11,18 +11,20 @@ const HeroSection = styled.div`
 `;
 
 const BackgroundDiv = styled.div`
-  background-color: pink;
+  background-color: ${({ theme }) => theme.color.mediumGreen};
   rotate: 10deg;
   width: 60rem;
-  height: 60rem;
+  height: 120rem;
 
   position: absolute;
   right: -20rem;
+  z-index: -1;
 `;
 
 const Ampersand = styled.div`
   position: absolute;
   right: -15rem;
+  z-index: -1;
 `;
 
 const Title = styled.h1`

@@ -12,6 +12,7 @@ const Stripes = styled.div<LengthProps>`
   color: ${({ theme }) => theme.color.white};
 
   text-align: start;
+  font-family: "Courier New";
   padding: 0.2rem 1rem;
 
   height: 1.5rem;

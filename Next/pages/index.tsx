@@ -5,11 +5,9 @@ import Link from "next/link";
 import { Navbar } from "../Components/Navbar/Navbar";
 import styles from "../styles/Home.module.css";
 import { NewsHero } from "../Components/NewsHero/NewsHero";
-import { HeroStripes } from "../Components/HeroStripes/HeroStripes";
 import { Bookgrid } from "../Components/Bookgrid/Bookgrid";
 import { Footer } from "../Components/Footer/Footer";
 import { HeroStripes } from "../Components/HeroStripes/HeroStripes";
-import { Navbar } from "../Components/Navbar/Navbar";
 import { SanityClient } from "../SanityClient";
 
 interface propInterface {
@@ -44,7 +42,6 @@ const Home: NextPage<propInterface> = ({
 
       <Navbar />
       <NewsHero heroStripesText={heroStripesText} />
-      <HeroStripes heroStripesText={heroStripesText}></HeroStripes>
       <Bookgrid />
 
       <p>
