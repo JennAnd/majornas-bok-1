@@ -24,22 +24,36 @@ interface propInterface {
       _key: string;
     }
   ];
+  bookGrid: [
+    {
+      title: string;
+      author: string;
+      cover: string;
+      imageUrl: string;
+    }
+  ];
 }
 
 const Home: NextPage<propInterface> = ({
   heroStripesText,
   openingHours,
   companyInfo,
+  bookGrid,
 }) => {
   return (
     <div>
-
       {/* <Link href="sanityTestPage">Sanity test</Link> */}
 
       <Navbar />
       <HeroStripes heroStripesText={heroStripesText}></HeroStripes>
-      <Bookgrid />
 
+      {bookGrid.map((book, index) => {
+        if (index === 0) {
+          return null;
+        } else {
+          return <Bookgrid book={book} key={1} />;
+        }
+      })}
 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis
@@ -69,8 +83,14 @@ export const getServerSideProps = async () => {
     "imageUrl": image.asset->url,
       ...
     }`);
+  const bookGrid = await SanityClient.fetch(`*[_type == 'books']{
+      "imageUrl": image.asset->url,
+        ...
+      }`);
 
-  return { props: { heroStripesText, openingHours, companyInfo, eventInfo } };
+  return {
+    props: { heroStripesText, openingHours, companyInfo, eventInfo, bookGrid },
+  };
 };
 
 export default Home;
