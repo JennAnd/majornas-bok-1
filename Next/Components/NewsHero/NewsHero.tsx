@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 import Image from "next/image";
-import { HeroStripes } from "../HeroStripes/HeroStripes";
+import { HeroStripes } from "./HeroStripes/HeroStripes";
 
 const HeroSection = styled.div`
   height: 60rem;
@@ -28,9 +28,14 @@ const Ampersand = styled.div`
 `;
 
 const Title = styled.h1`
-  position: relative;
-  font-size: 3rem;
+  max-width: 35rem;
   margin: 0rem 5rem;
+
+  font-size: 3.5rem;
+  font-family: ${({ theme }) => theme.font.BigCaslon};
+  font-weight: 400;
+
+  position: relative;
 `;
 
 interface newsText {
