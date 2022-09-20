@@ -3,12 +3,11 @@ import * as S from "./Bookgrid.styles";
 import Image from "next/image";
 
 export const Bookgrid = ({ book }) => {
-  console.log(book.imageUrl);
   return (
     <S.Bookdiv>
-      <Image src={book.imageUrl} alt={book.title} width={380} height={480} />
-      <S.BookName>{book.title}</S.BookName>
-      <S.AuthorName>{book.author}</S.AuthorName>
+      <Image src={book?.imageUrl} alt={book?.title} width={380} height={480} />
+      <S.BookName>{book?.title}</S.BookName>
+      <S.AuthorName>{book?.author}</S.AuthorName>
     </S.Bookdiv>
   );
 };
