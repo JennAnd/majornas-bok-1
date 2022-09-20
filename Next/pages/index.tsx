@@ -1,14 +1,11 @@
 import type { NextPage } from "next";
-
-import { useState } from "react";
-import Link from "next/link";
-import { Navbar } from "../Components/Navbar/Navbar";
-import styles from "../styles/Home.module.css";
-import { NewsHero } from "../Components/NewsHero/NewsHero";
 import { Bookgrid } from "../Components/Bookgrid/Bookgrid";
 import { BookgridContainer } from "../Components/BookgridContainer/BookgridContainer";
+import { Bookmark } from "../Components/Bookmark/Bookmark";
 import { Footer } from "../Components/Footer/Footer";
+import { Navbar } from "../Components/Navbar/Navbar";
 import { HeroStripes } from "../Components/NewsHero/HeroStripes/HeroStripes";
+import { NewsHero } from "../Components/NewsHero/NewsHero";
 import { SanityClient } from "../SanityClient";
 
 interface propInterface {
@@ -52,14 +49,13 @@ const Home: NextPage<propInterface> = ({
       <Navbar />
 
       <NewsHero newsInfo={newsInfo} />
-      
-      <Bookgrid />
+
+      <Bookgrid book={bookGrid} />
       <HeroStripes heroStripesText={heroStripesText}></HeroStripes>
       <BookgridContainer bookGrid={bookGrid} />
       <Bookmark text="Nyinkomna böcker" />
       <Bookgrid book={bookGrid} />
       <Bookmark text="Senaste på Instagram" />
-
 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis
@@ -95,7 +91,6 @@ export const getServerSideProps = async () => {
   return {
     props: { newsInfo, openingHours, companyInfo, eventInfo, bookGrid },
   };
-
 };
 
 export default Home;
