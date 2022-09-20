@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import { Bookgrid } from "../Components/Bookgrid/Bookgrid";
+import { BookgridContainer } from "../Components/BookgridContainer/BookgridContainer";
 import { Footer } from "../Components/Footer/Footer";
 import { HeroStripes } from "../Components/HeroStripes/HeroStripes";
 import { Navbar } from "../Components/Navbar/Navbar";
@@ -47,13 +48,7 @@ const Home: NextPage<propInterface> = ({
       <Navbar />
       <HeroStripes heroStripesText={heroStripesText}></HeroStripes>
 
-      {bookGrid.map((book, index) => {
-        if (index === 0) {
-          return null;
-        } else {
-          return <Bookgrid book={book} key={1} />;
-        }
-      })}
+      <BookgridContainer bookGrid={bookGrid} />
 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis
@@ -83,9 +78,9 @@ export const getServerSideProps = async () => {
     "imageUrl": image.asset->url,
       ...
     }`);
-  const bookGrid = await SanityClient.fetch(`*[_type == 'books']{
-      "imageUrl": image.asset->url,
-        ...
+  const bookGrid = await SanityClient.fetch(`*[_type == 'book']{
+    "imageUrl": cover.asset->url,
+      ...
       }`);
 
   return {
