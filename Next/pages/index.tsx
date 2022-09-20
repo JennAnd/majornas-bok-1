@@ -6,6 +6,7 @@ import { Navbar } from "../Components/Navbar/Navbar";
 import styles from "../styles/Home.module.css";
 import { NewsHero } from "../Components/NewsHero/NewsHero";
 import { Bookgrid } from "../Components/Bookgrid/Bookgrid";
+import { BookgridContainer } from "../Components/BookgridContainer/BookgridContainer";
 import { Footer } from "../Components/Footer/Footer";
 import { HeroStripes } from "../Components/NewsHero/HeroStripes/HeroStripes";
 import { SanityClient } from "../SanityClient";
@@ -30,18 +31,35 @@ interface propInterface {
       _key: string;
     }
   ];
+  bookGrid: [
+    {
+      title?: string;
+      author?: string;
+      cover?: string;
+      imageUrl?: string;
+    }
+  ];
 }
 
 const Home: NextPage<propInterface> = ({
   newsInfo,
   openingHours,
   companyInfo,
+  bookGrid,
 }) => {
   return (
     <div>
       <Navbar />
+
       <NewsHero newsInfo={newsInfo} />
+      
       <Bookgrid />
+      <HeroStripes heroStripesText={heroStripesText}></HeroStripes>
+      <BookgridContainer bookGrid={bookGrid} />
+      <Bookmark text="Nyinkomna böcker" />
+      <Bookgrid book={bookGrid} />
+      <Bookmark text="Senaste på Instagram" />
+
 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis
@@ -69,8 +87,15 @@ export const getServerSideProps = async () => {
     "imageUrl": image.asset->url,
       ...
     }`);
+  const bookGrid = await SanityClient.fetch(`*[_type == 'book']{
+    "imageUrl": cover.asset->url,
+      ...
+      }`);
 
-  return { props: { newsInfo, openingHours, companyInfo, eventInfo } };
+  return {
+    props: { newsInfo, openingHours, companyInfo, eventInfo, bookGrid },
+  };
+
 };
 
 export default Home;
