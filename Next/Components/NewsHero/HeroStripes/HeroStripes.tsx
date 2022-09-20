@@ -12,6 +12,7 @@ const Stripes = styled.div<LengthProps>`
   color: ${({ theme }) => theme.color.white};
 
   text-align: start;
+  font-family: "Courier New";
   padding: 0.2rem 1rem;
 
   height: 1.5rem;
@@ -28,16 +29,47 @@ const Stripes = styled.div<LengthProps>`
       return "70%";
     }
   }};
+
+  @media (max-width: 1300px) {
+    width: ${(props) => {
+      if (props.short) {
+        return "100%";
+      }
+    }};
+    display: ${(props) => {
+      if (props.tallest) {
+        return "none";
+      }
+    }};
+  }
+
+  @media (max-width: 800px) {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+  }
 `;
 
 const StripeContainer = styled.div`
   width: 50%;
   height: 40rem;
 
+  position: absolute;
+  right: 0rem;
+  top: 15rem;
+
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
+
+  @media (max-width: 1300px) {
+    top: 20rem;
+    height: 34rem;
+    width: 90%;
+  }
+  @media (max-width: 1000px) {
+    top: 24rem;
+  }
 `;
 
 interface StripesText {

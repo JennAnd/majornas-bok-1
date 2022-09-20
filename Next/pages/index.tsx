@@ -1,14 +1,16 @@
 import type { NextPage } from "next";
 import { Bookgrid } from "../Components/Bookgrid/Bookgrid";
 import { BookgridContainer } from "../Components/BookgridContainer/BookgridContainer";
-import { Footer } from "../Components/Footer/Footer";
-import { HeroStripes } from "../Components/HeroStripes/HeroStripes";
 import { Bookmark } from "../Components/Bookmark/Bookmark";
+import { Footer } from "../Components/Footer/Footer";
 import { Navbar } from "../Components/Navbar/Navbar";
+import { HeroStripes } from "../Components/NewsHero/HeroStripes/HeroStripes";
+import { NewsHero } from "../Components/NewsHero/NewsHero";
 import { SanityClient } from "../SanityClient";
 
 interface propInterface {
-  heroStripesText: {
+  newsInfo: {
+    h1: string;
     firstText: string;
     secondText: string;
     thirdText: string;
@@ -37,22 +39,21 @@ interface propInterface {
 }
 
 const Home: NextPage<propInterface> = ({
-  heroStripesText,
+  newsInfo,
   openingHours,
   companyInfo,
   bookGrid,
 }) => {
   return (
     <div>
-      {/* <Link href="sanityTestPage">Sanity test</Link> */}
-
       <Navbar />
-      <HeroStripes heroStripesText={heroStripesText}></HeroStripes>
+      <NewsHero newsInfo={newsInfo} />
+      <Bookgrid book={bookGrid} />
+      <HeroStripes heroStripesText={newsInfo}></HeroStripes>
       <BookgridContainer bookGrid={bookGrid} />
       <Bookmark text="Nyinkomna böcker" />
       <Bookgrid book={bookGrid} />
       <Bookmark text="Senaste på Instagram" />
-
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis
         mollitia. Doloremque laboriosam dolorum adipisci ullam odit minus nulla
@@ -65,16 +66,13 @@ const Home: NextPage<propInterface> = ({
         consequuntur ab? Incidunt porro libero saepe voluptatem consequatur.
         Voluptate, saepe fuga.
       </p>
-
       <Footer openingHours={openingHours} companyInfo={companyInfo} />
     </div>
   );
 };
 
 export const getServerSideProps = async () => {
-  const heroStripesText = await SanityClient.fetch(
-    `*[_type == "heroStripes"][0]`
-  );
+  const newsInfo = await SanityClient.fetch(`*[_type == "newsHero"][0]`);
   const openingHours = await SanityClient.fetch(`*[_type == 'openingHours']`);
   const companyInfo = await SanityClient.fetch(`*[_type == "info"][0]`);
   const eventInfo = await SanityClient.fetch(`*[_type == 'event']{
@@ -87,7 +85,7 @@ export const getServerSideProps = async () => {
       }`);
 
   return {
-    props: { heroStripesText, openingHours, companyInfo, eventInfo, bookGrid },
+    props: { newsInfo, openingHours, companyInfo, eventInfo, bookGrid },
   };
 };
 

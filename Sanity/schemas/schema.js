@@ -9,7 +9,7 @@ import openingHours from "./openingHours";
 import info from "./info";
 import costumerReview from "./constumerReview";
 import event from "./event";
-import heroStripes from "./heroStripes";
+import newsHero from "./newsHero";
 import book from "./book";
 import bookCircle from "./bookCircle";
 import about from "./about";
@@ -24,7 +24,7 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
 
-    heroStripes,
+    newsHero,
     info,
     openingHours,
     event,
