@@ -67,19 +67,18 @@ export const BookCircleContainer: React.FC<BookCircleContainerProps> = ({
                 alt="Picture of a pile of books"
                 layout="fill"
                 objectFit="cover"
+                priority={true}
               />
             </S.ImageContainer>
 
             {bookCircle.map((bookCircle, index) => {
               return (
-                <>
-                  <S.TextTitle key={bookCircle._id}>
-                    {bookCircle.name}
-                  </S.TextTitle>
-                  <S.TextBody key={bookCircle._id}>
+                <div key={`bookCircle-map-${bookCircle._id}`}>
+                  <S.TextTitle>{bookCircle.name}</S.TextTitle>
+                  <S.TextBody>
                     {bookCircle.description[0].children[0].text}
                   </S.TextBody>
-                </>
+                </div>
               );
             })}
           </S.RightContainer>

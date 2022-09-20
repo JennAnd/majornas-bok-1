@@ -24,7 +24,17 @@ interface propInterface {
       _id: string;
     }
   ];
-  bookCircle: [{}];
+  bookCircle: [
+    {
+      name: string;
+      date: string;
+      description: { children }[];
+      slug: string;
+      image: string;
+      _id: string;
+      imageUrl: string;
+    }
+  ];
 }
 
 const Event: NextPage<propInterface> = ({
@@ -42,15 +52,15 @@ const Event: NextPage<propInterface> = ({
       <Bookmark text="Författarkvällar" />
       {eventInfo.map((item, index) => {
         if (index === 0) {
-          return <EventCardBig item={item} key={item._id} />;
+          return <EventCardBig item={item} key={`EventCardBig-${item._id}`} />;
         }
       })}
       <EventContainer>
         {eventInfo.map((item, index) => {
           if (index === 0) {
-            return <></>;
+            return null;
           } else {
-            return <EventCard item={item} key={item._id} />;
+            return <EventCard item={item} key={`EventCard-${item._id}`} />;
           }
         })}
         {showPopup && (
