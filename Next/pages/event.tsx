@@ -24,12 +24,14 @@ interface propInterface {
       _id: string;
     }
   ];
+  bookCircle: [{}];
 }
 
 const Event: NextPage<propInterface> = ({
   openingHours,
   companyInfo,
   eventInfo,
+  bookCircle,
 }) => {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
@@ -61,7 +63,7 @@ const Event: NextPage<propInterface> = ({
         )}
       </EventContainer>
       <Bookmark text="Bokcirkel" />
-      <BookCircleContainer />
+      <BookCircleContainer bookCircle={bookCircle} />
       <Footer openingHours={openingHours} companyInfo={companyInfo} />
     </>
   );
@@ -74,7 +76,9 @@ export const getServerSideProps = async () => {
     "imageUrl": image.asset->url,
       ...
     }`);
-  return { props: { openingHours, companyInfo, eventInfo } };
+  const bookCircle = await SanityClient.fetch(`*[_type == 'bookCircle'][0..1]`);
+
+  return { props: { openingHours, companyInfo, eventInfo, bookCircle } };
 };
 
 export default Event;

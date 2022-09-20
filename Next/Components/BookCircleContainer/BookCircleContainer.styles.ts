@@ -11,16 +11,17 @@ export const BookCircleContainer = styled.div`
 
   @media (${({ theme }) => theme.breakpoint.tablet}) {
     margin-bottom: -410px;
-    padding: 3rem;
+    padding: 5rem;
   }
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    height: 950px;
+    height: 750px;
     margin-bottom: 0px;
     flex-direction: row;
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    height: 1050px;
   }
 `;
 
@@ -30,6 +31,10 @@ export const LeftContainer = styled.div`
   left: 0;
   display: flex;
   flex-direction: column;
+
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+    margin-bottom: 50px;
+  }
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     width: 50%;
@@ -64,12 +69,15 @@ export const ImageContainer = styled.div`
   }
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
+    top: -150px;
+    margin-bottom: -150px;
+    height: 60%;
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     margin-bottom: -100px;
-    top: -120px;
-    height: 70%;
+    top: -150px;
+    height: 60%;
   }
 `;
 

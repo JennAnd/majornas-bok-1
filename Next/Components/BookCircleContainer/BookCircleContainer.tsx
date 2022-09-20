@@ -1,10 +1,15 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { Z_ASCII } from "zlib";
 import { Button } from "../Button/Button";
 import { Text } from "../Text/Text";
+import { Whitespace } from "../Whitespace/Whitespace";
 import * as S from "./BookCircleContainer.styles";
+import { BookCircleContainerProps } from "./BookCircleContainer.types";
 
-export const BookCircleContainer = () => {
+export const BookCircleContainer: React.FC<BookCircleContainerProps> = ({
+  bookCircle,
+}) => {
   const [showPopup, setShowPopup] = useState(false);
   const [width, setWidth] = useState(0);
 
@@ -66,16 +71,19 @@ export const BookCircleContainer = () => {
                 objectFit="cover"
               />
             </S.ImageContainer>
-            <S.TextTitle>Novellbokcirkel</S.TextTitle>
-            <S.TextBody>
-              Den första träffen hålls den 20/9 och inför detta tillfälle läser
-              vi “Öknens alla blommor” av Per Olov Enquist.
-            </S.TextBody>
-            <S.TextTitle>Pocketbokcirkel</S.TextTitle>
-            <S.TextBody>
-              Den första träffen hålls den 27/9 och inför detta tillfälle läser
-              vi “Klara och solen” Kazuo Ishiguro.
-            </S.TextBody>
+
+            {bookCircle.map((bookCircle, index) => {
+              return (
+                <>
+                  <S.TextTitle bookCircle={bookCircle} key={bookCircle._id}>
+                    {bookCircle.name}
+                  </S.TextTitle>
+                  <S.TextBody>
+                    {bookCircle.description[0].children[0].text}
+                  </S.TextBody>
+                </>
+              );
+            })}
           </S.RightContainer>
         </>
       )}
