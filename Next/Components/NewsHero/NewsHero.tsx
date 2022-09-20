@@ -42,7 +42,12 @@ const Title = styled.h1`
   position: relative;
 
   @media (max-width: 1300px) {
-    margin: 2rem 5rem;
+    margin: 2rem 2rem;
+    font-size: 3rem;
+  }
+
+  @media (max-width: 1000px) {
+    margin: 2rem 2rem;
     font-size: 2.5rem;
   }
 `;

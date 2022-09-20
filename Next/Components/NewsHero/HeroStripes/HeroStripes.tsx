@@ -45,7 +45,10 @@ const StripeContainer = styled.div`
   justify-content: space-between;
 
   @media (max-width: 1300px) {
-    width: 80%;
+    width: 90%;
+  }
+  @media (max-width: 800px) {
+    top: 24rem;
   }
 `;
 
