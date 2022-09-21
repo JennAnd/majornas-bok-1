@@ -45,7 +45,7 @@ export const PopupOverlay: React.FC<PopupOverlayProps> = ({
         <S.NameContainer>{eventInfo.name}</S.NameContainer>
         <S.InfoWrapper>
           <S.DescriptionContainer>
-            {eventInfo.description[0].children[0].text}
+            {eventInfo.description}
           </S.DescriptionContainer>
           <S.SignUpContainer>Anmäl dig till författarkvällen</S.SignUpContainer>
           <S.NameAndMail>Namn</S.NameAndMail>

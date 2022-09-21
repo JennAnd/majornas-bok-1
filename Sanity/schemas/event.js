@@ -10,7 +10,13 @@ export default {
       name: "name",
       title: "Namn",
       type: "string",
-      description: "Vänligen använd Förnamn Efternamn format.",
+      description: "Vänligen använd Förnamn Efternamn format (max 28 tecken).",
+      validation: (Rule) => [
+        Rule.required()
+          .min(3)
+          .error("A title of min. 3 characters is required"),
+        Rule.max(28).error("Namnet är för långt. Försök korta ner det."),
+      ],
     },
     {
       name: "date",
@@ -21,12 +27,17 @@ export default {
     {
       name: "description",
       title: "Beskrivning",
-      type: "blockContent",
+      type: "text",
       description:
-        "Vänligen ange en kort beskrivning av eventet. (max 100 tecken)",
-      options: {
-        maxLength: 100,
-      },
+        "Vänligen ange en kort beskrivning av eventet (max 225 tecken).",
+      validation: (Rule) => [
+        Rule.required()
+          .min(3)
+          .error("A title of min. 3 characters is required"),
+        Rule.max(225).error(
+          "Beskrivningen är för lång. Var god korta ner den."
+        ),
+      ],
     },
     {
       name: "slug",
