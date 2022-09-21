@@ -14,13 +14,20 @@ export const Overlay = styled.div`
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     height: 80vh;
-    width: 80vw;
+    width: 90vw;
     top: calc(50% - 40vh);
-    left: calc(50% - 40vw);
+    left: calc(50% - 45vw);
 
     flex-direction: row;
     gap: 5rem;
     box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    height: 80vh;
+    width: 80vw;
+    top: calc(50% - 40vh);
+    left: calc(50% - 40vw);
   }
 `;
 
@@ -130,11 +137,12 @@ export const NameContainer = styled.div`
     margin-bottom: ${({ theme }) => theme.margin.medium};
     background-color: unset;
     color: ${({ theme }) => theme.color.black};
+    top: -1.5rem;
     /* top: ${({ theme }) => theme.margin.xLarge}; */
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    font-size: ${({ theme }) => theme.fontSize.h1};
+    font-size: ${({ theme }) => theme.fontSize.xlarge};
     top: 0;
   }
 `;
