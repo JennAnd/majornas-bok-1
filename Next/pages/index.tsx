@@ -3,6 +3,7 @@ import { Bookgrid } from "../Components/Bookgrid/Bookgrid";
 import { BookgridContainer } from "../Components/BookgridContainer/BookgridContainer";
 import { Bookmark } from "../Components/Bookmark/Bookmark";
 import { Footer } from "../Components/Footer/Footer";
+import { Instagram } from "../Components/Instagram/Instagram";
 import { Navbar } from "../Components/Navbar/Navbar";
 import { HeroStripes } from "../Components/NewsHero/HeroStripes/HeroStripes";
 import { NewsHero } from "../Components/NewsHero/NewsHero";
@@ -46,6 +47,7 @@ const Home: NextPage<propInterface> = ({
 }) => {
   return (
     <div>
+      <Instagram />
       <Navbar />
       <NewsHero newsInfo={newsInfo} />
       <Bookgrid book={bookGrid} />
