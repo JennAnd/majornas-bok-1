@@ -2,19 +2,22 @@ import styled from "styled-components";
 
 export const Overlay = styled.div`
   background-color: ${({ theme }) => theme.color.white};
-  position: absolute;
+  position: fixed;
   top: 0px;
   z-index: 3;
-  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  left: 0px;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    height: 40vh;
-    width: 90vw;
+    height: 80vh;
+    width: 80vw;
     top: calc(50% - 40vh);
-    left: calc(50% - 45vw);
+    left: calc(50% - 40vw);
+
     flex-direction: row;
     gap: 5rem;
     box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.2);
@@ -43,7 +46,7 @@ export const RightContainer = styled.div`
     position: relative;
     width: 50%;
     /* top: 15%; */
-    /* margin-top: ${({ theme }) => theme.margin.xxLarge}; */
+    margin-top: ${({ theme }) => theme.margin.xxLarge};
   }
 `;
 
@@ -93,6 +96,7 @@ export const CloseContainer = styled.div`
   justify-content: center;
   top: ${({ theme }) => theme.margin.large};
   opacity: 0.85;
+  z-index: 2;
 
   &:hover {
     cursor: pointer;
@@ -100,6 +104,7 @@ export const CloseContainer = styled.div`
   }
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
+    background-color: none;
     width: ${({ theme }) => theme.margin.xxLarge};
     height: ${({ theme }) => theme.margin.xxLarge};
     opacity: 1;
@@ -125,7 +130,7 @@ export const NameContainer = styled.div`
     margin-bottom: ${({ theme }) => theme.margin.medium};
     background-color: unset;
     color: ${({ theme }) => theme.color.black};
-    top: ${({ theme }) => theme.margin.xLarge};
+    /* top: ${({ theme }) => theme.margin.xLarge}; */
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
@@ -149,12 +154,12 @@ export const DescriptionContainer = styled.div`
   top: -2rem;
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    top: -2rem;
+    top: -3rem;
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    font-size: ${({ theme }) => theme.fontSize.h2};
-    top: -6rem;
+    /* font-size: ${({ theme }) => theme.fontSize.medium}; */
+    top: -3rem;
   }
 `;
 
