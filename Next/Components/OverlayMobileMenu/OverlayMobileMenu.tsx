@@ -1,18 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import * as S from "./OverlayMobileMenu.styles";
 import Image from "next/image";
 import Link from "next/link";
+import { OverlayMobileMenuProps } from "./OverlayMobileMenu.types";
 
-export const OverlayMobileMenu = () => {
+export const OverlayMobileMenu: React.FC<OverlayMobileMenuProps> = ({
+  onClick,
+}) => {
   return (
     <S.OverlayMenuWrapper>
-      <S.IconWrapper>
-        <Image
-          src="/Icons/MenuClose.svg"
-          alt="menu-icon"
-          width={16}
-          height={16}
-        />
+      <S.IconWrapper onClick={onClick}>
+        <Image src="/Icons/MenuClose.svg" alt="close" width={16} height={16} />
       </S.IconWrapper>
       <S.HeaderText>
         Majornas <br />
@@ -23,7 +21,7 @@ export const OverlayMobileMenu = () => {
         <Link href="/">
           <a>NYHETER</a>
         </Link>
-        <Link href="/">
+        <Link href="/event">
           <a>EVENT</a>
         </Link>
         <Link href="/about">
