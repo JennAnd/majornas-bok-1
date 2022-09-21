@@ -7,7 +7,6 @@ import { PopupOverlayProps } from "./PopupOverlay.types";
 export const PopupOverlay: React.FC<PopupOverlayProps> = ({
   eventInfo,
   onClick,
-  text,
 }) => {
   const [inputName, setInputName] = useState("");
   const [inputEmail, setInputEmail] = useState("");
