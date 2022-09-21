@@ -4,7 +4,7 @@ import createSchema from "part:@sanity/base/schema-creator";
 import schemaTypes from "all:part:@sanity/base/schema-type";
 
 // We import object and document schemas
-import blockContent from "./blockContent";
+
 import openingHours from "./openingHours";
 import info from "./info";
 import costumerReview from "./constumerReview";
@@ -32,9 +32,5 @@ export default createSchema({
     bookCircle,
     about,
     costumerReview,
-
-    // When added to this list, object types can be used as
-    // { type: 'typename' } in other document schemas
-    blockContent,
   ]),
 });
