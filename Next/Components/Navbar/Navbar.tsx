@@ -26,7 +26,7 @@ export const Navbar = () => {
           <Link href="/event">
             <a>Event</a>
           </Link>
-          <Link href="/about">
+          <Link href="/om-oss">
             <a>Om butiken</a>
           </Link>
         </S.NavMenu>
