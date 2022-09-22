@@ -59,4 +59,14 @@ export const NavMenu = styled.div`
   }
 `;
 
+export const LinkWrapper = styled.div<{ active: boolean }>`
+  text-decoration: underline;
+  ${(props) =>
+    props.active &&
+    `
+    text-decoration: underline;
+    color: #FFF;
+    `}
+`;
+
 export const Nav = styled.nav``;
