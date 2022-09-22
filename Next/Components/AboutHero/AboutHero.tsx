@@ -1,10 +1,14 @@
 import React from "react";
 import * as S from "./AboutHero.styles";
 import Image from "next/image";
+import { Bookmark } from "../Bookmark/Bookmark";
 
 export const AboutHero = ({ aboutInfo }) => {
   return (
     <S.Hero>
+      <S.bookmarkWrapper>
+        <Bookmark text="Om butiken" color="#FEB28C" />
+      </S.bookmarkWrapper>
       <S.HeroWrapper>
         <S.ImageHeroWrapperMobile>
           <Image
