@@ -49,9 +49,9 @@ const Home: NextPage<propInterface> = ({
     <div>
       <Instagram />
       <Navbar />
-      <NewsHero newsInfo={newsInfo} />
+      {/* <NewsHero newsInfo={newsInfo} /> */}
       <Bookgrid book={bookGrid} />
-      <HeroStripes heroStripesText={newsInfo}></HeroStripes>
+      {/* <HeroStripes heroStripesText={newsInfo}></HeroStripes> */}
       <BookgridContainer bookGrid={bookGrid} />
       <Bookmark text="Nyinkomna böcker" />
       <Bookgrid book={bookGrid} />
