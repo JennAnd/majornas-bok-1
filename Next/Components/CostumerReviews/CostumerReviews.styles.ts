@@ -19,7 +19,7 @@ export const ReviewContainer = styled.div`
 
 export const ReviewText = styled.p`
   font-size: 16px;
-  font-family: "Big Casio";
+  font-family: ${({ theme }) => theme.font.BigCaslon};
   text-align: center;
   color: ${({ theme }) => theme.color.black};
   padding: 5px;
