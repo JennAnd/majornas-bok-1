@@ -5,8 +5,10 @@ import useSWR from "swr";
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export const Instagram = () => {
+  const username = "yrgo_bokhandel";
+
   const { data, error } = useSWR(
-    "https://pokeapi.co/api/v2/pokemon/ditto",
+    "https://instagram.com/${username}/?__a=1",
     fetcher
   );
 
