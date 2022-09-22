@@ -1,8 +1,8 @@
 import React from "react";
-import * as S from "./Bookgrid.styles";
+import * as S from "./BookCard.styles";
 import Image from "next/image";
 
-export const Bookgrid = ({ book }) => {
+export const BookCard = ({ book }) => {
   return (
     <S.Bookdiv>
       <Image src={book?.imageUrl} alt={book?.title} width={380} height={480} />

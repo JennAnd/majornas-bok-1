@@ -4,6 +4,5 @@ export type BookmarkProps = {
   className?: string;
   onClick?: () => void;
   alt?: string;
-  backgroundColor?: string;
   color?: string;
 };
