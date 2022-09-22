@@ -15,7 +15,7 @@ export const CostumerReviews = ({ costumerReview }) => {
                 height={40}
               />
             </S.ImageWrapper>
-            <S.ReviewText>{costumerReview[0].Review}</S.ReviewText>
+            <S.ReviewText>{costumerReview[1].Review}</S.ReviewText>
           </S.ReviewNoteOne>
 
           <S.ReviewNoteTwo>
@@ -27,7 +27,7 @@ export const CostumerReviews = ({ costumerReview }) => {
                 height={40}
               />
             </S.ImageWrapper>
-            <S.ReviewText>{costumerReview[1].Review}</S.ReviewText>
+            <S.ReviewText>{costumerReview[0].Review}</S.ReviewText>
           </S.ReviewNoteTwo>
 
           <S.ReviewNoteThree>

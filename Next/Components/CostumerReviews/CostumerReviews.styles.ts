@@ -19,7 +19,7 @@ export const ReviewContainer = styled.div`
 
 export const ReviewText = styled.p`
   font-size: 16px;
-  font-family: "Big Casio";
+  font-family: ${({ theme }) => theme.font.BigCaslon};
   text-align: center;
   color: ${({ theme }) => theme.color.black};
   padding: 5px;
@@ -64,8 +64,12 @@ export const ReviewNoteOne = styled.div`
   }
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    margin-left: 550px;
+    margin-left: 15%;
     width: 290px;
+  }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    margin-left: 35%;
   }
 `;
 
@@ -76,10 +80,17 @@ export const ReviewNoteTwo = styled.div`
     display: block;
     background-color: white;
     padding: 0px;
-    display: inline-block;
+    position: relative;
+    padding: 10px;
+    z-index: 2;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 465px;
-    margin-left: 60px;
+    width: 405px;
+    margin-top: -200px;
+    margin-left: 50%;
+  }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    margin-left: 60%;
   }
 `;
 
@@ -97,7 +108,14 @@ export const ReviewNoteThree = styled.div`
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     width: 359px;
-    margin-left: 267px;
+    margin-left: 10%;
+    margin-top: 150px;
+    position: relative;
+    z-index: 2;
+  }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    margin-left: 20%;
   }
 `;
 
@@ -108,6 +126,7 @@ export const ReviewNoteFour = styled.div`
   width: 175px;
   margin-left: 70px;
   margin-top: 40px;
+  padding-bottom: 5px;
   @media (${({ theme }) => theme.breakpoint.tablet}) {
     margin-left: 140px;
     width: 175px;
@@ -115,7 +134,16 @@ export const ReviewNoteFour = styled.div`
   }
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
+    margin-left: 60%;
+  }
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     width: 417px;
-    margin-left: 140px;
+    margin-left: 50%;
+    margin-top: -300px;
+    margin-bottom: 150px;
+    display: block;
+    position: relative;
+    z-index: 2;
   }
 `;
