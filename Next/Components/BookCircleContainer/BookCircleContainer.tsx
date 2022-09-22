@@ -75,9 +75,7 @@ export const BookCircleContainer: React.FC<BookCircleContainerProps> = ({
               return (
                 <div key={`bookCircle-map-${bookCircle._id}`}>
                   <S.TextTitle>{bookCircle.name}</S.TextTitle>
-                  <S.TextBody>
-                    {bookCircle.description[0].children[0].text}
-                  </S.TextBody>
+                  <S.TextBody>{bookCircle.description}</S.TextBody>
                 </div>
               );
             })}

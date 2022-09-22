@@ -20,17 +20,14 @@ const Home: NextPage<propInterface> = ({
   aboutInfo,
 }) => {
   return (
-    <div>
-      {/* <Link href="sanityTestPage">Sanity test</Link> */}
-
+    <>
       <Navbar />
       <Bookmark text="Om butiken" />
       <AboutHero aboutInfo={aboutInfo} />
       <Bookmark text="Vad besökare sagt" />
       <CostumerReviews costumerReview={costumerReview} />
-
       <Footer openingHours={openingHours} companyInfo={companyInfo} />
-    </div>
+    </>
   );
 };
 

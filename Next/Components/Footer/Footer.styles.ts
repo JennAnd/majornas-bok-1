@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.footer`
   position: relative;
   bottom: 0;
   height: 0;
@@ -37,27 +37,21 @@ export const OpeningsHoursContainer = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  position: absolute;
-  width: 230px;
   z-index: 1;
-  right: 0px;
-  bottom: 680px;
   padding: 0;
   margin: 0;
 
-  @media (${({ theme }) => theme.breakpoint.tablet}) {
-    bottom: 1500px;
-    width: 480px;
-  }
+  position: absolute;
+  bottom: 200vw;
+  width: 40vw;
+  height: 38.5vw;
+  right: 8vw;
+
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    bottom: 520px;
-    width: 280px;
-    right: 120px;
-  }
-  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    bottom: 750px;
-    width: 400px;
-    right: calc(25% - 200px);
+    bottom: 49vw;
+    width: 30vw;
+    height: 38.5vw;
+    right: 10.5vw;
   }
 `;
 
@@ -120,35 +114,25 @@ export const OpeningsHoursTime = styled.p`
 
 export const CompanyInfoContainer = styled.div`
   position: absolute;
-  left: calc(50% - 135px);
-  bottom: 180px;
-  width: 270px;
-  height: 230px;
+  left: 17vw;
+  bottom: 50vw;
+  width: 65vw;
+  height: 50vw;
 
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  @media (${({ theme }) => theme.breakpoint.tablet}) {
-    left: calc(50% - 275px);
-    bottom: 330px;
-    width: 550px;
-    height: 500px;
-  }
-
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    left: calc(25% - 170px);
-    bottom: 165px;
-    width: 260px;
-    height: 210px;
+    left: 10vw;
+    bottom: 8vw;
+    width: 21.5vw;
+    height: 40vw;
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    left: calc(25% - 235px);
-    bottom: 230px;
-    width: 360px;
-    height: 300px;
+    bottom: 6vw;
   }
 `;
 
@@ -159,14 +143,14 @@ export const CompanyName = styled.p`
   color: #292929;
 
   @media (${({ theme }) => theme.breakpoint.tablet}) {
-    font-size: 3.9rem;
+    font-size: 3.3rem;
   }
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     font-size: 1.6rem;
     margin-bottom: ${({ theme }) => theme.margin.large};
   }
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     margin-top: 0;
   }
 `;
@@ -209,9 +193,6 @@ export const CompanyContact = styled.a`
     font-size: 2.25rem;
   }
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    font-size: 1.2rem;
-  }
-  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    font-size: 1.6rem;
+    font-size: 1rem;
   }
 `;
