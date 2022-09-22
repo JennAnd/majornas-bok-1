@@ -30,8 +30,8 @@ export const OverlayMobileMenu: React.FC<OverlayMobileMenuProps> = ({
             <a>EVENT</a>
           </Link>
         </S.LinkWrapper>
-        <S.LinkWrapper active={router.asPath === "/about"}>
-          <Link href="/about">
+        <S.LinkWrapper active={router.asPath === "/om-oss"}>
+          <Link href="/om-oss">
             <a>OM BUTIKEN</a>
           </Link>
         </S.LinkWrapper>
