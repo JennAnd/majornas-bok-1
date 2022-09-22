@@ -37,7 +37,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onClick }) => {
         )}
 
         <S.NavMenu>
-
           <S.LinkWrapper active={router.asPath === "/"}>
             <Link href="/">
               <a>Nyheter</a>
@@ -53,17 +52,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onClick }) => {
               <a>Om butiken</a>
             </Link>
           </S.LinkWrapper>
-
-          <Link href="/">
-            <a>Nyheter</a>
-          </Link>
-          <Link href="/event">
-            <a>Event</a>
-          </Link>
-          <Link href="/om-oss">
-            <a>Om butiken</a>
-          </Link>
-
         </S.NavMenu>
       </S.NavWrapper>
     </S.Nav>
