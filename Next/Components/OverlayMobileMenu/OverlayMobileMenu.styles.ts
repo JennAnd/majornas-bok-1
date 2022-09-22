@@ -58,3 +58,14 @@ export const MenuTextWrapper = styled.div`
     text-decoration: none;
   }
 `;
+
+export const LinkWrapper = styled.div<{ active: boolean }>`
+  text-decoration: none;
+
+  ${(props) =>
+    props.active &&
+    `
+    text-decoration: underline;
+    color: #FFF;
+    `}
+`;

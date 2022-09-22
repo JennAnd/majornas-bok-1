@@ -4,9 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { NavbarProps } from "./Navbar.types";
 import { OverlayMobileMenu } from "../OverlayMobileMenu/OverlayMobileMenu";
+import { useRouter } from "next/router";
 
 export const Navbar: React.FC<NavbarProps> = ({ onClick }) => {
   const [showOverlayMenu, setShowPopup] = useState(false);
+  const router = useRouter();
   return (
     <S.Nav>
       <S.NavWrapper>
@@ -33,7 +35,25 @@ export const Navbar: React.FC<NavbarProps> = ({ onClick }) => {
             }}
           />
         )}
+
         <S.NavMenu>
+
+          <S.LinkWrapper active={router.asPath === "/"}>
+            <Link href="/">
+              <a>Nyheter</a>
+            </Link>
+          </S.LinkWrapper>
+          <S.LinkWrapper active={router.asPath === "/event"}>
+            <Link href="/event">
+              <a>Event</a>
+            </Link>
+          </S.LinkWrapper>
+          <S.LinkWrapper active={router.asPath === "/about"}>
+            <Link href="/about">
+              <a>Om butiken</a>
+            </Link>
+          </S.LinkWrapper>
+
           <Link href="/">
             <a>Nyheter</a>
           </Link>
@@ -43,6 +63,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onClick }) => {
           <Link href="/om-oss">
             <a>Om butiken</a>
           </Link>
+
         </S.NavMenu>
       </S.NavWrapper>
     </S.Nav>
