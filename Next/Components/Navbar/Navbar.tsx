@@ -47,8 +47,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onClick }) => {
               <a>Event</a>
             </Link>
           </S.LinkWrapper>
-          <S.LinkWrapper active={router.asPath === "/about"}>
-            <Link href="/about">
+          <S.LinkWrapper active={router.asPath === "/om-oss"}>
+            <Link href="/om-oss">
               <a>Om butiken</a>
             </Link>
           </S.LinkWrapper>
