@@ -22,7 +22,7 @@ export const BookName = styled.p`
   padding-top: 8px;
   margin: 0px;
 
-  @media (min-width: 1024px) {
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     font-size: 24px;
   }
 `;

@@ -2,20 +2,14 @@ import React from "react";
 import * as S from "./Bookmark.styles";
 import { BookmarkProps } from "./Bookmark.types";
 
-export const Bookmark: React.FC<BookmarkProps> = ({
-  onClick,
-  text,
-  backgroundColor,
-  color,
-}) => {
+export const Bookmark: React.FC<BookmarkProps> = ({ onClick, text, color }) => {
   return (
-    <S.BookmarkWrapper
-      style={{
-        color: `${color}`,
-        backgroundColor: `${backgroundColor}`,
-      }}
-    >
-      <S.BookmarkContainer
+    <S.BookmarkWrapper>
+      <S.BookmarkContainer onClick={onClick} color={color}>
+        {text}
+      </S.BookmarkContainer>
+
+      {/* <S.BookmarkContainer
         style={{
           color: `${color}`,
           backgroundColor: `${backgroundColor}`,
@@ -23,7 +17,7 @@ export const Bookmark: React.FC<BookmarkProps> = ({
         onClick={onClick}
       >
         {text}
-      </S.BookmarkContainer>
+      </S.BookmarkContainer> */}
     </S.BookmarkWrapper>
   );
 };

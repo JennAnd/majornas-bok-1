@@ -1,13 +1,17 @@
 import React from "react";
 import * as S from "./BookgridContainer.styles";
-import { Bookgrid } from "../Bookgrid/Bookgrid";
+import { BookCard } from "../BookCard/BookCard";
+import { Bookmark } from "../Bookmark/Bookmark";
 
-export const BookgridContainer = (bookGrid) => {
+export const BookgridContainer = (bookCard) => {
   return (
-    <S.BookWrapper>
-      {bookGrid.bookGrid.map((book) => {
-        return <Bookgrid book={book} key={1} />;
-      })}
-    </S.BookWrapper>
+    <S.BookGridWrapper>
+      <Bookmark text="Nyinkomna böcker" color="#FEB28C" />
+      <S.BookGrid>
+        {bookCard.bookCard.map((book) => {
+          return <BookCard book={book} key={1} />;
+        })}
+      </S.BookGrid>
+    </S.BookGridWrapper>
   );
 };
