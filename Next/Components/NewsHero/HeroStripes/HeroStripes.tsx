@@ -10,6 +10,7 @@ interface LengthProps {
 const Stripes = styled.div<LengthProps>`
   background-color: ${({ theme }) => theme.color.black};
   color: ${({ theme }) => theme.color.white};
+  opacity: 0.5;
 
   text-align: start;
   font-family: "Courier New";
@@ -55,7 +56,7 @@ const StripeContainer = styled.div`
 
   position: absolute;
   right: 0rem;
-  top: 15rem;
+  top: 4rem;
 
   display: flex;
   flex-direction: column;
@@ -65,6 +66,7 @@ const StripeContainer = styled.div`
   @media (max-width: 1300px) {
     top: 20rem;
     height: 34rem;
+    margin-top: -100px;
     width: 90%;
   }
   @media (max-width: 1000px) {
