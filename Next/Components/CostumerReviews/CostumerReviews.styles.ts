@@ -3,8 +3,18 @@ import styled from "styled-components";
 export const ReviewWrapper = styled.div`
   width: 100vw;
   background-color: ${({ theme }) => theme.color.green};
+  padding-top: 40px;
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
+    padding-top: 40px;
+  }
+`;
+
+export const BookmarkContainer = styled.div`
+  margin-bottom: 0px;
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    margin-bottom: 30px;
   }
 `;
 
@@ -52,14 +62,16 @@ export const ImageWrapper = styled.div`
 export const ReviewNoteOne = styled.div`
   background-color: white;
   padding: 0px;
-  display: inline-block;
+  display: block;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   width: 180px;
   margin-left: 30px;
-  margin-top: 50px;
+  margin-top: 10px;
+  z-index: 2;
 
   @media (${({ theme }) => theme.breakpoint.tablet}) {
     margin-left: 60px;
+    margin-top: 100px;
     width: 280px;
   }
 
@@ -69,7 +81,8 @@ export const ReviewNoteOne = styled.div`
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    margin-left: 35%;
+    margin-left: 43%;
+    margin-top: -200px;
   }
 `;
 
@@ -90,7 +103,8 @@ export const ReviewNoteTwo = styled.div`
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    margin-left: 60%;
+    margin-left: 68%;
+    margin-top: -210px;
   }
 `;
 
