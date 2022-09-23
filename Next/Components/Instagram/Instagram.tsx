@@ -62,14 +62,14 @@ const ImageContainer = styled.div`
 `;
 
 const InstagramContainer = styled.div`
-  height: 35rem;
-
   background: ${({ theme }) => theme.color.blue};
+  height: 50rem;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   @media (max-width: 1000px) {
+    height: 35rem;
     white-space: nowrap;
     overflow: scroll;
     overflow-y: hidden;
