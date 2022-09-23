@@ -8,10 +8,11 @@ const HeroSection = styled.div`
   max-width: 80rem;
 
   display: flex;
-  align-items: center;
+  flex-direction: column;
 
-  @media (max-width: 1300px) {
-    flex-direction: column;
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+    align-items: center;
+    flex-direction: row;
   }
 `;
 
@@ -27,7 +28,7 @@ const BackgroundDiv = styled.div`
   z-index: -1;
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    right: -15rem;
+    right: -30rem;
     margin-top: 0px;
     width: 60rem;
     height: 120rem;
@@ -57,14 +58,21 @@ const Title = styled.h1`
   position: relative;
 
   @media (${({ theme }) => theme.breakpoint.tablet}) {
-    margin: 2rem 5rem;
+    margin: 0rem 5rem;
     margin-bottom: 400px;
+    margin-top: -400px;
+    padding-bottom: 40px;
   }
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    margin: 0rem 5rem;
-    margin-bottom: 400px;
     font-size: 3.5rem;
+    margin-top: 0px;
+    width: 40%;
+  }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    font-size: 3.5rem;
+    margin-top: 0px;
   }
 `;
 
