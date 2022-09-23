@@ -76,7 +76,7 @@ const InstagramContainer = styled.div`
   }
 `;
 
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
+const fetcher = (link) => fetch(link).then((res) => res.json());
 
 export const Instagram = () => {
   // our instagram id is "18046477966366219";
@@ -85,10 +85,9 @@ export const Instagram = () => {
     `https://graph.instagram.com/me/media?fields=id,media_url,username,caption&access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}`,
     fetcher
   );
+
   if (error) return <div>Failed to load</div>;
   if (!data) return <div>Loading...</div>;
-
-  const Images = data.data.map((image) => console.log(image.media_url));
 
   return (
     <InstagramContainer>
