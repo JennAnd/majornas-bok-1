@@ -5,7 +5,9 @@ import Image from "next/image";
 import styled from "styled-components";
 
 const Display = ({ image }) => {
-  return <img src={image} alt="Picture of the author" />;
+  return (
+    <Image src={image} alt="Picture of the author" width={300} height={300} />
+  );
 };
 
 const Shelf = styled.div`
@@ -22,7 +24,7 @@ const ImageContainer = styled.div`
   padding: 0rem 2rem;
 
   display: flex;
-  justify-content: space-around;/v/t51.29350-15/307983666_2125345730983648_2862442340684326019_n.jpg
+  justify-content: space-around;
   align-items: center;
   img {
     width: 18rem;
@@ -73,6 +75,9 @@ export const Instagram = () => {
   const username = "yrgo_bokhandel";
   const token =
     "IGQVJXdWZAnVWlSTm5rRkpPLUtkR2hSQnU4RjRseGYzYzI0MVdIYVBjQXE4cFJfSjM2dENxRVpUNXJ4M0hZAb3BJTWFSNXZAfUDI1V0RIVlB6TWNIQWZAtMUFkR2JBNGM4Vm1sX0w0ZAmFLUzc2cnU0SUgwYQZDZD";
+  console.log("Access token " + process.env.INSTAGRAM_ACCESS_TOKEN);
+  console.log("Test " + process.env.NEXT_PUBLIC_STUDIO_AUTH_TOKEN);
+
   const id = "18046477966366219";
 
   const { data, error } = useSWR(

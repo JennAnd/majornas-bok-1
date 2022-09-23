@@ -55,18 +55,6 @@ const Home: NextPage<propInterface> = ({
       <Bookgrid book={bookGrid} />
       <Bookmark text="Senaste på Instagram" />
       <Instagram />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis
-        mollitia. Doloremque laboriosam dolorum adipisci ullam odit minus nulla
-        consequuntur ab? Incidunt porro libero saepe voluptatem consequatur.
-        Voluptate, saepe fuga.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis
-        mollitia. Doloremque laboriosam dolorum adipisci ullam odit minus nulla
-        consequuntur ab? Incidunt porro libero saepe voluptatem consequatur.
-        Voluptate, saepe fuga.
-      </p>
       <Footer openingHours={openingHours} companyInfo={companyInfo} />
     </div>
   );
