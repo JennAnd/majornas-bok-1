@@ -47,15 +47,14 @@ const Home: NextPage<propInterface> = ({
 }) => {
   return (
     <div>
-      <Instagram />
       <Navbar />
-      {/* <NewsHero newsInfo={newsInfo} /> */}
+      <NewsHero newsInfo={newsInfo} />
       <Bookgrid book={bookGrid} />
-      {/* <HeroStripes heroStripesText={newsInfo}></HeroStripes> */}
       <BookgridContainer bookGrid={bookGrid} />
       <Bookmark text="Nyinkomna böcker" />
       <Bookgrid book={bookGrid} />
       <Bookmark text="Senaste på Instagram" />
+      <Instagram />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, veritatis
         mollitia. Doloremque laboriosam dolorum adipisci ullam odit minus nulla

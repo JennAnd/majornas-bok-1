@@ -12,17 +12,43 @@ const Shelf = styled.div`
   background: ${({ theme }) => theme.color.black};
   width: 100%;
   height: 2rem;
+
+  @media (max-width: 1000px) {
+    width: 80rem;
+  }
 `;
 
 const ImageContainer = styled.div`
   padding: 0rem 2rem;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around;/v/t51.29350-15/307983666_2125345730983648_2862442340684326019_n.jpg
   align-items: center;
   img {
     width: 18rem;
     height: 18rem;
+  }
+
+  @media (max-width: 1600px) {
+    img {
+      width: 14rem;
+      height: 14rem;
+    }
+  }
+
+  @media (max-width: 1250px) {
+    img {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    img {
+      width: 12rem;
+      height: 12rem;
+    }
+    width: 80rem;
   }
 `;
 
@@ -34,6 +60,11 @@ const InstagramContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media (max-width: 1000px) {
+    white-space: nowrap;
+    overflow: scroll;
+    overflow-y: hidden;
+  }
 `;
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
