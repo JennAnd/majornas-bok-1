@@ -5,8 +5,18 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  env: {
+    INSTAGRAM_ACCESS_TOKEN: process.env.INSTAGRAM_ACCESS_TOKEN,
+  },
   images: {
-    domains: ["cdn.sanity.io", "images.unsplash.com"],
+    //Instagram API changes domain from time to time 😣
+    domains: [
+      "cdn.sanity.io",
+      "images.unsplash.com",
+      "scontent-arn2-1.cdninstagram.com",
+      "scontent-arn2-2.cdninstagram.com",
+      "scontent-arn2-3.cdninstagram.com",
+    ],
   },
 };
 

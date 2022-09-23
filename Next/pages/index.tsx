@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { BookgridContainer } from "../Components/BookgridContainer/BookgridContainer";
 import { Bookmark } from "../Components/Bookmark/Bookmark";
 import { Footer } from "../Components/Footer/Footer";
+import { Instagram } from "../Components/Instagram/Instagram";
 import { Navbar } from "../Components/Navbar/Navbar";
 import { HeroStripes } from "../Components/NewsHero/HeroStripes/HeroStripes";
 import { NewsHero } from "../Components/NewsHero/NewsHero";
@@ -50,7 +51,7 @@ const Home: NextPage<propInterface> = ({
       <HeroStripes heroStripesText={newsInfo}></HeroStripes>
       <BookgridContainer bookCard={bookCard} />
       <Bookmark text="Senaste på Instagram" color="#FFF4BF" />
-      {/* Put instagram here */}
+      <Instagram />
       <Footer openingHours={openingHours} companyInfo={companyInfo} />
     </div>
   );
