@@ -75,16 +75,10 @@ const InstagramContainer = styled.div`
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export const Instagram = () => {
-  const username = "yrgo_bokhandel";
-  const token =
-    "IGQVJXdWZAnVWlSTm5rRkpPLUtkR2hSQnU4RjRseGYzYzI0MVdIYVBjQXE4cFJfSjM2dENxRVpUNXJ4M0hZAb3BJTWFSNXZAfUDI1V0RIVlB6TWNIQWZAtMUFkR2JBNGM4Vm1sX0w0ZAmFLUzc2cnU0SUgwYQZDZD";
-  console.log("Access token " + process.env.INSTAGRAM_ACCESS_TOKEN);
-  console.log("Test " + process.env.NEXT_PUBLIC_STUDIO_AUTH_TOKEN);
-
   const id = "18046477966366219";
 
   const { data, error } = useSWR(
-    `https://graph.instagram.com/me/media?fields=id,media_url,username,caption&access_token=${token}`,
+    `https://graph.instagram.com/me/media?fields=id,media_url,username,caption&access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}`,
     fetcher
   );
   if (error) return <div>Failed to load</div>;
