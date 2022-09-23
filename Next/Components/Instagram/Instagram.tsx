@@ -55,6 +55,10 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @media (max-width: 1000px) {
+    width: 80rem;
+  }
 `;
 
 const InstagramContainer = styled.div`
@@ -75,7 +79,7 @@ const InstagramContainer = styled.div`
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export const Instagram = () => {
-  const id = "18046477966366219";
+  // our instagram id is "18046477966366219";
 
   const { data, error } = useSWR(
     `https://graph.instagram.com/me/media?fields=id,media_url,username,caption&access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}`,
