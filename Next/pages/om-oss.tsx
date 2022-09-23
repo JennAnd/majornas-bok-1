@@ -23,7 +23,6 @@ const Home: NextPage<propInterface> = ({
     <>
       <Navbar />
       <AboutHero aboutInfo={aboutInfo} />
-      <Bookmark text="Vad besökare sagt" color="#FFF4BF" />
       <CostumerReviews costumerReview={costumerReview} />
       <Footer openingHours={openingHours} companyInfo={companyInfo} />
     </>
