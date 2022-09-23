@@ -60,7 +60,7 @@ export const NavMenu = styled.div`
 `;
 
 export const LinkWrapper = styled.div<{ active: boolean }>`
-  text-decoration: underline;
+  text-decoration: none;
   ${(props) =>
     props.active &&
     `
