@@ -6,9 +6,38 @@ import styled from "styled-components";
 
 const Display = ({ image }) => {
   return (
-    <Image src={image} alt="Picture of the author" width={300} height={300} />
+    <StyledImage>
+      <Image
+        className="Picture"
+        src={image}
+        alt="Instagram picture"
+        layout="fill"
+        objectFit="cover"
+      />
+    </StyledImage>
   );
 };
+
+const StyledImage = styled.div`
+  width: 18rem;
+  height: 18rem;
+  position: relative;
+
+  @media (max-width: 1600px) {
+    width: 14rem;
+    height: 14rem;
+  }
+
+  @media (max-width: 1250px) {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  @media (max-width: 1000px) {
+    width: 12rem;
+    height: 12rem;
+  }
+`;
 
 const Shelf = styled.div`
   background: ${({ theme }) => theme.color.black};
@@ -26,32 +55,6 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  img {
-    width: 18rem;
-    height: 18rem;
-  }
-
-  @media (max-width: 1600px) {
-    img {
-      width: 14rem;
-      height: 14rem;
-    }
-  }
-
-  @media (max-width: 1250px) {
-    img {
-      width: 10rem;
-      height: 10rem;
-    }
-  }
-
-  @media (max-width: 1000px) {
-    img {
-      width: 12rem;
-      height: 12rem;
-    }
-    width: 80rem;
-  }
 `;
 
 const InstagramContainer = styled.div`
@@ -92,8 +95,8 @@ export const Instagram = () => {
   return (
     <InstagramContainer>
       <ImageContainer>
-        {data.data.map((image) => (
-          <Display image={image.media_url} key="Instagram" />
+        {data.data.map((image, key) => (
+          <Display image={image.media_url} key={key} />
         ))}
       </ImageContainer>
       <Shelf />
