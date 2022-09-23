@@ -1,10 +1,10 @@
-import { SiBookstack } from "react-icons/si";
+import { GiBookshelf } from "react-icons/gi";
 
 export default {
   name: "book",
   title: "Böcker",
   type: "document",
-  icon: SiBookstack,
+  icon: GiBookshelf,
   fields: [
     {
       name: "title",
