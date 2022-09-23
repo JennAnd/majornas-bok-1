@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+/* import React, { useState } from "react"; */
 import * as S from "./OverlayMobileMenu.styles";
 import Image from "next/image";
 import Link from "next/link";
 import { OverlayMobileMenuProps } from "./OverlayMobileMenu.types";
+import { useRouter } from "next/router";
 
 export const OverlayMobileMenu: React.FC<OverlayMobileMenuProps> = ({
   onClick,
 }) => {
+  const router = useRouter();
   return (
     <S.OverlayMenuWrapper>
       <S.IconWrapper onClick={onClick}>
@@ -18,15 +20,21 @@ export const OverlayMobileMenu: React.FC<OverlayMobileMenuProps> = ({
       </S.HeaderText>
 
       <S.MenuTextWrapper>
-        <Link href="/">
-          <a>NYHETER</a>
-        </Link>
-        <Link href="/event">
-          <a>EVENT</a>
-        </Link>
-        <Link href="/about">
-          <a>OM BUTIKEN</a>
-        </Link>
+        <S.LinkWrapper active={router.asPath === "/"}>
+          <Link href="/">
+            <a>NYHETER</a>
+          </Link>
+        </S.LinkWrapper>
+        <S.LinkWrapper active={router.asPath === "/event"}>
+          <Link href="/event">
+            <a>EVENT</a>
+          </Link>
+        </S.LinkWrapper>
+        <S.LinkWrapper active={router.asPath === "/om-oss"}>
+          <Link href="/om-oss">
+            <a>OM BUTIKEN</a>
+          </Link>
+        </S.LinkWrapper>
       </S.MenuTextWrapper>
     </S.OverlayMenuWrapper>
   );

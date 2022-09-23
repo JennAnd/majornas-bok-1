@@ -15,21 +15,21 @@ export const Bookdiv = styled.div`
 `;
 
 export const BookName = styled.p`
-  font-family: "Courier New", Courier, monospace;
-  color: #292929;
+  font-family: ${({ theme }) => theme.font.BigCaslon};
+  color: ${({ theme }) => theme.color.black};
   font-size: 16px;
   padding: 0px;
   padding-top: 8px;
   margin: 0px;
 
-  @media (min-width: 1024px) {
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
     font-size: 24px;
   }
 `;
 
 export const AuthorName = styled.p`
-  font-family: "Courier New", Courier, monospace;
-  color: #292929;
+  font-family: ${({ theme }) => theme.font.DMSans};
+  color: ${({ theme }) => theme.color.black};
   font-size: 16px;
   padding: 0px;
   padding-top: 8px;

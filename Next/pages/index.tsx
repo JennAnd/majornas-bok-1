@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import { Bookgrid } from "../Components/Bookgrid/Bookgrid";
 import { BookgridContainer } from "../Components/BookgridContainer/BookgridContainer";
 import { Bookmark } from "../Components/Bookmark/Bookmark";
 import { Footer } from "../Components/Footer/Footer";
@@ -29,7 +28,7 @@ interface propInterface {
       _key: string;
     }
   ];
-  bookGrid: [
+  bookCard: [
     {
       title?: string;
       author?: string;
@@ -43,17 +42,15 @@ const Home: NextPage<propInterface> = ({
   newsInfo,
   openingHours,
   companyInfo,
-  bookGrid,
+  bookCard,
 }) => {
   return (
     <div>
       <Navbar />
       <NewsHero newsInfo={newsInfo} />
-      <Bookgrid book={bookGrid} />
-      <BookgridContainer bookGrid={bookGrid} />
-      <Bookmark text="Nyinkomna böcker" />
-      <Bookgrid book={bookGrid} />
-      <Bookmark text="Senaste på Instagram" />
+      <HeroStripes heroStripesText={newsInfo}></HeroStripes>
+      <BookgridContainer bookCard={bookCard} />
+      <Bookmark text="Senaste på Instagram" color="#FFF4BF" />
       <Instagram />
       <Footer openingHours={openingHours} companyInfo={companyInfo} />
     </div>
@@ -68,13 +65,13 @@ export const getServerSideProps = async () => {
     "imageUrl": image.asset->url,
       ...
     }`);
-  const bookGrid = await SanityClient.fetch(`*[_type == 'book']{
+  const bookCard = await SanityClient.fetch(`*[_type == 'book']{
     "imageUrl": cover.asset->url,
       ...
       }`);
 
   return {
-    props: { newsInfo, openingHours, companyInfo, eventInfo, bookGrid },
+    props: { newsInfo, openingHours, companyInfo, eventInfo, bookCard },
   };
 };
 

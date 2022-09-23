@@ -1,10 +1,10 @@
-import { BsCardText } from "react-icons/si";
+import { FaStoreAlt } from "react-icons/fa";
 
 export default {
   name: "about",
   title: "Om butiken",
   type: "document",
-  icon: BsCardText,
+  icon: FaStoreAlt,
   fields: [
     {
       name: "aboutStore",
