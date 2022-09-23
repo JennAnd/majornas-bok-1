@@ -10,6 +10,7 @@ interface LengthProps {
 const Stripes = styled.div<LengthProps>`
   background-color: ${({ theme }) => theme.color.black};
   color: ${({ theme }) => theme.color.white};
+  opacity: 0.5;
 
   text-align: start;
   font-family: "Courier New";
@@ -50,25 +51,27 @@ const Stripes = styled.div<LengthProps>`
 `;
 
 const StripeContainer = styled.div`
-  width: 50%;
-  height: 40rem;
-
+  top: 20rem;
+  height: 34rem;
+  margin-top: -100px;
+  width: 90%;
   position: absolute;
   right: 0rem;
-  top: 15rem;
-
+  top: 24rem;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
 
-  @media (max-width: 1300px) {
-    top: 20rem;
-    height: 34rem;
-    width: 90%;
-  }
-  @media (max-width: 1000px) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
     top: 24rem;
+  }
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    width: 50%;
+    height: 40rem;
+    position: absolute;
+    right: 0rem;
+    top: 10rem;
   }
 `;
 

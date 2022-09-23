@@ -9,7 +9,7 @@ export const BookGrid = styled.div`
   justify-content: center;
   display: grid;
   grid-template-columns: auto auto;
-  margin-top: 100px;
+  margin-top: 40px;
 
   @media (min-width: 1250px) {
     grid-template-columns: auto auto auto;
@@ -17,7 +17,11 @@ export const BookGrid = styled.div`
 `;
 
 export const BookGridWrapper = styled.div`
+  margin-top: -180px;
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    margin-top: -250px;
+    margin-top: -400px;
+  }
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    margin-top: -400px;
   }
 `;

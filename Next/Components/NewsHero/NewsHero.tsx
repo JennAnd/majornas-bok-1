@@ -8,47 +8,71 @@ const HeroSection = styled.div`
   max-width: 80rem;
 
   display: flex;
-  align-items: center;
+  flex-direction: column;
 
-  @media (max-width: 1300px) {
-    flex-direction: column;
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+    align-items: center;
+    flex-direction: row;
   }
 `;
 
 const BackgroundDiv = styled.div`
   background-color: ${({ theme }) => theme.color.mediumGreen};
-  rotate: 10deg;
-  width: 60rem;
-  height: 120rem;
+  rotate: 15deg;
+  width: 40rem;
+  height: 60rem;
+  margin-top: 130px;
 
   position: absolute;
   right: -20rem;
   z-index: -1;
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    right: -30rem;
+    margin-top: 0px;
+    width: 60rem;
+    height: 120rem;
+    margin-top: 0px;
+  }
 `;
 
 const Ampersand = styled.div`
   position: absolute;
   right: -15rem;
+  height: 500px;
   z-index: -1;
+  margin-top: 100px;
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    right: -15rem;
+    margin-top: 0px;
+  }
 `;
 
 const Title = styled.h1`
   max-width: 35rem;
-  margin: 0rem 5rem;
-
-  font-size: 3.5rem;
+  margin: 2rem 2rem;
+  font-size: 30px;
   font-family: ${({ theme }) => theme.font.BigCaslon};
   font-weight: 400;
-
   position: relative;
 
-  @media (max-width: 1300px) {
-    margin: 2rem 2rem;
-    font-size: 3rem;
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+    margin: 0rem 5rem;
+    margin-bottom: 400px;
+    margin-top: -400px;
+    padding-bottom: 40px;
   }
 
-  @media (max-width: 1000px) {
-    margin: 2rem 2rem;
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    font-size: 3.5rem;
+    margin-top: 0px;
+    width: 40%;
+  }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    font-size: 3.5rem;
+    margin-top: 0px;
   }
 `;
 
