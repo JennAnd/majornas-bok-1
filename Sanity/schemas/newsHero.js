@@ -1,7 +1,10 @@
+import { AiOutlineHome } from "react-icons/ai";
+
 export default {
   name: "newsHero",
   title: "Startsida",
   type: "document",
+  icon: AiOutlineHome,
   fields: [
     {
       name: "h1",

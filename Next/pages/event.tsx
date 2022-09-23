@@ -49,7 +49,7 @@ const Event: NextPage<propInterface> = ({
   return (
     <>
       <Navbar />
-      <Bookmark text="Författarkvällar" />
+      <Bookmark text="Författarkvällar" color="#FEB28C" />
       {eventInfo.map((item, index) => {
         if (index === 0) {
           return <EventCardBig item={item} key={`EventCardBig-${item._id}`} />;
@@ -72,7 +72,7 @@ const Event: NextPage<propInterface> = ({
           />
         )}
       </EventContainer>
-      <Bookmark text="Bokcirkel" />
+      <Bookmark text="Bokcirkel" color="#FEB28C" />
       <BookCircleContainer bookCircle={bookCircle} />
       <Footer openingHours={openingHours} companyInfo={companyInfo} />
     </>

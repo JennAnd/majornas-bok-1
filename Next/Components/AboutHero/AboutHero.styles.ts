@@ -1,7 +1,14 @@
 import styled from "styled-components";
 
 export const HeroWrapper = styled.div`
+  position: relative;
   background-color: ${({ theme }) => theme.color.black};
+`;
+
+export const bookmarkWrapper = styled.div`
+  position: absolute;
+  width: 100%;
+  z-index: 3;
 `;
 
 export const ImageHeroWrapperMobile = styled.div`
