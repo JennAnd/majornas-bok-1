@@ -49,7 +49,6 @@ const Home: NextPage<propInterface> = ({
     <div>
       <Navbar />
       <NewsHero newsInfo={newsInfo} />
-      <Bookmark text="Nyinkomna böcker" />
       <HeroStripes heroStripesText={newsInfo}></HeroStripes>
       <BookgridContainer bookCard={bookGrid} />
       <Bookmark text="Senaste på Instagram" color="#FFF4BF" />
