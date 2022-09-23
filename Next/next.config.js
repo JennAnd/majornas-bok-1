@@ -13,6 +13,7 @@ const nextConfig = {
     domains: [
       "cdn.sanity.io",
       "images.unsplash.com",
+      "scontent.cdninstagram.com",
       "scontent-arn2-1.cdninstagram.com",
       "scontent-arn2-2.cdninstagram.com",
       "scontent-arn2-3.cdninstagram.com",
