@@ -19,11 +19,11 @@ export const Container = styled.footer`
     background: url("/Images/Footer/Footer_Desktop.svg");
     padding-bottom: 93%;
     background-position: left !important;
-    margin-top: -180px;
+    margin-top: -190px;
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    margin-top: -255px;
+    margin-top: -260px;
   }
 `;
 
