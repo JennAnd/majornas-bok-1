@@ -68,7 +68,7 @@ const InstagramContainer = styled.div`
   background: ${({ theme }) => theme.color.blue};
   margin-top: 150px;
   padding-bottom: 200px;
-  padding-top: 150px;
+  padding-top: 100px;
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     padding-bottom: 250px;
@@ -78,7 +78,7 @@ const InstagramContainer = styled.div`
 `;
 
 const BookmarkWrapper = styled.div`
-  margin-bottom: -200px;
+  margin-bottom: -220px;
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     margin-bottom: -200px;
   }
