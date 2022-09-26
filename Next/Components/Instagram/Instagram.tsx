@@ -3,6 +3,7 @@ import React from "react";
 import useSWR from "swr";
 import Image from "next/image";
 import styled from "styled-components";
+import { Bookmark } from "../Bookmark/Bookmark";
 
 const Display = ({ image }) => {
   return (
@@ -19,60 +20,67 @@ const Display = ({ image }) => {
 };
 
 const StyledImage = styled.div`
-  width: 18rem;
-  height: 18rem;
+  width: 20rem;
+  height: 20rem;
   position: relative;
 
-  @media (max-width: 1600px) {
-    width: 14rem;
-    height: 14rem;
-  }
-
-  @media (max-width: 1250px) {
-    width: 10rem;
-    height: 10rem;
-  }
-
-  @media (max-width: 1000px) {
-    width: 12rem;
-    height: 12rem;
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    width: 260px;
+    height: 260px;
   }
 `;
 
 const Shelf = styled.div`
   background: ${({ theme }) => theme.color.black};
-  width: 100%;
   height: 2rem;
+  width: 110rem;
+  margin-top: -15px;
 
-  @media (max-width: 1000px) {
-    width: 80rem;
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    width: 100%;
   }
 `;
 
 const ImageContainer = styled.div`
-  padding: 0rem 2rem;
-
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 110rem;
 
-  @media (max-width: 1000px) {
-    width: 80rem;
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    width: 100%;
+  }
+`;
+
+const InstagramWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: scroll;
+  overflow-y: hidden;
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
   }
 `;
 
 const InstagramContainer = styled.div`
   background: ${({ theme }) => theme.color.blue};
-  height: 50rem;
+  margin-top: 150px;
+  padding-bottom: 200px;
+  padding-top: 100px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  @media (max-width: 1000px) {
-    height: 35rem;
-    white-space: nowrap;
-    overflow: scroll;
-    overflow-y: hidden;
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    padding-bottom: 250px;
+    margin-top: 100px;
+    padding-top: 150px;
+  }
+`;
+
+const BookmarkWrapper = styled.div`
+  margin-bottom: -220px;
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    margin-bottom: -200px;
   }
 `;
 
@@ -90,13 +98,20 @@ export const Instagram = () => {
   if (!data) return <div>Loading...</div>;
 
   return (
-    <InstagramContainer>
-      <ImageContainer>
-        {data.data.map((image, key) => (
-          <Display image={image.media_url} key={key} />
-        ))}
-      </ImageContainer>
-      <Shelf />
-    </InstagramContainer>
+    <>
+      <BookmarkWrapper>
+        <Bookmark text="Senaste på Instagram" color="#FFF4BF" />
+      </BookmarkWrapper>
+      <InstagramContainer>
+        <InstagramWrapper>
+          <ImageContainer>
+            {data.data.map((image, key) => (
+              <Display image={image.media_url} key={key} />
+            ))}
+          </ImageContainer>
+        </InstagramWrapper>
+        <Shelf />
+      </InstagramContainer>
+    </>
   );
 };
