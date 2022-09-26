@@ -1,7 +1,5 @@
 import type { NextPage } from "next";
-
 import { BookgridContainer } from "../Components/BookgridContainer/BookgridContainer";
-import { Bookmark } from "../Components/Bookmark/Bookmark";
 import { Footer } from "../Components/Footer/Footer";
 import { Instagram } from "../Components/Instagram/Instagram";
 import { Navbar } from "../Components/Navbar/Navbar";
@@ -51,7 +49,6 @@ const Home: NextPage<propInterface> = ({
       <NewsHero newsInfo={newsInfo} />
       <HeroStripes heroStripesText={newsInfo}></HeroStripes>
       <BookgridContainer bookCard={bookGrid} />
-      <Bookmark text="Senaste på Instagram" color="#FFF4BF" />
       <Instagram />
       <Footer openingHours={openingHours} companyInfo={companyInfo} />
     </div>
