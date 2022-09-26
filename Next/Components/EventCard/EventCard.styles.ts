@@ -24,16 +24,8 @@ export const DateContainer = styled.div`
     width: fit-content;
     padding: ${({ theme }) => theme.margin.xLarge};
     font-size: ${({ theme }) => theme.fontSize.medium};
-    top: 10.25%;
+    top: 13.1%;
   }
-
-  /* @media (${({ theme }) => theme.breakpoint.desktop}) {
-    left: 0%;
-    width: fit-content;
-    padding: ${({ theme }) => theme.margin.xLarge};
-    font-size: ${({ theme }) => theme.fontSize.medium};
-    top: 10.25%;
-  } */
 `;
 
 export const NameContainer = styled.div`

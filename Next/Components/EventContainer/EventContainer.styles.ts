@@ -11,5 +11,6 @@ export const EventContainer = styled.div`
     gap: 4rem;
     height: 655px;
     justify-content: space-evenly;
+    padding-bottom: 150px;
   }
 `;

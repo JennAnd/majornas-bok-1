@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BookCircleContainer } from "../Components/BookCircleContainer/BookCircleContainer";
 import { Bookmark } from "../Components/Bookmark/Bookmark";
 import { EventCard } from "../Components/EventCard/EventCard";
@@ -45,6 +45,11 @@ const Event: NextPage<propInterface> = ({
 }) => {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
 
   return (
     <>
@@ -72,7 +77,17 @@ const Event: NextPage<propInterface> = ({
           />
         )}
       </EventContainer>
-      <Bookmark text="Bokcirkel" color="#FEB28C" />
+      {width < 1024 ? (
+        <Bookmark
+          text="Bokcirkel"
+          color="#FEB28C"
+          backgroundColor="#5F47A6"
+          margin="0px"
+        />
+      ) : (
+        <Bookmark text="Bokcirkel" color="#FEB28C" backgroundColor="#D0E9D4" />
+      )}
+
       <BookCircleContainer bookCircle={bookCircle} />
       <Footer openingHours={openingHours} companyInfo={companyInfo} />
     </>
