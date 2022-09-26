@@ -47,7 +47,6 @@ const Home: NextPage<propInterface> = ({
     <div>
       <Navbar />
       <NewsHero newsInfo={newsInfo} />
-      <HeroStripes heroStripesText={newsInfo}></HeroStripes>
       <BookgridContainer bookCard={bookGrid} />
       <Instagram />
       <Footer openingHours={openingHours} companyInfo={companyInfo} />

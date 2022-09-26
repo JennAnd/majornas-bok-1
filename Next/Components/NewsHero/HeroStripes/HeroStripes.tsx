@@ -10,7 +10,6 @@ interface LengthProps {
 const Stripes = styled.div<LengthProps>`
   background-color: ${({ theme }) => theme.color.black};
   color: ${({ theme }) => theme.color.white};
-  opacity: 0.5;
 
   text-align: start;
   font-family: "Courier New";
