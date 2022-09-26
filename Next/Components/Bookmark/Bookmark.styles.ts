@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const BookmarkWrapper = styled.div`
+  display: flex;
   @media (${({ theme }) => theme.breakpoint.tablet}) {
     margin-bottom: -4rem;
     display: flex;
@@ -24,7 +25,6 @@ export const BookmarkContainer = styled.div`
   border-bottom: 50px solid ${(props) => props.color};
   padding: 0 ${({ theme }) => theme.padding.large};
   padding-left: 24px;
-
   font-family: ${({ theme }) => theme.font.BigCaslon};
   font-size: ${({ theme }) => theme.fontSize.h2};
   margin: ${({ theme }) => theme.margin.xLarge} 0;
