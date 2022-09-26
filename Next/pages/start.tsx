@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import styled from "styled-components";
 import { BookgridContainer } from "../Components/BookgridContainer/BookgridContainer";
 import { Footer } from "../Components/Footer/Footer";
 import { Instagram } from "../Components/Instagram/Instagram";
@@ -37,6 +38,11 @@ interface propInterface {
   ];
 }
 
+const StartContainer = styled.div`
+  position: relative;
+  overflow-x: hidden;
+`;
+
 const Home: NextPage<propInterface> = ({
   newsInfo,
   openingHours,
@@ -44,14 +50,13 @@ const Home: NextPage<propInterface> = ({
   bookGrid,
 }) => {
   return (
-    <div>
+    <StartContainer>
       <Navbar />
       <NewsHero newsInfo={newsInfo} />
-      <HeroStripes heroStripesText={newsInfo}></HeroStripes>
       <BookgridContainer bookCard={bookGrid} />
       <Instagram />
       <Footer openingHours={openingHours} companyInfo={companyInfo} />
-    </div>
+    </StartContainer>
   );
 };
 
