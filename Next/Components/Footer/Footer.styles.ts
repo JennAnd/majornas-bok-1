@@ -11,8 +11,12 @@ export const Container = styled.footer`
   background-size: contain !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
-  padding-bottom: 292%;
-  margin-top: -200px;
+  padding-bottom: 292.5vw;
+  margin-top: -250px;
+
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+    margin-top: -410px;
+  }
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     background-color: ${({ theme }) => theme.color.green};
