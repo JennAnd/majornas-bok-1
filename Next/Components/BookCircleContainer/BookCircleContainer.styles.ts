@@ -8,15 +8,18 @@ export const BookCircleContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: ${({ theme }) => theme.padding.xxLarge};
+  margin-top: -30px;
 
   @media (${({ theme }) => theme.breakpoint.tablet}) {
     margin-bottom: -410px;
+    margin-top: 30px;
     padding: 5rem;
   }
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     height: 750px;
     margin-bottom: 0px;
+    margin-top: 0px;
     flex-direction: row;
   }
 
