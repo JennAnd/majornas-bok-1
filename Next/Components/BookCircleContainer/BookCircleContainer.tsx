@@ -48,7 +48,7 @@ export const BookCircleContainer: React.FC<BookCircleContainerProps> = ({
               fontSize="2.25rem"
             />
             <Text
-              text="Anmäl dig redan idag via formuläret. Vi ser fram emot att ditt deltagande!"
+              text="Anmäl dig redan idag via knappen nedan. Vi ser fram emot att ditt deltagande!"
               fontFamily="DM Sans"
             />
             <Button
