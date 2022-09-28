@@ -81,7 +81,7 @@ const Event: NextPage<propInterface> = ({
         <Bookmark
           text="Bokcirkel"
           color="#FEB28C"
-          backgroundColor="#5F47A6"
+          backgroundColor="#D0E9D4"
           margin="0px"
         />
       ) : (
