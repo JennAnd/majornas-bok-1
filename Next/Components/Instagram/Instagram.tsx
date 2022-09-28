@@ -1,12 +1,9 @@
-import { useEffect } from "react";
-import React from "react";
-import useSWR from "swr";
-import Image from "next/image";
 import styled from "styled-components";
+import useSWR from "swr";
 import { Bookmark } from "../Bookmark/Bookmark";
 
-const Display = ({ image }) => {
-  return <StyledImage src={image} />;
+const Display = ({ image, onClick }) => {
+  return <StyledImage src={image} onClick={onClick} />;
 };
 
 const StyledImage = styled.img`
@@ -96,7 +93,13 @@ export const Instagram = () => {
         <InstagramWrapper>
           <ImageContainer>
             {data.data.map((image, key) => (
-              <Display image={image.media_url} key={key} />
+              <Display
+                image={image.media_url}
+                key={key}
+                onClick={() =>
+                  open("https://www.instagram.com/yrgo_yrgo_yrgo/", "_blank")
+                }
+              />
             ))}
           </ImageContainer>
         </InstagramWrapper>
