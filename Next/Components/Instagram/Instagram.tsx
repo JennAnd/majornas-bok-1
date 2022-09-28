@@ -6,20 +6,10 @@ import styled from "styled-components";
 import { Bookmark } from "../Bookmark/Bookmark";
 
 const Display = ({ image }) => {
-  return (
-    <StyledImage>
-      <Image
-        className="Picture"
-        src={image}
-        alt="Instagram picture"
-        layout="fill"
-        objectFit="cover"
-      />
-    </StyledImage>
-  );
+  return <StyledImage src={image} />;
 };
 
-const StyledImage = styled.div`
+const StyledImage = styled.img`
   width: 20rem;
   height: 20rem;
   position: relative;
