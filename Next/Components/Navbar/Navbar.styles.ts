@@ -55,6 +55,11 @@ export const NavMenu = styled.div`
     a {
       color: ${({ theme }) => theme.color.white};
       text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        color: ${({ theme }) => theme.color.lightGreen};
+      }
     }
   }
 `;

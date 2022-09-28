@@ -12,10 +12,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onClick }) => {
   return (
     <S.Nav>
       <S.NavWrapper>
-        <S.NavText>
-          Majornas <br />
-          Böcker & Kaffe
-        </S.NavText>
+        <Link href="/start">
+          <S.NavText>
+            Majornas <br />
+            Böcker & Kaffe
+          </S.NavText>
+        </Link>
         <S.ImageWrapper
           onClick={() => {
             setShowPopup(!showOverlayMenu);
