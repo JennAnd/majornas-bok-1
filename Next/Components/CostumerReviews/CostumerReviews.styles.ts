@@ -4,16 +4,21 @@ export const ReviewWrapper = styled.div`
   width: 100vw;
   background-color: ${({ theme }) => theme.color.green};
   padding-top: 40px;
-  padding-bottom: 100px;
+  padding-bottom: 18vw;
 
   @media (${({ theme }) => theme.breakpoint.tablet}) {
-    padding-bottom: 140px;
+    padding-bottom: 24vw;
     margin-bottom: -350px;
   }
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     padding-top: 40px;
-    margin-bottom: 0px;
+    padding-bottom: 30vw;
+  }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    padding-top: 40px;
+    padding-bottom: 22vw;
   }
 `;
 
@@ -23,6 +28,10 @@ export const BookmarkContainer = styled.div`
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     margin-bottom: 30px;
   }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    padding-bottom: 20vw;
+  }
 `;
 
 export const ReviewContainer = styled.div`
@@ -30,7 +39,7 @@ export const ReviewContainer = styled.div`
   background-color: ${({ theme }) => theme.color.green};
   padding-bottom: 80px;
 
-  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
   }
 `;
 
@@ -88,7 +97,7 @@ export const ReviewNoteOne = styled.div`
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    margin-left: 43%;
+    margin-left: 33%;
     margin-top: -200px;
   }
 `;
@@ -136,7 +145,7 @@ export const ReviewNoteThree = styled.div`
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    margin-left: 20%;
+    margin-left: 15%;
   }
 `;
 

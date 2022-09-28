@@ -12,7 +12,6 @@ export const bookmarkWrapper = styled.div`
 `;
 
 export const ImageHeroWrapperMobile = styled.div`
-  width: 100wv;
   display: block;
   @media (min-width: 500px) {
     display: none;
@@ -27,18 +26,11 @@ export const ImageHeroWrapperDesktop = styled.div`
 `;
 
 export const HeroTextWrapper = styled.div`
-  width: 100wv;
   background-color: ${({ theme }) => theme.color.black};
-  padding-top: 32px;
-  padding-right: 24px;
-  padding-left: 24px;
-  padding-bottom: 64px;
+  padding: ${({ theme }) => theme.padding.xLarge};
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    padding-top: 57px;
-    padding-right: 305px;
-    padding-left: 99px;
-    padding-bottom: 56px;
+    padding: 48px 80px;
   }
 `;
 
@@ -46,8 +38,15 @@ export const HeroText = styled.p`
   color: ${({ theme }) => theme.color.white};
   font-family: "Inter";
   font-weight: 500;
-  fontsize: 16px;
-  line-height: 19.36px;
+  font-size: ${({ theme }) => theme.fontSize.text};
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    font-size: ${({ theme }) => theme.fontSize.medium};
+  }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+    font-size: ${({ theme }) => theme.fontSize.h2};
+  }
 `;
 
 export const Hero = styled.div``;
