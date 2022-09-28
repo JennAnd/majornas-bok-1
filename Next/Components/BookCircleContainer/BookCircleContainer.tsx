@@ -26,16 +26,16 @@ export const BookCircleContainer: React.FC<BookCircleContainerProps> = ({
               fontSize="1.75rem"
             />
             <Text
-              text="Anmäl dig redan idag via formuläret. Vi ser fram emot att ditt deltagande!"
+              text="Anmäl dig redan idag via knappen nedan. Vi ser fram emot att ditt deltagande!"
               fontFamily="DM Sans"
             />
             <Button
-              text="Läs mer & anmäl dig här"
+              text="Anmäl dig här"
               margin="0rem 0rem 8rem 0rem"
               width="100%"
-              onClick={() => {
-                setShowPopup(!showPopup);
-              }}
+              onClick={() =>
+                ((window as Window).location = "mailto:info@majornasbocker.se")
+              }
             />
           </S.LeftContainer>
         </>
