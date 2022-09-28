@@ -20,7 +20,7 @@ export const OverlayMobileMenu: React.FC<OverlayMobileMenuProps> = ({
       </S.HeaderText>
 
       <S.MenuTextWrapper>
-        <S.LinkWrapper active={router.asPath === "/"}>
+        <S.LinkWrapper active={router.asPath === "/start"}>
           <Link href="/start">
             <a>NYHETER</a>
           </Link>
