@@ -11,11 +11,11 @@ export const Container = styled.footer`
   background-size: contain !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
-  padding-bottom: 292.5vw;
-  margin-top: -250px;
+  padding-bottom: 265vw;
+  margin-top: -80px;
 
   @media (${({ theme }) => theme.breakpoint.tablet}) {
-    margin-top: -410px;
+    margin-top: 200px;
   }
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
@@ -52,7 +52,7 @@ export const OpeningsHoursContainer = styled.div`
   right: 8vw;
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    bottom: 49vw;
+    bottom: 51vw;
     width: 30vw;
     height: 38.5vw;
     right: 10.5vw;
@@ -119,7 +119,7 @@ export const OpeningsHoursTime = styled.p`
 export const CompanyInfoContainer = styled.div`
   position: absolute;
   left: 17vw;
-  bottom: 50vw;
+  bottom: 55vw;
   width: 65vw;
   height: 50vw;
 
@@ -128,15 +128,21 @@ export const CompanyInfoContainer = styled.div`
   flex-direction: column;
   justify-content: center;
 
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+    bottom: 55vw;
+    width: 55vw;
+    left: 22.5vw;
+  }
+
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     left: 10vw;
-    bottom: 8vw;
+    bottom: 10vw;
     width: 21.5vw;
     height: 40vw;
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    bottom: 6vw;
+    bottom: 9vw;
   }
 `;
 
