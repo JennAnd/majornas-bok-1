@@ -4,9 +4,16 @@ export const ReviewWrapper = styled.div`
   width: 100vw;
   background-color: ${({ theme }) => theme.color.green};
   padding-top: 40px;
+  padding-bottom: 100px;
+
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+    padding-bottom: 140px;
+    margin-bottom: -350px;
+  }
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     padding-top: 40px;
+    margin-bottom: 0px;
   }
 `;
 
