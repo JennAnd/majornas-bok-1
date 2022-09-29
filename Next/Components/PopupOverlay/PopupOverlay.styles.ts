@@ -1,4 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const transition = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`;
 
 export const Overlay = styled.div`
   background-color: ${({ theme }) => theme.color.white};
@@ -11,6 +21,7 @@ export const Overlay = styled.div`
   left: 0px;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
+  animation: ${transition} 0.25s ease-in-out;
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     height: 80vh;
@@ -52,8 +63,11 @@ export const RightContainer = styled.div`
     justify-content: space-evenly;
     position: relative;
     width: 50%;
-    /* top: 15%; */
     margin-top: ${({ theme }) => theme.margin.xxLarge};
+  }
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    height: 87%;
   }
 `;
 
@@ -199,6 +213,7 @@ export const NameAndMail = styled.p`
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     margin-bottom: ${({ theme }) => theme.margin.small};
+    margin-top: ${({ theme }) => theme.margin.small};
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
@@ -221,7 +236,7 @@ export const Input = styled.input`
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    font-size: ${({ theme }) => theme.fontSize.medium};
+    font-size: ${({ theme }) => theme.fontSize.text};
     top: -4rem;
   }
 `;
