@@ -39,6 +39,10 @@ export const ReviewContainer = styled.div`
   background-color: ${({ theme }) => theme.color.green};
   padding-bottom: 80px;
 
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+    padding-bottom: 245px;
+  }
+
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
   }
 `;

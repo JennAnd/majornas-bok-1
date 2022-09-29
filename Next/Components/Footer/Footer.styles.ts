@@ -15,7 +15,7 @@ export const Container = styled.footer`
   margin-top: -80px;
 
   @media (${({ theme }) => theme.breakpoint.tablet}) {
-    margin-top: 200px;
+    margin-top: -150px;
   }
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {

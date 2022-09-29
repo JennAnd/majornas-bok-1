@@ -11,7 +11,7 @@ export const BookCircleContainer = styled.div`
   margin-top: -30px;
 
   @media (${({ theme }) => theme.breakpoint.tablet}) {
-    margin-bottom: -410px;
+    margin-bottom: -175px;
     margin-top: 30px;
     padding: 5rem;
   }
