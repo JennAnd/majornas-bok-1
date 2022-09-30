@@ -43,16 +43,17 @@ export const ReviewContainer = styled.div`
     padding-bottom: 245px;
   }
 
-  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    padding-bottom: 0px;
   }
 `;
 
 export const ReviewText = styled.p`
-  font-size: 16px;
+  font-size: 18px;
   font-family: ${({ theme }) => theme.font.BigCaslon};
   text-align: center;
   color: ${({ theme }) => theme.color.black};
-  padding: 5px;
+  padding: 10px;
   padding-top: 0px;
   margin-top: 0px;
 
@@ -101,8 +102,9 @@ export const ReviewNoteOne = styled.div`
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    margin-left: 33%;
-    margin-top: -200px;
+    margin-left: 40%;
+    margin-top: -400px;
+    height: 180px;
   }
 `;
 

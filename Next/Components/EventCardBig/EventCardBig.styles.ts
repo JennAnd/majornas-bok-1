@@ -134,7 +134,29 @@ export const NameContainer = styled.div`
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    font-size: ${({ theme }) => theme.fontSize.h1};
+    top: 0;
+  }
+`;
+
+export const TitleContainer = styled.div`
+  display: none;
+
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+    display: block;
+    font-family: ${({ theme }) => theme.font.BigCaslon};
+    font-size: ${({ theme }) => theme.fontSize.xlarge};
+    padding: 0 ${({ theme }) => theme.padding.large};
+    margin-bottom: 0;
+    background-color: unset;
+    color: ${({ theme }) => theme.color.black};
+    top: ${({ theme }) => theme.margin.xLarge};
+    margin-bottom: 30px;
+  }
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  }
+
+  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     top: 0;
   }
 `;
@@ -171,7 +193,8 @@ export const DescriptionContainer = styled.div`
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     margin-bottom: 6rem;
-    font-size: ${({ theme }) => theme.fontSize.h2};
+    font-size: ${({ theme }) => theme.fontSize.medium};
+    width: 70%;
     top: -6rem;
   }
 `;
@@ -180,6 +203,12 @@ export const SignUpWrapper = styled.div`
   display: none;
   @media (${({ theme }) => theme.breakpoint.tablet}) {
     display: block;
+    width: 80%;
+  }
+
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    display: block;
+    width: 60%;
   }
 `;
 
@@ -194,10 +223,10 @@ export const SignUpContainer = styled.p`
   top: -2rem;
 
   @media (${({ theme }) => theme.breakpoint.tablet}) {
+    font-size: ${({ theme }) => theme.fontSize.medium};
   }
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    font-size: ${({ theme }) => theme.fontSize.large};
     top: -4rem;
   }
 `;
@@ -242,6 +271,10 @@ export const SignUpButtonContainer = styled.div`
   display: none;
   @media (${({ theme }) => theme.breakpoint.tablet}) {
     display: block;
+    width: 80%;
+  }
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    width: 60%;
   }
 `;
 

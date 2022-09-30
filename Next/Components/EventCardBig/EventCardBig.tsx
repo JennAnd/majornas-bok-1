@@ -33,6 +33,7 @@ export const EventCardBig: React.FC<EventCardBigProps> = ({ item }) => {
       </S.LeftContainer>
 
       <S.RightContainer>
+        <S.TitleContainer>Näst på tur</S.TitleContainer>
         <S.NameContainer>{item.name}</S.NameContainer>
         <S.InfoWrapper>
           <S.DescriptionContainer>{item.description}</S.DescriptionContainer>
