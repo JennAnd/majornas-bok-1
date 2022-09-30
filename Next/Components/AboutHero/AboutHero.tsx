@@ -12,7 +12,7 @@ export const AboutHero = ({ aboutInfo }) => {
       <S.HeroWrapper>
         <S.ImageHeroWrapperMobile>
           <Image
-            src="/Images/AboutHero/Bookshelf-mobile.webp"
+            src="/Images/AboutHero/mobile.png"
             alt="bookshelf"
             width={500}
             height={745}
@@ -20,7 +20,7 @@ export const AboutHero = ({ aboutInfo }) => {
         </S.ImageHeroWrapperMobile>
         <S.ImageHeroWrapperDesktop>
           <Image
-            src="/Images/AboutHero/Bookshelf-desktop.webp"
+            src="/Images/AboutHero/desktop.png"
             alt="bookshelf"
             width={1512}
             height={694}
