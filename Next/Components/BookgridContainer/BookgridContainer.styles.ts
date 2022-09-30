@@ -9,7 +9,12 @@ export const BookGrid = styled.div`
   justify-content: center;
   display: grid;
   grid-template-columns: auto auto;
-  margin-top: 40px;
+  margin-top: 0px;
+
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
 
   @media (min-width: 1250px) {
     grid-template-columns: auto auto auto;

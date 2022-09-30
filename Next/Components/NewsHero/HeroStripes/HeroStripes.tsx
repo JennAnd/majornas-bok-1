@@ -14,7 +14,7 @@ const Stripes = styled.div<LengthProps>`
   text-align: start;
   font-family: "Courier New";
   padding: 0.2rem 1rem;
-
+  opacity: 80%;
   height: 1.5rem;
   max-width: 80rem;
   width: 85%;

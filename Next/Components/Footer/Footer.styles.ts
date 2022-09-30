@@ -61,7 +61,6 @@ export const OpeningsHoursContainer = styled.div`
 
 export const OpeningsHoursTitle = styled.p`
   font-size: ${({ theme }) => theme.fontSize.h2};
-  font-weight: 600;
   letter-spacing: 1px;
   margin-bottom: 0.75rem;
   margin-top: 0.75rem;
@@ -71,28 +70,30 @@ export const OpeningsHoursTitle = styled.p`
     margin-bottom: 2.75rem;
   }
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    font-size: ${({ theme }) => theme.fontSize.xlarge};
+    font-size: ${({ theme }) => theme.fontSize.large};
+    margin-top: 50px;
     margin-bottom: 1.5rem;
   }
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    font-size: ${({ theme }) => theme.fontSize.xxLarge};
+    font-size: ${({ theme }) => theme.fontSize.xlarge};
     margin-bottom: 1.5rem;
   }
 `;
 export const OpeningsHoursDays = styled.p`
   font-size: 1.4rem;
-  font-weight: 500;
   margin-bottom: 0;
   margin-top: 0;
 
   @media (${({ theme }) => theme.breakpoint.tablet}) {
+    font-size: ${({ theme }) => theme.fontSize.xxLarge};
     font-size: 2.75rem;
   }
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    font-size: 1.8rem;
+    font-size: ${({ theme }) => theme.fontSize.large};
   }
+
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    font-size: 2.25rem;
+    font-size: ${({ theme }) => theme.fontSize.xlarge};
   }
 `;
 
@@ -103,16 +104,16 @@ export const OpeningsHoursTime = styled.p`
   margin-top: 0.25rem;
 
   @media (${({ theme }) => theme.breakpoint.tablet}) {
-    font-size: ${({ theme }) => theme.fontSize.large};
+    font-size: ${({ theme }) => theme.fontSize.xxLarge};
     margin-bottom: 2.75rem;
   }
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    font-size: ${({ theme }) => theme.fontSize.h2};
+    font-size: ${({ theme }) => theme.fontSize.large};
     margin-bottom: 1.5rem;
   }
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    font-size: ${({ theme }) => theme.fontSize.large};
     margin-bottom: 2.5rem;
+    font-size: ${({ theme }) => theme.fontSize.xlarge};
   }
 `;
 

@@ -19,6 +19,7 @@ export const Overlay = styled.div`
 
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     padding: 100px ${({ theme }) => theme.padding.large};
+    padding-bottom: 0px;
   }
 `;
 

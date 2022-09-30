@@ -6,15 +6,15 @@ export const Footer = ({ openingHours, companyInfo }) => {
       {openingHours?.length > 0 && (
         <S.OpeningsHoursContainer>
           <S.OpeningsHoursTitle>Öppettider</S.OpeningsHoursTitle>
-          <S.OpeningsHoursDays>{openingHours[2].day}</S.OpeningsHoursDays>
+          <S.OpeningsHoursDays>{openingHours[2].day}:</S.OpeningsHoursDays>
           <S.OpeningsHoursTime>
             {openingHours[2].openingHrs}
           </S.OpeningsHoursTime>
-          <S.OpeningsHoursDays>{openingHours[1].day}</S.OpeningsHoursDays>
+          <S.OpeningsHoursDays>{openingHours[1].day}:</S.OpeningsHoursDays>
           <S.OpeningsHoursTime>
             {openingHours[1].openingHrs}
           </S.OpeningsHoursTime>
-          <S.OpeningsHoursDays>{openingHours[0].day}</S.OpeningsHoursDays>
+          <S.OpeningsHoursDays>{openingHours[0].day}:</S.OpeningsHoursDays>
           <S.OpeningsHoursTime>
             {openingHours[0].openingHrs}
           </S.OpeningsHoursTime>

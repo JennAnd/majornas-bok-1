@@ -21,11 +21,14 @@ export const EventCard: React.FC<EventCardProps> = ({ item, children }) => {
           objectFit="cover"
         />
       </S.ImageContainer>
+      <S.ImageContainerDesktop>
+        <Image src={item.imageUrl} alt="Event image" width={380} height={520} />
+      </S.ImageContainerDesktop>
       <S.NameContainer>{item.name}</S.NameContainer>
 
       <Button
         key={item._id}
-        text="Läs mer & anmäl dig här"
+        text="Läs mer och anmäl dig"
         onClick={() => {
           setShowPopup(!showPopup);
           setSelectedItem(item);
