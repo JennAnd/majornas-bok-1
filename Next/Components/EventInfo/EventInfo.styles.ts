@@ -30,14 +30,15 @@ export const TextDiv = styled.div`
 
 export const InfoText = styled.p`
   color: white;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 2rem 2rem;
 
   @media (${({ theme }) => theme.breakpoint.tablet}) {
+    padding: 2rem 5rem;
   }
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    padding-left: 200px;
-    width: 60%;
+    padding: 2rem 5rem;
+    width: 80%;
+    max-width: 60rem;
   }
 `;
