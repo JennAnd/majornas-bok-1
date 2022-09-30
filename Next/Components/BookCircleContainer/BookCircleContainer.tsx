@@ -70,15 +70,22 @@ export const BookCircleContainer: React.FC<BookCircleContainerProps> = ({
                 priority={true}
               />
             </S.ImageContainer>
-
-            {bookCircle.map((bookCircle, index) => {
-              return (
-                <div key={`bookCircle-map-${bookCircle._id}`}>
-                  <S.TextTitle>{bookCircle.name}</S.TextTitle>
-                  <S.TextBody>{bookCircle.description}</S.TextBody>
-                </div>
-              );
-            })}
+            {/* <S.TextBody>{bookCircle.description}</S.TextBody> */}
+            <S.TextBody>
+              Vill du vara med i en bokcirkel så kan du vara det här! För
+              närvarande är det en pocketbokcirkel och en novellbokcirkel igång,
+              båda grupperna träffas var fjärde vecka. Böckerna som läses väljer
+              vi gemensamt. Träffarna sker på tisdagskvällar vid 18. <br />
+              <br /> Det finns även en novellbokcirkel för föräldralediga som
+              träffas dagtid var fjortonde dag. Lämpar sig bäst för mindre barn
+              som inte börjat gå ännu. Ett roligt sätt för både barn och
+              föräldrar att träffas på! <br />
+              <br />
+              Är du med i en grupp som träffas regelbundet och hittar på saker?
+              Om ni är intresserade av en kväll i bokhandeln där ni får enklare
+              förtäring och får höra berättas om aktuella böcker så maila för
+              mer info.
+            </S.TextBody>
           </S.RightContainer>
         </>
       )}

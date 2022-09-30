@@ -100,4 +100,8 @@ export const TextBody = styled.p`
   font-size: ${({ theme }) => theme.fontSize.text};
   font-family: ${({ theme }) => theme.font.DMSans};
   color: ${({ theme }) => theme.color.white};
+  display: none;
+  @media (${({ theme }) => theme.breakpoint.desktop}) {
+    display: block;
+  }
 `;
