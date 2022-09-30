@@ -1,5 +1,8 @@
 # Majornas bok och kafé
 
+### The Live site running on vercel! ✨
+https://majornas-bok.vercel.app/
+
 ## Designers
 
 - Felix
