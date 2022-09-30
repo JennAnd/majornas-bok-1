@@ -46,12 +46,13 @@ export const NameContainer = styled.div`
     margin-bottom: ${({ theme }) => theme.margin.large};
     padding: 0.75rem ${({ theme }) => theme.padding.medium};
     align-items: flex-start;
-    width: 210px;
+    width: 280px;
     height: 80px;
+    padding: 15px;
   }
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     font-size: ${({ theme }) => theme.fontSize.h2};
-    width: 280px;
+    padding: 20px;
     height: 90px;
   }
 
@@ -67,7 +68,17 @@ export const ImageContainer = styled.div`
   width: 100%;
   height: 300px;
 
-  @media (${({ theme }) => theme.breakpoint.desktop}) {
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+    display: none;
+  }
+`;
+
+export const ImageContainerDesktop = styled.div`
+  display: none;
+
+  @media (${({ theme }) => theme.breakpoint.tablet}) {
+    display: block;
+    position: relative;
     width: 280px;
     height: 400px;
   }

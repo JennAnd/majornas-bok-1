@@ -6,7 +6,6 @@ import { HeroStripes } from "./HeroStripes/HeroStripes";
 const HeroSection = styled.div`
   height: 60rem;
   max-width: 80rem;
-
   display: flex;
   flex-direction: column;
 
@@ -73,6 +72,7 @@ const Title = styled.h1`
   @media (${({ theme }) => theme.breakpoint.largeScreen}) {
     font-size: 3.5rem;
     margin-top: 0px;
+    width: 50%;
   }
 `;
 

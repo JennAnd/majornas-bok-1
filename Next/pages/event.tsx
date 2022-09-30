@@ -9,6 +9,7 @@ import { Footer } from "../Components/Footer/Footer";
 import { Navbar } from "../Components/Navbar/Navbar";
 import { PopupOverlay } from "../Components/PopupOverlay/PopupOverlay";
 import { SanityClient } from "../SanityClient";
+import { EventInfo } from "../Components/EventInfo/EventInfo";
 
 interface propInterface {
   companyInfo: {};
@@ -54,7 +55,8 @@ const Event: NextPage<propInterface> = ({
   return (
     <>
       <Navbar />
-      <Bookmark text="Författarkvällar" color="#FEB28C" />
+
+      <EventInfo></EventInfo>
       {eventInfo.map((item, index) => {
         if (index === 0) {
           return <EventCardBig item={item} key={`EventCardBig-${item._id}`} />;
