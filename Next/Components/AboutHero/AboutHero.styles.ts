@@ -31,21 +31,18 @@ export const HeroTextWrapper = styled.div`
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
     padding: 48px 80px;
+    margin-right: 300px;
   }
 `;
 
 export const HeroText = styled.p`
   color: ${({ theme }) => theme.color.white};
   font-family: "Inter";
-  font-weight: 500;
+  font-weight: 400;
   font-size: ${({ theme }) => theme.fontSize.text};
 
   @media (${({ theme }) => theme.breakpoint.desktop}) {
-    font-size: ${({ theme }) => theme.fontSize.medium};
-  }
-
-  @media (${({ theme }) => theme.breakpoint.largeScreen}) {
-    font-size: ${({ theme }) => theme.fontSize.h2};
+    font-size: 18px;
   }
 `;
 
