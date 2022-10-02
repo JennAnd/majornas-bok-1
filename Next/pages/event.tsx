@@ -58,7 +58,6 @@ const Event: NextPage<propInterface> = ({
 
       <EventInfo></EventInfo>
       {eventInfo.map((item, index) => {
-        console.log(index);
         if (index === 2) {
           return <EventCardBig item={item} key={`EventCardBig-${item._id}`} />;
         }
