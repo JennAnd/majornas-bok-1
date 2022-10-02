@@ -89,6 +89,7 @@ export const ReviewNoteOne = styled.div`
   margin-left: 30px;
   margin-top: 10px;
   z-index: 2;
+  padding-bottom: 10px;
 
   @media (${({ theme }) => theme.breakpoint.tablet}) {
     margin-left: 60px;
