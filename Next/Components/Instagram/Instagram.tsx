@@ -74,8 +74,6 @@ const BookmarkWrapper = styled.div`
 const fetcher = (link) => fetch(link).then((res) => res.json());
 
 export const Instagram = () => {
-  // our instagram id is "18046477966366219";
-
   const { data, error } = useSWR(
     `https://graph.instagram.com/me/media?fields=id,media_url,username,caption&access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}`,
     fetcher
